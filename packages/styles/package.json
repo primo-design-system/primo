@@ -29,7 +29,7 @@
   "devDependencies": {
     "@primo/stylelint-config": "^1.0.1",
     "@primo/tokens": "^0.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "stylelint": "10.1.0",
     "stylelint-order": "3.0.1"
   }
