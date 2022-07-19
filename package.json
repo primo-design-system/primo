@@ -11,8 +11,8 @@
     "url": "git+https://github.com/primodesignsystem/primo.git"
   },
   "scripts": {
-    "prettier": "prettier --check \"**/*.{json,js,ts,tsx}\"",
-    "prettier.fix": "prettier --write \"**/*.{json,js,ts,tsx}\"",
+    "prettier": "prettier --check \"**/*.{json,js,scss,ts,tsx}\"",
+    "prettier:fix": "prettier --write \"**/*.{json,js,scss,ts,tsx}\"",
     "lint": "eslint .",
     "setup": "lerna exec yarn install",
     "test": "lerna run test --parallel",
@@ -122,7 +122,7 @@
     "nohoist": []
   },
   "engines": {
-    "node": ">= 12"
+    "node": ">= 16"
   },
   "config": {
     "commitizen": {

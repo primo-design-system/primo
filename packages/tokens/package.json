@@ -14,11 +14,12 @@
   "author": "Richard McCartney <richard@mccartney.io>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
   "license": "MIT",
-  "main": "build/web/primo/js/index.js",
-  "module": "build/web/primo/js/index.js",
+  "type": "module",
   "files": [
-    "lib",
-    "src"
+    "*.css",
+    "*.json",
+    "*.less",
+    "themes/**/*"
   ],
   "publishConfig": {
     "access": "public"
@@ -28,7 +29,7 @@
     "url": "git+https://github.com/primodesignsystem/primo.git"
   },
   "scripts": {
-    "build": "node ./scripts/build.js",
+    "build": "node scripts",
     "clean": "rm -rf build",
     "test": "jest"
   },
@@ -36,9 +37,8 @@
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
   "devDependencies": {
-    "style-dictionary": "^2.10.1"
-  },
-  "dependencies": {
-    "jest": "^26.6.0"
+    "jest": "^26.6.0",
+    "style-dictionary": "^3.0.1",
+    "chroma-js": "^2.1.2"
   }
 }
