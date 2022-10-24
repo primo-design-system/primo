@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`breakpoint tokens : matches snapshot 1`] = `
+Object {
+  "breakpoints": Object {
+    "lg": Object {
+      "value": "1024px",
+    },
+    "md": Object {
+      "value": "768px",
+    },
+    "sm": Object {
+      "value": "375px",
+    },
+    "xl": Object {
+      "value": "1280px",
+    },
+    "xs": Object {
+      "value": "320px",
+    },
+  },
+}
+`;
