@@ -19,7 +19,8 @@
     "build": "lerna run build --parallel",
     "build.ci": "lerna run build.ci --parallel",
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean"
+    "clean": "lerna clean",
+    "storybook": "lerna run start:storybook --parallel"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -122,7 +123,7 @@
     "nohoist": []
   },
   "engines": {
-    "node": ">= 16"
+    "node": ">= 12"
   },
   "config": {
     "commitizen": {
