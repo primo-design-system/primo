@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base color tokens : matches snapshot 1`] = `
+Object {
+  "color": Object {
+    "black": Object {
+      "value": Object {
+        "hex": "#000000",
+      },
+    },
+    "blue": Object {
+      "10": Object {
+        "value": Object {
+          "hex": "#0000FF",
+          "opacity": 0.1,
+        },
+      },
+      "100": Object {
+        "value": Object {
+          "hex": "#0000FF",
+        },
+      },
+      "20": Object {
+        "value": Object {
+          "hex": "#0000FF",
+          "opacity": 0.2,
+        },
+      },
+      "40": Object {
+        "value": Object {
+          "hex": "#0000FF",
+          "opacity": 0.4,
+        },
+      },
+      "5": Object {
+        "value": Object {
+          "hex": "#0000FF",
+          "opacity": 0.05,
+        },
+      },
+      "60": Object {
+        "value": Object {
+          "hex": "#0000FF",
+          "opacity": 0.6,
+        },
+      },
+      "80": Object {
+        "value": Object {
+          "hex": "#0000FF",
+          "opacity": 0.8,
+        },
+      },
+    },
+    "green": Object {
+      "10": Object {
+        "value": Object {
+          "hex": "#00FF00",
+          "opacity": 0.1,
+        },
+      },
+      "100": Object {
+        "value": Object {
+          "hex": "#00FF00",
+        },
+      },
+      "20": Object {
+        "value": Object {
+          "hex": "#00FF00",
+          "opacity": 0.2,
+        },
+      },
+      "40": Object {
+        "value": Object {
+          "hex": "#00FF00",
+          "opacity": 0.4,
+        },
+      },
+      "5": Object {
+        "value": Object {
+          "hex": "#00FF00",
+          "opacity": 0.05,
+        },
+      },
+      "60": Object {
+        "value": Object {
+          "hex": "#00FF00",
+          "opacity": 0.6,
+        },
+      },
+      "80": Object {
+        "value": Object {
+          "hex": "#00FF00",
+          "opacity": 0.8,
+        },
+      },
+    },
+    "grey": Object {
+      "10": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.1,
+        },
+      },
+      "100": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+        },
+      },
+      "20": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.2,
+        },
+      },
+      "40": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.4,
+        },
+      },
+      "5": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.05,
+        },
+      },
+      "60": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.6,
+        },
+      },
+      "80": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.8,
+        },
+      },
+    },
+    "orange": Object {
+      "10": Object {
+        "value": Object {
+          "hex": "#FFA500",
+          "opacity": 0.1,
+        },
+      },
+      "100": Object {
+        "value": Object {
+          "hex": "#FFA500",
+        },
+      },
+      "20": Object {
+        "value": Object {
+          "hex": "#FFA500",
+          "opacity": 0.2,
+        },
+      },
+      "40": Object {
+        "value": Object {
+          "hex": "#FFA500",
+          "opacity": 0.4,
+        },
+      },
+      "5": Object {
+        "value": Object {
+          "hex": "#FFA500",
+          "opacity": 0.05,
+        },
+      },
+      "60": Object {
+        "value": Object {
+          "hex": "#FFA500",
+          "opacity": 0.6,
+        },
+      },
+      "80": Object {
+        "value": Object {
+          "hex": "#FFA500",
+          "opacity": 0.8,
+        },
+      },
+    },
+    "red": Object {
+      "10": Object {
+        "value": Object {
+          "hex": "#FF0000",
+          "opacity": 0.1,
+        },
+      },
+      "100": Object {
+        "value": Object {
+          "hex": "#FF0000",
+        },
+      },
+      "20": Object {
+        "value": Object {
+          "hex": "#FF0000",
+          "opacity": 0.2,
+        },
+      },
+      "40": Object {
+        "value": Object {
+          "hex": "#FF0000",
+          "opacity": 0.4,
+        },
+      },
+      "5": Object {
+        "value": Object {
+          "hex": "#FF0000",
+          "opacity": 0.05,
+        },
+      },
+      "60": Object {
+        "value": Object {
+          "hex": "#FF0000",
+          "opacity": 0.6,
+        },
+      },
+      "80": Object {
+        "value": Object {
+          "hex": "#FF0000",
+          "opacity": 0.8,
+        },
+      },
+    },
+    "white": Object {
+      "value": Object {
+        "hex": "#FFFFFF",
+      },
+    },
+    "yellow": Object {
+      "10": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.1,
+        },
+      },
+      "100": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+        },
+      },
+      "20": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.2,
+        },
+      },
+      "40": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.4,
+        },
+      },
+      "5": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.05,
+        },
+      },
+      "60": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.6,
+        },
+      },
+      "80": Object {
+        "value": Object {
+          "hex": "#FFFF00",
+          "opacity": 0.8,
+        },
+      },
+    },
+  },
+}
+`;
