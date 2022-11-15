@@ -1,7 +1,12 @@
+@use "sass:map";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 /** @define utilities */
 
 $radius: (
-  'none': 0,
+  'None': 0,
   '1': 1,
   '2': 2,
   '4': 4,
@@ -23,7 +28,7 @@ $radius: (
 
 @each $key, $value in $radius {
   /* stylelint-disable-next-line */
-  .u-borderRadius#{functions.capitalize($key)} {
+  .u-borderRadius#{$key} {
     border-radius: var(--border-radius-#{$value});
 
     @each $breakpoint in variables.$breakpoints {
