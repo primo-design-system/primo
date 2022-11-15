@@ -9,217 +9,312 @@ Object {
       },
     },
     "blue": Object {
+      "0": Object {
+        "value": Object {
+          "hex": "#f4fbff",
+        },
+      },
       "10": Object {
         "value": Object {
-          "hex": "#0000FF",
-          "opacity": 0.1,
+          "hex": "#c5e8fd",
         },
       },
       "100": Object {
         "value": Object {
-          "hex": "#0000FF",
+          "hex": "#002b87",
+        },
+      },
+      "15": Object {
+        "value": Object {
+          "hex": "#addefb",
         },
       },
       "20": Object {
         "value": Object {
-          "hex": "#0000FF",
-          "opacity": 0.2,
+          "hex": "#97d4fa",
+        },
+      },
+      "30": Object {
+        "value": Object {
+          "hex": "#6ebff5",
         },
       },
       "40": Object {
         "value": Object {
-          "hex": "#0000FF",
-          "opacity": 0.4,
+          "hex": "#4caaed",
         },
       },
-      "5": Object {
+      "50": Object {
         "value": Object {
-          "hex": "#0000FF",
-          "opacity": 0.05,
+          "hex": "#3294e4",
         },
       },
       "60": Object {
         "value": Object {
-          "hex": "#0000FF",
-          "opacity": 0.6,
+          "hex": "#1e7dd7",
+        },
+      },
+      "70": Object {
+        "value": Object {
+          "hex": "#1166c7",
         },
       },
       "80": Object {
         "value": Object {
-          "hex": "#0000FF",
-          "opacity": 0.8,
+          "hex": "#0850b3",
+        },
+      },
+      "90": Object {
+        "value": Object {
+          "hex": "#033b9e",
         },
       },
     },
     "green": Object {
+      "0": Object {
+        "value": Object {
+          "hex": "#f4fff7",
+        },
+      },
       "10": Object {
         "value": Object {
-          "hex": "#00FF00",
-          "opacity": 0.1,
+          "hex": "#c5fdd3",
         },
       },
       "100": Object {
         "value": Object {
-          "hex": "#00FF00",
+          "hex": "#008738",
+        },
+      },
+      "15": Object {
+        "value": Object {
+          "hex": "#adfbc1",
         },
       },
       "20": Object {
         "value": Object {
-          "hex": "#00FF00",
-          "opacity": 0.2,
+          "hex": "#97fab0",
+        },
+      },
+      "30": Object {
+        "value": Object {
+          "hex": "#6ef592",
         },
       },
       "40": Object {
         "value": Object {
-          "hex": "#00FF00",
-          "opacity": 0.4,
+          "hex": "#4ced79",
         },
       },
-      "5": Object {
+      "50": Object {
         "value": Object {
-          "hex": "#00FF00",
-          "opacity": 0.05,
+          "hex": "#32e466",
         },
       },
       "60": Object {
         "value": Object {
-          "hex": "#00FF00",
-          "opacity": 0.6,
+          "hex": "#1ed758",
+        },
+      },
+      "70": Object {
+        "value": Object {
+          "hex": "#11c74e",
         },
       },
       "80": Object {
         "value": Object {
-          "hex": "#00FF00",
-          "opacity": 0.8,
+          "hex": "#08b346",
+        },
+      },
+      "90": Object {
+        "value": Object {
+          "hex": "#039e3f",
         },
       },
     },
     "grey": Object {
+      "0": Object {
+        "value": Object {
+          "hex": "#f5f5f5",
+        },
+      },
       "10": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.1,
+          "hex": "#f3f3f3",
         },
       },
       "100": Object {
         "value": Object {
-          "hex": "#FFFF00",
+          "hex": "#787878",
+        },
+      },
+      "15": Object {
+        "value": Object {
+          "hex": "#f1f1f1",
         },
       },
       "20": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.2,
+          "hex": "#efefef",
+        },
+      },
+      "30": Object {
+        "value": Object {
+          "hex": "#eaeaea",
         },
       },
       "40": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.4,
+          "hex": "#e2e2e2",
         },
       },
-      "5": Object {
+      "50": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.05,
+          "hex": "#d8d8d8",
         },
       },
       "60": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.6,
+          "hex": "#cbcbcb",
+        },
+      },
+      "70": Object {
+        "value": Object {
+          "hex": "#bababa",
         },
       },
       "80": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.8,
+          "hex": "#a6a6a6",
+        },
+      },
+      "90": Object {
+        "value": Object {
+          "hex": "#8f8f8f",
         },
       },
     },
     "orange": Object {
+      "0": Object {
+        "value": Object {
+          "hex": "#fff7f4",
+        },
+      },
       "10": Object {
         "value": Object {
-          "hex": "#FFA500",
-          "opacity": 0.1,
+          "hex": "#fdd7c5",
         },
       },
       "100": Object {
         "value": Object {
-          "hex": "#FFA500",
+          "hex": "#874a00",
+        },
+      },
+      "15": Object {
+        "value": Object {
+          "hex": "#fbc7ad",
         },
       },
       "20": Object {
         "value": Object {
-          "hex": "#FFA500",
-          "opacity": 0.2,
+          "hex": "#fab797",
+        },
+      },
+      "30": Object {
+        "value": Object {
+          "hex": "#f59c6e",
         },
       },
       "40": Object {
         "value": Object {
-          "hex": "#FFA500",
-          "opacity": 0.4,
+          "hex": "#ed854c",
         },
       },
-      "5": Object {
+      "50": Object {
         "value": Object {
-          "hex": "#FFA500",
-          "opacity": 0.05,
+          "hex": "#e47532",
         },
       },
       "60": Object {
         "value": Object {
-          "hex": "#FFA500",
-          "opacity": 0.6,
+          "hex": "#d7691e",
+        },
+      },
+      "70": Object {
+        "value": Object {
+          "hex": "#c76011",
         },
       },
       "80": Object {
         "value": Object {
-          "hex": "#FFA500",
-          "opacity": 0.8,
+          "hex": "#b35908",
+        },
+      },
+      "90": Object {
+        "value": Object {
+          "hex": "#9e5203",
         },
       },
     },
     "red": Object {
+      "0": Object {
+        "value": Object {
+          "hex": "#fff4f4",
+        },
+      },
       "10": Object {
         "value": Object {
-          "hex": "#FF0000",
-          "opacity": 0.1,
+          "hex": "#fdc5c5",
         },
       },
       "100": Object {
         "value": Object {
-          "hex": "#FF0000",
+          "hex": "#870900",
+        },
+      },
+      "15": Object {
+        "value": Object {
+          "hex": "#fbaead",
         },
       },
       "20": Object {
         "value": Object {
-          "hex": "#FF0000",
-          "opacity": 0.2,
+          "hex": "#fa9797",
+        },
+      },
+      "30": Object {
+        "value": Object {
+          "hex": "#f56f6e",
         },
       },
       "40": Object {
         "value": Object {
-          "hex": "#FF0000",
-          "opacity": 0.4,
+          "hex": "#ed4e4c",
         },
       },
-      "5": Object {
+      "50": Object {
         "value": Object {
-          "hex": "#FF0000",
-          "opacity": 0.05,
+          "hex": "#e43532",
         },
       },
       "60": Object {
         "value": Object {
-          "hex": "#FF0000",
-          "opacity": 0.6,
+          "hex": "#d7231e",
+        },
+      },
+      "70": Object {
+        "value": Object {
+          "hex": "#c71711",
         },
       },
       "80": Object {
         "value": Object {
-          "hex": "#FF0000",
-          "opacity": 0.8,
+          "hex": "#b31008",
+        },
+      },
+      "90": Object {
+        "value": Object {
+          "hex": "#9e0b03",
         },
       },
     },
@@ -229,45 +324,64 @@ Object {
       },
     },
     "yellow": Object {
+      "0": Object {
+        "value": Object {
+          "hex": "#fffdf4",
+        },
+      },
       "10": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.1,
+          "hex": "#fdf4c5",
         },
       },
       "100": Object {
         "value": Object {
-          "hex": "#FFFF00",
+          "hex": "#876800",
+        },
+      },
+      "15": Object {
+        "value": Object {
+          "hex": "#fbeead",
         },
       },
       "20": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.2,
+          "hex": "#fae997",
+        },
+      },
+      "30": Object {
+        "value": Object {
+          "hex": "#f5dd6e",
         },
       },
       "40": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.4,
+          "hex": "#edd14c",
         },
       },
-      "5": Object {
+      "50": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.05,
+          "hex": "#e4c332",
         },
       },
       "60": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.6,
+          "hex": "#d7b41e",
+        },
+      },
+      "70": Object {
+        "value": Object {
+          "hex": "#c7a211",
         },
       },
       "80": Object {
         "value": Object {
-          "hex": "#FFFF00",
-          "opacity": 0.8,
+          "hex": "#b38f08",
+        },
+      },
+      "90": Object {
+        "value": Object {
+          "hex": "#9e7b03",
         },
       },
     },

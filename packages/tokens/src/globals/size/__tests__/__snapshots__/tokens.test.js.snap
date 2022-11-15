@@ -2,39 +2,48 @@
 
 exports[`spacing tokens : matches snapshot 1`] = `
 Object {
-  "spacing": Object {
+  "size": Object {
+    "0": Object {
+      "value": 0,
+    },
+    "1": Object {
+      "value": 1,
+    },
     "128": Object {
-      "value": "128px",
+      "value": 128,
     },
     "16": Object {
-      "value": "16px",
+      "value": 16,
+    },
+    "2": Object {
+      "value": 2,
     },
     "24": Object {
-      "value": "24px",
+      "value": 24,
     },
     "256": Object {
-      "value": "256px",
+      "value": 256,
     },
     "32": Object {
-      "value": "32px",
+      "value": 32,
     },
     "4": Object {
-      "value": "4px",
+      "value": 4,
     },
     "40": Object {
-      "value": "40px",
+      "value": 40,
     },
     "48": Object {
-      "value": "48px",
+      "value": 48,
     },
     "64": Object {
-      "value": "64px",
+      "value": 64,
     },
     "8": Object {
-      "value": "8px",
+      "value": 8,
     },
     "96": Object {
-      "value": "96px",
+      "value": 96,
     },
   },
 }

@@ -11,6 +11,11 @@ Object {
         "value": "Work Sans, 'Helvetica Neue', sans",
       },
     },
+    "line-height": Object {
+      "default": Object {
+        "value": "1.5",
+      },
+    },
     "size": Object {
       "100": Object {
         "value": "6.25",
@@ -28,7 +33,7 @@ Object {
         "value": "1",
       },
       "18": Object {
-        "value": "18",
+        "value": "1.125",
       },
       "20": Object {
         "value": "1.25",
@@ -85,16 +90,34 @@ Object {
         "value": "1",
       },
     },
-    "weight": Object {
-      "bold": Object {
-        "value": 700,
-      },
-      "medium": Object {
-        "value": 500,
-      },
-      "regular": Object {
-        "value": 400,
-      },
+  },
+  "font-weight": Object {
+    "black": Object {
+      "value": "900",
+    },
+    "bold": Object {
+      "value": "700",
+    },
+    "extrabold": Object {
+      "value": "800",
+    },
+    "extralight": Object {
+      "value": "200",
+    },
+    "light": Object {
+      "value": "300",
+    },
+    "medium": Object {
+      "value": "500",
+    },
+    "regular": Object {
+      "value": "400",
+    },
+    "semibold": Object {
+      "value": "600",
+    },
+    "thin": Object {
+      "value": "100",
     },
   },
 }

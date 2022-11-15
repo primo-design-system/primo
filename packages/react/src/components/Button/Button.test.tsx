@@ -45,7 +45,7 @@ describe('<Button />', () => {
     const { rerender } = render(<Button {...defaultProps} />);
 
     expect(screen.getByTestId('test-button')).toBeInTheDocument();
-    expect(screen.getByTestId('test-button')).toHaveClass('cds-Button');
+    expect(screen.getByTestId('test-button')).toHaveClass('pds-Button');
 
     // Change props
     rerender(<Button {...props} />);
@@ -79,13 +79,13 @@ describe('<Button />', () => {
     const { rerender } = render(<Button {...defaultProps} />);
 
     expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'cds-Button--small'
+      'pds-Button--small'
     );
 
     // Change props
     rerender(<Button {...props} />);
 
-    expect(screen.getByTestId('test-button')).toHaveClass('cds-Button--small');
+    expect(screen.getByTestId('test-button')).toHaveClass('pds-Button--small');
   });
 
   // test(': renders with `startIcon`', () => {
@@ -102,7 +102,7 @@ describe('<Button />', () => {
   //   rerender(<Button {...props} />);
 
   //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'cds-Button--startIcon'
+  //     'pds-Button--startIcon'
   //   );
   //   expect(screen.getByTestId('test-button-svg')).toBeInTheDocument();
   //   expect(screen.getByTestId('test-button-svg')).toHaveClass('cds-Icon');
@@ -123,8 +123,8 @@ describe('<Button />', () => {
   //   rerender(<Button {...props} />);
 
   //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'cds-Button--startIcon',
-  //     'cds-Button--small'
+  //     'pds-Button--startIcon',
+  //     'pds-Button--small'
   //   );
   //   expect(screen.getByTestId('test-button-svg')).toBeInTheDocument();
   //   expect(screen.getByTestId('test-button-svg')).toHaveClass(
@@ -148,10 +148,10 @@ describe('<Button />', () => {
   //   rerender(<Button {...props} />);
 
   //   expect(screen.getByTestId('test-button')).not.toHaveClass(
-  //     'cds-Button--endIcon'
+  //     'pds-Button--endIcon'
   //   );
   //   expect(screen.getByTestId('test-button')).not.toHaveClass(
-  //     'cds-Button--startIcon'
+  //     'pds-Button--startIcon'
   //   );
   //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
   // });
@@ -170,10 +170,10 @@ describe('<Button />', () => {
   //   rerender(<Button {...props} />);
 
   //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'cds-Button--endIcon'
+  //     'pds-Button--endIcon'
   //   );
   //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'cds-Button--onlyIcon'
+  //     'pds-Button--onlyIcon'
   //   );
   //   expect(screen.queryByTestId('test-button-svg')).toBeInTheDocument();
   // });
@@ -205,33 +205,33 @@ describe('<Button />', () => {
     const { rerender } = render(<Button {...defaultProps} />);
 
     expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'cds-Button--fullWidth'
+      'pds-Button--fullWidth'
     );
 
     // Change props
     rerender(<Button {...props} />);
 
     expect(screen.getByTestId('test-button')).toHaveClass(
-      'cds-Button--fullWidth'
+      'pds-Button--fullWidth'
     );
   });
 
   test(': is set with class by the `className` prop', () => {
     const props = {
       ...defaultProps,
-      className: 'cds-Button--modifier',
+      className: 'pds-Button--modifier',
     };
     const { rerender } = render(<Button {...defaultProps} />);
 
     expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'cds-Button--modifier'
+      'pds-Button--modifier'
     );
 
     // Change props
     rerender(<Button {...props} />);
 
     expect(screen.getByTestId('test-button')).toHaveClass(
-      'cds-Button--modifier'
+      'pds-Button--modifier'
     );
   });
 
