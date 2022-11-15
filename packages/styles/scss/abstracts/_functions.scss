@@ -1,6 +1,6 @@
-@use "sass:list";
-@use "sass:map";
-@use "sass:string";
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:string';
 ///
 /// Map deep get
 ///
@@ -24,7 +24,8 @@
 /// @return {String}
 ///
 @function capitalize($string) {
-  @return string.to-upper-case(string.slice($string, 1, 1)) + string.slice($string, 2);
+  @return string.to-upper-case(string.slice($string, 1, 1)) +
+    string.slice($string, 2);
 }
 
 // Alias
@@ -38,7 +39,8 @@
 /// @return {String}
 ///
 @function uncapitalize($string) {
-  @return string.to-lower-case(string.slice($string, 1, 1)) + string.slice($string, 2);
+  @return string.to-lower-case(string.slice($string, 1, 1)) +
+    string.slice($string, 2);
 }
 
 // Alias

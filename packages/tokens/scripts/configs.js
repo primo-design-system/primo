@@ -9,7 +9,7 @@ const transforms = [
   'size/rem',
   'color/opacity',
   'color/transform',
-  'color/hsl'
+  'color/hsl',
 ];
 
 const web = [
@@ -53,9 +53,9 @@ const web = [
             format: `json/flat`,
           },
         ],
-      }
-    }
-  }
+      },
+    },
+  },
 ];
 
 export default [...web];

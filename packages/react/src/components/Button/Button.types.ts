@@ -9,7 +9,13 @@ export type RefType = React.Ref<HTMLButtonElement | HTMLAnchorElement>;
 export type ButtonFill = 'default' | 'ghost' | 'outline';
 export type ButtonTarget = '_blank' | '_parent' | '_self' | '_top';
 export type ButtonType = 'button' | 'reset' | 'submit';
-export type ButtonVariant = 'default' | 'primary' | 'secondary' | 'tertiary' | 'positive' | 'negative';
+export type ButtonVariant =
+  | 'default'
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'positive'
+  | 'negative';
 
 interface SharedButtonProps {
   /** Specify the content of your Button */

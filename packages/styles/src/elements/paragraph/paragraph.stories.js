@@ -1,8 +1,8 @@
-import paragraphDefault from "./paragraph.html";
+import paragraphDefault from './paragraph.html';
 
 export default {
   title: 'Elements/Paragraph',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const paragraph = () => paragraphDefault;

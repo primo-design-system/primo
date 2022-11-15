@@ -1,8 +1,8 @@
-import anchorDefault from "./anchor.html";
+import anchorDefault from './anchor.html';
 
 export default {
   title: 'Elements/Anchor',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const anchor = () => anchorDefault;

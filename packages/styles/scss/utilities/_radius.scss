@@ -1,7 +1,7 @@
-@use "sass:map";
-@use "../abstracts/functions";
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use 'sass:map';
+@use '../abstracts/functions';
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 /** @define utilities */
 
@@ -13,7 +13,7 @@ $radius: (
   '8': 16,
   '24': 24,
   '64': 64,
-  '128': 128
+  '128': 128,
 );
 
 ///

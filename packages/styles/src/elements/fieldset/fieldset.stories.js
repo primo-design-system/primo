@@ -1,8 +1,8 @@
-import fieldsetDefault from "./fieldset.html";
+import fieldsetDefault from './fieldset.html';
 
 export default {
   title: 'Elements/Fieldset',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const fieldset = () => fieldsetDefault;

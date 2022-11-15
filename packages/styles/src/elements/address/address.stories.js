@@ -1,8 +1,8 @@
-import addressDefault from "./address.html";
+import addressDefault from './address.html';
 
 export default {
   title: 'Elements/Address',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const address = () => addressDefault;

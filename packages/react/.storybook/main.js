@@ -3,9 +3,7 @@
 const path = require('path');
 
 module.exports = {
-  stories: [
-    '../src/**/*.stories.@(mdx|tsx)',
-  ],
+  stories: ['../src/**/*.stories.@(mdx|tsx)'],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',
@@ -38,7 +36,7 @@ module.exports = {
     config.module.rules.push(
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader',],
+        use: ['style-loader', 'css-loader'],
         include: path.resolve(__dirname, '../'),
       },
       {

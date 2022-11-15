@@ -38,9 +38,8 @@ input[type='file']::file-selector-button {
   &[aria-disabled='true']:focus:not(:focus-visible),
   &[aria-disabled='true']:focus-within:not(:focus-visible),
   &[aria-disabled='true']:focus-visible:not(:focus) {
-      background-color: var(--color-grey-10);
-      color: var(--color-grey-60);
-      cursor: not-allowed;
+    background-color: var(--color-grey-10);
+    color: var(--color-grey-60);
+    cursor: not-allowed;
   }
 }
-

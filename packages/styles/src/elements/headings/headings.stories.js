@@ -1,8 +1,8 @@
-import headingsDefault from "./headings.html";
+import headingsDefault from './headings.html';
 
 export default {
   title: 'Elements/Headings',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const headings = () => headingsDefault;

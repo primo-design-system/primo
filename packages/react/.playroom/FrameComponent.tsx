@@ -8,11 +8,13 @@ import '@primo/components/dist/style.min.css';
 
 const FrameComponent: FunctionComponent = ({ children }) => {
   const body = document.body;
-  body.classList.add("primo");
+  body.classList.add('primo');
 
   return (
     <>
-      <div className='pds-ThemeProvider pds-ThemeProvider--primo'>{children}</div>
+      <div className="pds-ThemeProvider pds-ThemeProvider--primo">
+        {children}
+      </div>
     </>
   );
 };

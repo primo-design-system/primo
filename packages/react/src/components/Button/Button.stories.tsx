@@ -15,33 +15,37 @@ export default {
   component: Button,
 } as Meta;
 
-export const Default: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => <Button {...args} />;
+export const Default: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} />;
 
-export const Primary: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => (
-  <Button {...args} variant="primary" />
-);
+export const Primary: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} variant="primary" />;
 
-export const Secondary: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => (
-  <Button {...args} variant="secondary" />
-);
+export const Secondary: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} variant="secondary" />;
 
-export const Tertiary: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => (
-  <Button {...args} variant="tertiary" />
-);
+export const Tertiary: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} variant="tertiary" />;
 
-export const Positive: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => (
-  <Button {...args} variant="positive" />
-);
+export const Positive: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} variant="positive" />;
 
-export const Negative: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => (
-  <Button {...args} variant="negative" />
-);
+export const Negative: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} variant="negative" />;
 
-export const FullWidth: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => (
-  <Button {...args} isFullWidth />
-);
+export const FullWidth: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} isFullWidth />;
 
-export const Small: Story<ButtonProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => <Button {...args} isSmall />;
+export const Small: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} isSmall />;
 
 // export const WithIcon: Story<ButtonElementProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => (
 //   <Button {...args} startIcon="copy" />

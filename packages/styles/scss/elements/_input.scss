@@ -54,7 +54,7 @@ input {
     margin: 0;
     padding: 0;
 
-    &::file-selector-button{
+    &::file-selector-button {
       margin-right: var(--size-8);
     }
 
@@ -68,7 +68,6 @@ input {
   &[type='number'] {
     -moz-appearance: textfield;
   }
-
 
   // Re-enables the -webkit- search pseudo elements
 
@@ -138,7 +137,7 @@ input {
     border-radius: var(--size-2);
 
     &:before {
-      content: "\2713";
+      content: '\2713';
       color: var(--color-white);
       border-radius: var(--size-2);
       line-height: 1;

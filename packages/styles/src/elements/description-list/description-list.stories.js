@@ -1,8 +1,8 @@
-import descriptionListDefault from "./description-list.html";
+import descriptionListDefault from './description-list.html';
 
 export default {
   title: 'Elements/DescriptionList',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const descriptionList = () => descriptionListDefault;

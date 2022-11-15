@@ -20,7 +20,11 @@ StyleDictionary.registerTransform({
   name: 'size/px',
   type: 'value',
   matcher: ({ attributes }) => {
-    return attributes.category === 'size' || attributes.category === 'border-radius' || attributes.category === 'spacing';
+    return (
+      attributes.category === 'size' ||
+      attributes.category === 'border-radius' ||
+      attributes.category === 'spacing'
+    );
   },
   transformer: ({ value }) => `${value}px`,
 });

@@ -1,8 +1,8 @@
-import pictureDefault from "./picture.html";
+import pictureDefault from './picture.html';
 
 export default {
   title: 'Elements/Picture',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const picture = () => pictureDefault;

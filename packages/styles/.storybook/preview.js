@@ -1,5 +1,5 @@
-import { addParameters } from "@storybook/html";
-import "@storybook/addon-console";
+import { addParameters } from '@storybook/html';
+import '@storybook/addon-console';
 import '@primo/tokens/dist/css/tokens.css';
 import '../dist/style.css';
 
@@ -8,7 +8,7 @@ addParameters({
     config: {},
     options: {},
   },
-  layout: "fullscreen",
+  layout: 'fullscreen',
   html: {
     prettier: {
       tabWidth: 2,
@@ -18,6 +18,6 @@ addParameters({
   },
 });
 
-document.body.onload = function() {
-  document.body.classList.add("pds-ThemeProvider--primo");
+document.body.onload = function () {
+  document.body.classList.add('pds-ThemeProvider--primo');
 };

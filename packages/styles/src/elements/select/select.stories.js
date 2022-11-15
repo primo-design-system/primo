@@ -1,8 +1,8 @@
-import selectDefault from "./select.html";
+import selectDefault from './select.html';
 
 export default {
   title: 'Elements/Select',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const select = () => selectDefault;

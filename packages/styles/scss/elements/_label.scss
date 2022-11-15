@@ -3,8 +3,8 @@ label {
   display: inherit;
   font-size: var(--font-size-14);
 
-  + input:not([type=checkbox], [type=radio], [type=submit], [type=reset], [type=button]), 
-  + textarea, 
+  + input:not([type='checkbox'], [type='radio'], [type='submit'], [type='reset'], [type='button']),
+  + textarea,
   + select {
     margin-top: var(--size-4);
   }

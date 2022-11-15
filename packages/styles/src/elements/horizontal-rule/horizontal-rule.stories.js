@@ -1,8 +1,8 @@
-import horizontalRuleDefault from "./horizontal-rule.html";
+import horizontalRuleDefault from './horizontal-rule.html';
 
 export default {
   title: 'Elements/HorizontalRule',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const horizontalRule = () => horizontalRuleDefault;

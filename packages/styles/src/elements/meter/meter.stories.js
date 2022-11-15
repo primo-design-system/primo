@@ -1,8 +1,8 @@
-import meterDefault from "./meter.html";
+import meterDefault from './meter.html';
 
 export default {
   title: 'Elements/Meter',
-  parameters: { layout: "centered" },
+  parameters: { layout: 'centered' },
 };
 
 export const meter = () => meterDefault;
