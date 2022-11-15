@@ -1,0 +1,7 @@
+@charset 'UTF-8';
+@use "sass:meta";
+
+.primo {
+    // Component styles
+    @include meta.load-css('components/button');
+}
