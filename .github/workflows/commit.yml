@@ -1,12 +1,13 @@
 ---
-name: 🔎 Review
+name: 👩‍💻 Commit
 
 on:
-  pull_request:
-    branches: [ main, next ]
+  push:
+    branches:
+    - '**'
 
 jobs:
-  Review:
+  Commit:
     runs-on: ubuntu-latest
     env:
       working-directory: ./
@@ -34,15 +35,9 @@ jobs:
 
       - name: 🚧 Install
         run: yarn
-      
-      - name: 💡 Build
-        run: yarn build
 
       # - name: 📝 Lint
-      #   run: yarn lint      
+      #   run: yarn lint
 
-      - name: 🧪 Test
-        run: yarn test
-      
-      # - name: ♻️ Bundlesize
-      #   run: yarn bundlesize
+      - name: 🔀 Format
+        run: yarn prettier

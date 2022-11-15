@@ -21,6 +21,8 @@
     "build.ci": "lerna run build.ci --parallel",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
+    "release": "multi-semantic-release",
+    "release:dryrun": "yarn release --dry-run",
     "storybook": "lerna run start:storybook --parallel"
   },
   "devDependencies": {
@@ -57,7 +59,7 @@
     "jest": "^26.1.0",
     "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
-    "multi-semantic-release": "^2.4.5",
+    "multi-semantic-release": "^3.0.1",
     "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
