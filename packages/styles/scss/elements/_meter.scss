@@ -1,0 +1,51 @@
+meter {
+    border-radius: var(--size-8);
+    height: var(--size-16);
+    background: var(--color-grey-10);
+
+    &::-webkit-meter-bar {
+        border-radius: var(--size-8);
+        height: var(--size-16);
+        border: none;
+        background: var(--color-grey-10);
+    }
+
+    &::-webkit-meter-optimum-value {
+        background: var(--color-blue-60);
+    }
+
+    &::-webkit-meter-suboptimum-value {
+        background: var(--color-blue-40);
+    }
+
+    &::-webkit-meter-even-less-good-value {
+        background: var(--color-blue-20);
+    }
+
+    &::-moz-meter-bar {
+        border-radius: var(--size-8);
+        height: var(--size-16);
+        border: none;
+        background: var(--color-grey-10);
+    }
+
+    &:-moz-meter-optimum::-moz-meter-bar {
+        background: var(--color-blue-60);
+    }
+
+    &:-moz-meter-sub-optimum::-moz-meter-bar {
+        background: var(--color-blue-40);
+    }
+
+    &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+        background: var(--color-blue-20);
+    }
+
+    &[value] {
+        &[value='0'] {
+            &::-webkit-meter-optimum-value {
+                background: var(--color-grey-90);
+            }
+        }
+    }
+}

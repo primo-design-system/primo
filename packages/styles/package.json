@@ -1,7 +1,7 @@
 {
   "name": "@primo/styles",
   "version": "0.0.0",
-  "description": "> TODO: description",
+  "description": "Primo base CSS styles",
   "author": "Richard McCartney <richard@mccartney.io>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
   "license": "MIT",
@@ -11,6 +11,7 @@
   "files": [
     "dist/"
   ],
+  "style": "dist/style.min.css",
   "publishConfig": {
     "access": "public"
   },
@@ -21,16 +22,58 @@
   "bugs": {
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "lint:html": "htmlhint \"src/**/*.html\"",
+    "lint:styles": "stylelint '**/*.{css,scss}'",
+    "lint:styles:fix": "stylelint '**/*.{css,scss}' --fix",
+    "build:storybook": "build-storybook -c .storybook -o build",
+    "build:storybook:quiet": "yarn storybook --quiet",
+    "start:storybook": "start-storybook --ci -p 6001"
+  },
   "sass": {
     "includePaths": [
       "./node_modules"
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@postcss-plugins/text-transform": "^0.1.2",
     "@primo/stylelint-config": "^1.0.1",
     "@primo/tokens": "^0.0.0",
-    "node-sass": "^7.0.0",
-    "stylelint": "10.1.0",
-    "stylelint-order": "3.0.1"
+    "@primo/postcss-config": "^0.0.0",
+    "@storybook/addon-a11y": "^6.3.9",
+    "@storybook/addon-actions": "^6.3.9",
+    "@storybook/addon-console": "^1.2.3",
+    "@storybook/addon-design-assets": "^6.2.9",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-viewport": "^6.3.9",
+    "@storybook/addon-essentials": "^6.5.8",
+    "@storybook/addon-links": "^6.5.8",
+    "@storybook/addon-interactions": "^6.5.8",
+    "@storybook/html": "^6.5.8",
+    "@storybook/preset-scss": "^1.0.3",
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "babel-loader": "^8.2.2",
+    "autoprefixer": "^9.0.0",
+    "cssnano": "^5.1.7",
+    "css-loader": "^6.7.1",
+    "chroma-js": "^2.1.2",
+    "htmlhint": "^0.15.2",
+    "postcss": "^8.4.12",
+    "postcss-import": "^14.1.0",
+    "postcss-reporter": "^7.0.5",
+    "postcss-scss": "^4.0.3",
+    "rollup": "^2.70.1",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-sass": "^1.2.12",
+    "rollup-watch": "^4.3.1",
+    "sass": "^1.50.1",
+    "sass-loader": "10.1.1",
+    "style-loader": "2.0.0",
+    "stylelint": "^14.6.1"
   }
 }

@@ -1,0 +1,78 @@
+table {
+  border-color: var(--color-grey-80);
+  display: table;
+  border-collapse: collapse;
+}
+
+thead {
+  border-color: inherit;
+  display: table-header-group;
+  vertical-align: middle;
+  
+  th {
+    border-bottom: 1px solid var(--color-grey-40);
+  }
+}
+
+tbody {
+  border-color: inherit;
+  display: table-row-group;
+  vertical-align: middle;
+
+  th, td {
+    border-bottom: 1px solid var(--color-grey-30);
+  }
+
+  tr {
+    &:nth-child(even) {
+      background-color: var(--color-grey-10);
+    }
+  
+    &:hover {
+      background-color: var(--color-grey-20);
+    }
+  }
+}
+
+tfoot {
+  border-color: inherit;
+  display: table-footer-group;
+  vertical-align: middle;
+}
+
+// for tables without table section elements (can happen with XHTML or dynamically created tables)
+
+col {
+  display: table-column;
+}
+
+colgroup {
+  display: table-column-group;
+}
+
+tr {
+  border-color: inherit;
+  display: table-row;
+  vertical-align: inherit;
+}
+
+table > tr {
+  vertical-align: middle;
+}
+
+td,
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  text-align: initial;
+  padding: var(--size-8) var(--size-16);
+}
+
+th {
+  font-weight: bold;
+}
+
+caption {
+  display: table-caption;
+  text-align: -webkit-center;
+}

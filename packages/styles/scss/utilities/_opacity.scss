@@ -1,0 +1,44 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+/** @define utilities */
+
+$opacities: (
+  'none': 0,
+  '10': 0.1,
+  '20': 0.2,
+  '30': 0.3,
+  '40': 0.4,
+  '50': 0.5,
+  '60': 0.6,
+  '70': 0.7,
+  '80': 0.8,
+  '90': 0.9,
+  '100': 1,
+);
+
+///
+/// Opacity classes
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $opacities - Opacity variables
+/// @prop {Map} $breakpoints - Global breakpoint variables and names
+///
+
+@each $key, $value in $opacities {
+  /* stylelint-disable-next-line */
+  .u-opacity#{functions.capitalize($key)} {
+    opacity: var(--opacity-#{$value});
+
+    @each $breakpoint in variables.$breakpoints {
+      @include mixins.media-min-width($breakpoint) {
+        &:#{$breakpoint} {
+          opacity: var(--opacity-#{$value});
+        }
+      }
+    }
+  }
+}

@@ -1,32 +1,54 @@
 @charset 'UTF-8';
 
+@use '~@primo/tokens/dist/css/tokens';
+@use '~@primo/tokens/dist/scss/tokens' as tokens2;
+
 // Config and helpers
-@import 
-    'abstracts/variables',
-    'abstracts/functions',
-    'abstracts/mixins';
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
 
 // Vendors
-@import
-    'vendors/normalize';
+@use 'vendors/normalize';
 
 // Base styles
-@import
-  'base/base';
+@use 'base/reset';
+@use 'base/base';
+@use 'base/focus';
+@use 'base/selection';
 
 // Elements
-@import
-  'elements/button';
+@use 'elements/button';
+@use 'elements/input';
+@use 'elements/textarea';
+@use 'elements/select';
+@use 'elements/label';
+@use 'elements/tables';
+@use 'elements/hr';
+@use 'elements/headers';
+@use 'elements/lists';
+@use 'elements/link';
+@use 'elements/address';
+@use 'elements/blockquote';
+@use 'elements/code';
+@use 'elements/details';
+@use 'elements/dialog';
+@use 'elements/meter';
+@use 'elements/paragraphs';
+@use 'elements/progress';
+@use 'elements/media';
+@use 'elements/fieldset';
+@use 'elements/text';
 
 // Utilities
-@import
- 'utilities/color',
- 'utilities/font',
- 'utilities/font-size',
- 'utilities/opacity',
- 'utilities/radius',
- 'utilities/shadow',
- 'utilities/size',
- 'utilities/spacing',
- 'utilities/transitions',
- 'utilities/z-index';
+@use 'utilities/align';
+@use 'utilities/display';
+@use 'utilities/flex';
+@use 'utilities/layout';
+@use 'utilities/link' as link2;
+@use 'utilities/opacity';
+@use 'utilities/radius';
+@use 'utilities/spacing';
+@use 'utilities/text' as text2;
+@use 'utilities/word-break';
+@use 'utilities/z-index';

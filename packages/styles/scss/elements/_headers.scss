@@ -1,0 +1,39 @@
+//  Font sizes set for headline text. Using the font-size mixin will generate
+//  pixel and rem valued font-sizes.
+
+h1 {
+  font-size: var(--font-size-36);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--font-size-28);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--font-size-24);
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: var(--font-size-20);
+  line-height: 1.2;
+}
+
+h5,
+h6 {
+  font-size: var(--font-size-18);
+  line-height: 1.2;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+
+  + :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: var(--size-16);
+  }
+
+  + * {
+    margin-top: var(--size-16);
+  }
+}

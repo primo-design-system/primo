@@ -1,0 +1,22 @@
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: max(1px, 0.0625rem);
+  text-underline-offset: 0.1em;
+
+  &:hover {
+    color: inherit;
+    text-decoration-thickness: 3px;
+  }
+
+  &:active {
+    color: inherit;
+    text-decoration-thickness: 3px;
+    background-color: var(--color-yellow-20);
+  }
+}
+
+

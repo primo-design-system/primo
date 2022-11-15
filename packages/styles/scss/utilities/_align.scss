@@ -1,0 +1,37 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+/** @define utilities */
+
+///
+/// Vertical alignment utilities
+/// Depends on an appropriate `display` value.
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $key - Align variables
+/// @prop {Map} $breakpoints - Global breakpoint variables and names
+///
+@each $key,
+  $value
+    in (
+      'base line': 'baseline',
+      'top': 'top',
+      'middle': 'middle',
+      'bottom': 'bottom'
+    )
+{
+  .u-align#{functions.pascalize($key)} {
+    vertical-align: $value !important;
+
+    @each $breakpoint in variables.$breakpoints {
+      @include mixins.media-min-width($breakpoint) {
+        &:#{$breakpoint} {
+          vertical-align: $value !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@media (prefers-reduced-motion: no-preference) {
+  :focus,
+  :focus-visible,
+  :focus-within,
+  :focus:not(:focus-visible),
+  :focus-within:not(:focus-visible),
+  :focus-visible:not(:focus) {
+    outline-offset: var(--size-4);
+    transition: outline-offset 0.25s ease;
+  }
+
+  :not(:disabled):active,
+  :not(:disabled):focus-visible {
+    outline-color: var(--color-blue-60);
+  }
+}

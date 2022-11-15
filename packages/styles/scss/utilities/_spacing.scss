@@ -1,0 +1,95 @@
+@use "sass:map";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+/** @define utilities */
+
+$spacing-directions: 'top', 'left', 'bottom', 'right' !default;
+$spacing: (
+  'none': 0,
+  '4': 4,
+  '8': 8,
+  '16': 16,
+  '24': 24,
+  '32': 32,
+  '40': 40,
+  '48': 48,
+  '64': 64,
+  '128': 128,
+  '256': 256,
+) !default;
+$spacing-type: margin, padding !default;
+$spacing-values: map.values($spacing) !default;
+
+/**
+ * Sets padding or margin spacing 
+ */
+
+@each $type in $spacing-type {
+  @each $key, $value in $spacing {
+    /* stylelint-disable-next-line */
+    .u-#{$type}#{functions.capitalize($key)} {
+      #{$type}: var(--spacing-#{$value}) !important;
+
+      @each $breakpoint in variables.$breakpoints {
+        @include mixins.media-min-width($breakpoint) {
+          &:#{$breakpoint} {
+            #{$type}: var(--spacing-#{$value}) !important;
+          }
+        }
+      }
+    }
+
+    @each $direction in $spacing-directions {
+      $dir: #{functions.capitalize($direction)};
+      /* stylelint-disable-next-line */
+      .u-#{$type}#{$dir}#{functions.capitalize($key)} {
+        /* stylelint-disable-next-line */
+        #{$type}: {
+          #{$direction}: var(--spacing-#{$value}) !important;
+        }
+
+        @each $breakpoint in variables.$breakpoints {
+          @include mixins.media-min-width($breakpoint) {
+            &:#{$breakpoint} {
+              #{$type}: {
+                #{$direction}: var(--spacing-#{$value}) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* stylelint-disable-next-line */
+    .u-#{$type}Vert#{functions.capitalize($key)} {
+      #{$type}-bottom: var(--spacing-#{$value}) !important;
+      #{$type}-top: var(--spacing-#{$value}) !important;
+
+      @each $breakpoint in variables.$breakpoints {
+        @include mixins.media-min-width($breakpoint) {
+          &:#{$breakpoint} {
+            #{$type}-bottom: var(--spacing-#{$value}) !important;
+            #{$type}-top: var(--spacing-#{$value}) !important;
+          }
+        }
+      }
+    }
+
+    /* stylelint-disable-next-line */
+    .u-#{$type}Horiz#{functions.capitalize($key)} {
+      #{$type}-left: var(--spacing-#{$value}) !important;
+      #{$type}-right: var(--spacing-#{$value}) !important;
+
+      @each $breakpoint in variables.$breakpoints {
+        @include mixins.media-min-width($breakpoint) {
+          &:#{$breakpoint} {
+            #{$type}-left: var(--spacing-#{$value}) !important;
+            #{$type}-right: var(--spacing-#{$value}) !important;
+          }
+        }
+      }
+    }
+  }
+}

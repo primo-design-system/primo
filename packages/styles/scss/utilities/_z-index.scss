@@ -1,0 +1,25 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+/** @define utilities */
+
+///
+/// Z-index utilities
+///
+/// @access public
+/// @type Map
+/// @group utilities
+///
+@each $value in (0, 100, 200, 300, 400, 500, 600, 700, 800, 900) {
+  .u-zIndex#{$value} {
+    z-index: var(--z-index-#{$value});
+
+    @each $breakpoint in variables.$breakpoints {
+      @include mixins.media-min-width($breakpoint) {
+        &:#{$breakpoint} {
+          z-index: var(--z-index-#{$value});
+        }
+      }
+    }
+  }
+}

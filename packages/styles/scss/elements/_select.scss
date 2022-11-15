@@ -1,0 +1,81 @@
+select {
+  appearance: none;
+
+  border-radius: var(--size-4);
+  border: 1px solid var(--color-grey-60);
+  background: {
+    color: var(--color-white);
+    image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23CBCBCB" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
+    repeat: no-repeat;
+    size: var(--size-12) 3px;
+    position: right var(--size-16) center;
+  }
+  padding: var(--size-8) var(--size-48) var(--size-8) var(--size-16);
+
+  // Removes firefox select styles & arrow
+
+  text: {
+    indent: 0.01px;
+    overflow: '';
+  }
+
+  // Removes firefox dotted outline focusing
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 var(--color-black);
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:hover {
+    border-color: var(--color-grey-80);
+    background-image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23A6A6A6" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
+  }
+
+  &:active,
+  &:focus {
+    border-color: var(--color-black);
+    background-image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23000000" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
+  }
+
+  &[multiple],
+  &[size] {
+    background-image: none;
+    height: auto;
+
+    &:hover {
+      background-image: none;
+    }
+  }
+
+  &[multiple] {
+    
+    optgroup {
+      padding: 0;
+      font-weight: normal;
+    }
+
+    option {
+      padding: 0;
+
+      &:first-of-type {
+        margin-top: var(--size-4);
+      }
+
+      + option {
+        margin-top: var(--size-4);
+      }
+
+      &:checked {
+        background-color: var(--color-grey-20);
+      }
+    }
+  }
+
+  + p {
+    margin-top: var(--size-8);
+  }
+}

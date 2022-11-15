@@ -1,0 +1,140 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+/** @define utilities */
+
+/**
+ * Sets text alignment
+ */
+
+@each $align in center, left, justify, right {
+  /* stylelint-disable-next-line */
+  .u-text#{functions.capitalize($align)} {
+    text-align: $align;
+  }
+}
+
+/**
+ * Sets text transformation.
+ */
+
+@each $transform in capitalize, lowercase, uppercase {
+  /* stylelint-disable-next-line */
+  .u-text#{functions.capitalize($transform)} {
+    text-transform: $transform;
+  }
+}
+
+/**
+ * Sets the text weight.
+ */
+
+@each $weight in regular, medium, bold {
+  /* stylelint-disable-next-line */
+  .u-text#{functions.capitalize($weight)} {
+    font-weight: var(--font-weight-#{$weight});
+  }
+}
+
+/**
+ * Sets text style to italic.
+ */
+
+.u-textItalic {
+  font-style: italic;
+}
+
+/**
+ * Inherit the ancestor's text color.
+ */
+
+.u-textInheritColor {
+  color: inherit;
+}
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.u-textTruncate {
+  max-width: 100%; /* 1 */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important; /* 2 */
+}
+
+/**
+ * Enables font kerning in all browsers.
+ * http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+ *
+ * 1. Chrome (not Windows), Firefox, IE 10+
+ * 2. Safari 7 and future browsers
+ * 3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
+ */
+
+.u-textKern {
+  font-feature-settings: 'kern' 1; /* 1 */
+  font-kerning: normal; /* 2 */
+  text-rendering: optimizelegibility; /* 3 */
+}
+
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-textBreak {
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/**
+ * Prevent whitespace wrapping
+ */
+
+.u-textNoWrap {
+  white-space: nowrap !important;
+}
+
+/* 
+ * Prevent text decoration
+ */
+
+.u-textNoDecoration {
+  &,
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+/**
+ * Sets text size
+ */
+
+@each $value in 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 70, 84, 96,
+  112
+{
+  /* stylelint-disable-next-line */
+  .u-textSize#{$value} {
+    font-size: var(--font-size-#{$value}) !important;
+
+    @each $breakpoint in variables.$breakpoints {
+      @include mixins.media-min-width($breakpoint) {
+        &:#{$breakpoint} {
+          font-size: var(--font-size-#{$value}) !important;
+        }
+      }
+    }
+  }
+}

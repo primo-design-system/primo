@@ -1,0 +1,11 @@
+p {
+  display: block;
+
+  + p {
+    margin-top: var(--size-8);
+  }
+
+  + * {
+    margin-top: var(--size-16);
+  }
+}

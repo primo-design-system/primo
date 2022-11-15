@@ -1,0 +1,50 @@
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+/** @define utilities */
+
+///
+/// Display classes
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $value - Display variables
+/// @prop {Map} $breakpoints - Global breakpoint variables and names
+///
+@each $value in 'block', 'none', 'inline', 'inline-block', 'table', 'table-cell',
+  'table-row'
+{
+  .u-display#{functions.pascalize($value)} {
+    display: $value !important;
+
+    @each $breakpoint in variables.$breakpoints {
+      @include mixins.media-min-width($breakpoint) {
+        &:#{$breakpoint} {
+          display: $value !important;
+        }
+      }
+    }
+  }
+}
+
+///
+/// Visibility utility classes
+///
+/// Completely remove from the flow but leave available to screen readers.
+///
+.u-hiddenVisually {
+  border: 0 !important;
+  clip: rect(
+    var(--size-1),
+    var(--size-1),
+    var(--size-1),
+    var(--size-1)
+  ) !important;
+  height: var(--size-1) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: var(--size-1) !important;
+}

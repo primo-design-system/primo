@@ -1,0 +1,32 @@
+@use "sass:map";
+@use "variables";
+
+///
+/// Breakpoint mixins and functions to create powerful responsive sites and apps.
+///
+/// Min / max breakpoint mixin, can be used to set media individually. Use breakpoint names; xs, sm, md,
+/// lg and xl to set the breakpoint value e.g @include media-min-width(sm).
+///
+/// @param $breakpoint {String} - The breakpoint name
+///
+/// @return {String} - The media query
+///
+@mixin media-min-width($breakpoint) {
+  @if map.has-key(variables.$media-min-widths, $breakpoint) {
+    @media screen and (min-width: #{map.get(variables.$media-min-widths, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin media-max-width($breakpoint) {
+  @if map.has-key(variables.$media-max-widths, $breakpoint) {
+    @media screen and (max-width: #{map.get(variables.$media-max-widths, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

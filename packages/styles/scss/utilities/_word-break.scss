@@ -1,0 +1,8 @@
+/** @define utilities */
+
+.u-wordBreak {
+  overflow-wrap: break-word;
+
+  // IE fallback
+  word-wrap: break-word;
+}

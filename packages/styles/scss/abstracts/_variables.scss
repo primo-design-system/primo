@@ -1,0 +1,15 @@
+@use "~@primo/tokens/dist/scss/tokens";
+
+$breakpoints: xs, sm, md, lg !default;
+$media-max-widths: (
+  xs: tokens.$media-max-width-xs,
+  sm: tokens.$media-max-width-sm,
+  md: tokens.$media-max-width-md,
+  lg: tokens.$media-max-width-lg,
+) !default;
+$media-min-widths: (
+  xs: tokens.$media-min-width-xs,
+  sm: tokens.$media-min-width-sm,
+  md: tokens.$media-min-width-md,
+  lg: tokens.$media-min-width-lg,
+) !default;

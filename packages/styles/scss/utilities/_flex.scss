@@ -1,0 +1,249 @@
+@use "../abstracts/functions";
+
+/** @define utilities */
+
+///
+/// Flex classes
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $key - Flex variables
+///
+@each $key, $value in ('flex': 'flex', 'flex-inline': 'inline-flex') {
+  .u-#{functions.camelize($key)} {
+    display: #{$value} !important;
+  }
+}
+
+///
+/// Direction classes
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $value - Direction variables
+///
+@each $value in 'row', 'row-reverse', 'column', 'column-reverse' {
+  .u-flex#{functions.pascalize($value)} {
+    flex-direction: #{$value} !important;
+  }
+}
+
+///
+/// Wrap classes
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $value - Wrap variables
+///
+@each $value in 'wrap', 'nowrap', 'wrap-reverse' {
+  .u-flex#{functions.pascalize($value)} {
+    flex-wrap: #{$value} !important;
+  }
+}
+
+///
+/// Justify classes
+///
+/// Align items along the main axis of the current line of the flex container
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $key - Justify variables
+///
+@each $key,
+  $value
+    in (
+      'start': 'flex-start',
+      'end': 'flex-end',
+      'center': 'center',
+      'between': 'space-between',
+      'around': 'space-around',
+      'evenly': 'space-evenly',
+      'stretch': 'stretch'
+    )
+{
+  .u-flexJustify#{functions.pascalize($key)} {
+    justify-content: #{$value} !important;
+  }
+}
+
+///
+/// Align items classes
+///
+/// Align items in the cross axis of the current line of the flex container
+/// Similar to `justify-content` but in the perpendicular direction
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $key - Align variables
+///
+@each $key,
+  $value
+    in (
+      'start': 'flex-start',
+      'end': 'flex-end',
+      'center': 'center',
+      'base line': 'baseline',
+      'stretch': 'stretch'
+    )
+{
+  .u-flexAlignItems#{functions.pascalize($key)} {
+    align-items: #{$value} !important;
+  }
+}
+
+/**
+ * Aligns items within the flex container when there is extra
+ * space in the cross-axis
+ *
+ * Has no effect when there is only one line of flex items.
+ */
+
+@each $key,
+  $value
+    in (
+      'start': 'flex-start',
+      'end': 'flex-end',
+      'center': 'center',
+      'between': 'space-between',
+      'around': 'space-around',
+      'stretch': 'stretch'
+    )
+{
+  .u-flexAlignContent#{functions.pascalize($key)} {
+    align-content: #{$value} !important;
+  }
+}
+
+/**
+ * Override default alignment of single item when specified by `align-items`
+ */
+
+@each $key,
+  $value
+    in (
+      'start': 'flex-start',
+      'end': 'flex-end',
+      'center': 'center',
+      'base line': 'baseline',
+      'stretch': 'stretch',
+      'auto': 'auto'
+    )
+{
+  .u-flexAlignSelf#{functions.pascalize($key)} {
+    align-self: #{$value} !important;
+  }
+}
+
+/**
+ * Change order without editing underlying HTML
+ */
+
+@each $key, $value in ('first': '-1', 'last': '1', 'none': '0') {
+  .u-flexOrder#{functions.pascalize($key)} {
+    order: #{$value} !important;
+  }
+}
+
+/**
+ * Specify the flex grow factor, which determines how much the flex item will
+ * grow relative to the rest of the flex items in the flex container.
+ *
+ * Supports 1-5 proportions
+ *
+ * 1. Provide all values to avoid IE10 bug with shorthand flex
+ *    - http://git.io/vllC7
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis. Using this
+ *    instead of `auto` as this matches what the default would be with `flex`
+ *    shorthand - http://git.io/vllWx
+ */
+
+@each $value in 1, 2, 3, 4, 5 {
+  .u-flexGrow#{$value} {
+    flex: #{$value} 1 0% !important; /* 1 */
+  }
+}
+
+/**
+ * Specify the flex shrink factor, which determines how much the flex item will
+ * shrink relative to the rest of the flex items in the flex container.
+ */
+
+@each $value in 1, 2, 3, 4, 5 {
+  .u-flexShrink#{$value} {
+    flex-shrink: #{$value} !important; /* 2 */
+  }
+}
+
+/**
+ * Aligning with `auto` margins
+ * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+ */
+
+.u-flexExpand {
+  margin: auto !important;
+}
+
+@each $value in 'left', 'right', 'top', 'bottom' {
+  .u-flexExpand#{functions.pascalize($value)} {
+    margin-#{$value}: auto !important;
+  }
+}
+
+/**
+ * Basis
+ */
+
+.u-flexBasisAuto {
+  flex-basis: auto !important;
+}
+
+.u-flexBasis0 {
+  flex-basis: 0 !important;
+}
+
+/**
+ * Shorthand
+ *
+ * Declares all values instead of keywords like 'initial' to work around IE10
+ * https://www.w3.org/TR/css-flexbox-1/#flex-common
+ *
+ * 1. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
+ *    This ensures it overrides flex-basis set in other utilities.
+ */
+
+/*
+ * Sizes the item based on the width/height properties
+ */
+
+.u-flexInitial {
+  flex: 0 1 auto !important;
+  flex-basis: auto !important; /* 1 */
+}
+
+/**
+ * Sizes the item based on the width/height properties, but makes them fully
+ * flexible, so that they absorb any free space along the main axis.
+ */
+
+.u-flexAuto {
+  flex: 1 1 auto !important;
+  flex-basis: auto !important; /* 1 */
+}
+
+/**
+ * Sizes the item according to the width/height properties, but makes the flex
+ * item fully inflexible. Similar to initial, except that flex items are
+ * not allowed to shrink, even in overflow situations.
+ */
+
+.u-flexNone {
+  flex: 0 0 auto !important;
+  flex-basis: auto !important; /* 1 */
+}

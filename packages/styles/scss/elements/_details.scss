@@ -1,0 +1,15 @@
+details {
+  appearance: none;
+  display: block;
+
+  summary {
+    cursor: pointer;
+  }
+
+  &[open] {
+
+    summary {
+      margin-bottom: var(--size-8);
+    }
+  }
+}

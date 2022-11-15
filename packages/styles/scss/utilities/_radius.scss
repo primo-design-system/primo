@@ -1,0 +1,41 @@
+/** @define utilities */
+
+$radius: (
+  'none': 0,
+  '1': 1,
+  '2': 2,
+  '4': 4,
+  '8': 16,
+  '24': 24,
+  '64': 64,
+  '128': 128
+);
+
+///
+/// Border radius classes
+///
+/// @author Richard McCartney
+///
+/// @group utilities
+/// @prop {Map} $radius - Radius variables
+/// @prop {Map} $breakpoints - Global breakpoint variables and names
+///
+
+@each $key, $value in $radius {
+  /* stylelint-disable-next-line */
+  .u-borderRadius#{functions.capitalize($key)} {
+    border-radius: var(--border-radius-#{$value});
+
+    @each $breakpoint in variables.$breakpoints {
+      @include mixins.media-min-width($breakpoint) {
+        &:#{$breakpoint} {
+          border-radius: var(--border-radius-#{$value});
+        }
+      }
+    }
+  }
+}
+
+.u-borderRadiusCircle {
+  border-radius: 50rem;
+}
