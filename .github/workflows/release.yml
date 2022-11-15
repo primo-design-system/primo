@@ -28,6 +28,7 @@ jobs:
       - name: Build
         run: yarn
       - run: yarn setup
+      - run: yarn prettier
       - run: yarn build
       
       - name: Publish
