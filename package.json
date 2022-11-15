@@ -11,15 +11,16 @@
     "url": "git+https://github.com/primodesignsystem/primo.git"
   },
   "scripts": {
-    "prettier": "prettier --check \"**/*.{json,js,ts,tsx}\"",
-    "prettier.fix": "prettier --write \"**/*.{json,js,ts,tsx}\"",
+    "prettier": "prettier --check \"**/*.{json,js,scss,ts,tsx}\"",
+    "prettier:fix": "prettier --write \"**/*.{json,js,scss,ts,tsx}\"",
     "lint": "eslint .",
     "setup": "lerna exec yarn install",
     "test": "lerna run test --parallel",
     "build": "lerna run build --parallel",
     "build.ci": "lerna run build.ci --parallel",
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean"
+    "clean": "lerna clean",
+    "storybook": "lerna run start:storybook --parallel"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
