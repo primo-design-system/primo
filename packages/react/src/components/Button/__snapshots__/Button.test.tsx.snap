@@ -1,19 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> : matches snapshot 1`] = `
-<div>
-  <button
-    data-testid="button"
-    type="button"
-  />
-</div>
+<button
+  class="cds-Button"
+  data-testid="test-button"
+  type="button"
+>
+  Button text
+</button>
 `;
 
-exports[`<Button /> : matches snapshot as anchor 1`] = `
-<div>
-  <a
-    data-testid="button"
-    href="#"
-  />
-</div>
+exports[`<Button /> : matches snapshot as an anchor 1`] = `
+<a
+  aria-disabled="false"
+  class="cds-Button"
+  data-testid="test-button"
+  href="https://lloyds.com"
+>
+  Button text
+</a>
+`;
+
+exports[`<Button /> : matches snapshot with an icon 1`] = `
+<button
+  class="cds-Button cds-Button--startIcon"
+  data-testid="test-button"
+  type="button"
+>
+  <svg
+    aria-hidden="true"
+    class="cds-Icon"
+    data-testid="test-button-svg"
+    focusable="false"
+    role="img"
+    viewBox="0 0 1024 1024"
+  >
+    <path
+      d="M853.333 128h-426.667c-23.467 0-42.667 19.2-42.667 42.667v213.333h-213.333c-23.467 0-42.667 19.2-42.667 42.667v426.667c0 23.467 19.2 42.667 42.667 42.667h426.667c23.467 0 42.667-19.2 42.667-42.667v-213.333h213.333c23.467 0 42.667-19.2 42.667-42.667v-426.667c0-23.467-19.2-42.667-42.667-42.667zM584.533 840.533h-401.067v-401.067h401.067v401.067zM840.533 584.533h-200.533v-157.867c0-23.467-19.2-42.667-42.667-42.667h-157.867v-200.533h401.067v401.067z"
+    />
+  </svg>
+  Button text
+</button>
 `;

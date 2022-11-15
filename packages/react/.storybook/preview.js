@@ -1,23 +1,32 @@
-import { withHTML } from '@whitespace/storybook-addon-html/react';
-import transformSource from './transform-source';
+// .storybook/preview.js
+import '@primo/tokens/dist/css/tokens.css';
+import '@primo/styles/dist/style.min.css';
+import '@primo/components/dist/style.min.css';
 
-export const decorators = [withHTML];
+export const StoryWrapper = (Story) => (
+  <div className='pds-ThemeProvider--primo'>
+    <Story />
+  </div>
+);
+
+export const decorators = [StoryWrapper];
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   docs: {
     source: {
-      /*
-       * 'code' to render the HTML output (from transfromSource ↓)
-       * 'dynamic' to render the component JSX
-       */
       type: 'dynamic',
     },
-    transformSource,
   },
   options: {
     storySort: {
       order: ['Default'],
+    },
+  },
+  html: {
+    prettier: {
+      tabWidth: 2,
+      useTabs: false,
     },
   },
 };
