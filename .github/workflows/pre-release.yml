@@ -1,0 +1,80 @@
+---
+name: 🚧 Pre Release Checks
+
+on:
+  push:
+    branches: [ main, next ]
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./
+
+    steps:
+      - name: 📁 Get Yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        name: ♻️ Cache yarn between builds
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: 🛒 Checkout
+        uses: actions/checkout@v2
+
+      - name: 🏗 Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13.2
+
+      - name: 🚧 Install
+        run: yarn
+
+      - name: 🧪 Test
+        run: yarn test
+
+  Dry-Run:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./
+
+    needs: [Test]
+
+    steps:
+      - name: 📁 Get Yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        name: ♻️ Cache yarn between builds
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: 🛒 Checkout
+        uses: actions/checkout@v2
+
+      - name: 🏗 Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13.2
+
+      - name: 🚧 Install
+        run: yarn
+
+      - name: 💡 Build
+        run: yarn build
+
+      - name: 👷‍♂️ Release dry run
+        run: yarn release:dryrun
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SEMANTIC_RELEASE_PACKAGE: ${{ secrets.GITHUB_TOKEN }}
