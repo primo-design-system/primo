@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-  extends: ['stylelint-config-prettier'],
-  plugins: ['stylelint-prettier'],
+  extends: [require.resolve('stylelint-config-prettier')],
+  plugins: [require.resolve('stylelint-prettier')],
   rules: {
     'prettier/prettier': true,
   },
