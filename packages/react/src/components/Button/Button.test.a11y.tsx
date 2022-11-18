@@ -23,7 +23,7 @@ describe('<Button />', () => {
   test(': should render as an anchor element and not have basic accessibility issues', async () => {
     const props: ButtonProps = {
       ...defaultProps,
-      href: 'https://lloyds.com/',
+      href: 'https://google.com/',
     };
     const { container } = render(<Button {...props} />);
     const results = await axe(container);

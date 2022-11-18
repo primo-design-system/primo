@@ -56,7 +56,7 @@ describe('<Button />', () => {
   test(': renders as an anchor element', () => {
     const props: ButtonProps = {
       ...defaultProps,
-      href: 'https://lloyds.com/',
+      href: 'https://google.com/',
     };
     const { rerender } = render(<Button {...defaultProps} />);
 
@@ -67,7 +67,7 @@ describe('<Button />', () => {
 
     expect(screen.getByTestId('test-button')).toHaveAttribute(
       'href',
-      'https://lloyds.com/'
+      'https://google.com/'
     );
   });
 
@@ -105,7 +105,7 @@ describe('<Button />', () => {
   //     'pds-Button--startIcon'
   //   );
   //   expect(screen.getByTestId('test-button-svg')).toBeInTheDocument();
-  //   expect(screen.getByTestId('test-button-svg')).toHaveClass('cds-Icon');
+  //   expect(screen.getByTestId('test-button-svg')).toHaveClass('pds-Icon');
   // });
 
   // test(': renders with small `startIcon` when set to `isSmall`', () => {
@@ -128,8 +128,8 @@ describe('<Button />', () => {
   //   );
   //   expect(screen.getByTestId('test-button-svg')).toBeInTheDocument();
   //   expect(screen.getByTestId('test-button-svg')).toHaveClass(
-  //     'cds-Icon',
-  //     'cds-Icon--small'
+  //     'pds-Icon',
+  //     'pds-Icon--small'
   //   );
   // });
 
@@ -253,7 +253,7 @@ describe('<Button />', () => {
     const props: ButtonProps = {
       ...defaultProps,
       isDisabled: true,
-      href: 'https://lloyds.com/',
+      href: 'https://google.com/',
     };
     const { rerender } = render(<Button {...defaultProps} />);
 
@@ -266,7 +266,7 @@ describe('<Button />', () => {
     expect(screen.getByTestId('test-button')).toHaveAttribute('aria-disabled');
     expect(screen.getByTestId('test-button')).not.toHaveAttribute(
       'href',
-      'https://lloyds.com/'
+      'https://google.com/'
     );
   });
 
