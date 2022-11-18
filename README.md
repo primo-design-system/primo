@@ -60,12 +60,12 @@ In the future we will look to support
 
 | Package name                                  | Description                                                                            |
 | --------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [`@primo/fonts`](./packages/fonts)   | All base font files                                                                    |
-| [`@primo/grid`](./packages/grid)     | 12 column grid system and utilities                                                    |
-| [`@primo/icons`](./packages/icons)   | Iconography SVG assets to support the Design System                                    |
-| [`@primo/react`](./packages/react)   | React components                                                                       |
-| [`@primo/styles`](./packages/styles) | Base styles and CSS reset for the Design System                                        |
-| [`@primo/tokens`](./packages/tokens) | Tokens for color, type, spacing, grids that are available in the Cardano design system |
+| [`@primo/components`](./packages/components)  | All base component styles                                                              |
+| [`@primo/grid`](./packages/grid)              | 12 column grid system and utilities                                                    |
+| [`@primo/icons`](./packages/icons)            | Iconography SVG assets to support the Design System                                    |
+| [`@primo/react`](./packages/react)            | React components                                                                       |
+| [`@primo/styles`](./packages/styles)          | Base styles and CSS reset for the Design System                                        |
+| [`@primo/tokens`](./packages/tokens)          | Tokens for color, type, spacing, grids that are available in the Cardano design system |
 
 ## ✍️ Feedback
 
