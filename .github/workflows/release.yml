@@ -21,6 +21,9 @@ jobs:
       - name: 🚧 Install
         run: yarn
 
+      - name: 🔀 Format
+        run: yarn format
+
       - name: 🧪 Test
         run: yarn test
 

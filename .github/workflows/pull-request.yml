@@ -39,7 +39,10 @@ jobs:
         run: yarn build
 
       # - name: 📝 Lint
-      #   run: yarn lint      
+      #   run: yarn lint
+
+      - name: 🔀 Format
+        run: yarn format      
 
       - name: 🧪 Test
         run: yarn test
