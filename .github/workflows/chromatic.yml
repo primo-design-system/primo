@@ -14,8 +14,12 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
-      - name: 📁 Install dependencies
+      - name: 🚧 Install dependencies
         run: yarn
+
+      - name: 💡 Build
+        run: yarn build
+        
         # 👇 Adds Chromatic as a step in the workflow
       - name: 🧭 Publish @primo/components to Chromatic
         uses: chromaui/action@v1
