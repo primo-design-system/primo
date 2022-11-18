@@ -36,6 +36,20 @@ For a full bundle with React components and fonts, look at
 [`@primo/styles`](./packages/styles). These will provide the building
 blocks in `react` and `css`.
 
+### Requirements
+
+This project uses [Yarn](https://yarnpkg.com/) and [Node](https://nodejs.org/en/). Ensure you are using version `1.2.55` for yarn, to install please follow the [installation guide](https://classic.yarnpkg.com/en/docs/install).
+
+For node make sure you've set you local to version `16.*.*`. Use [nvm](https://github.com/nvm-sh/nvm) to manage your local development versions.
+
+### Installation
+
+To get started we need to setup all our local dependencies, we're using yarn workspaces and lerna to manage our mono repo.
+
+```sh
+yarn
+```
+
 In the future we will look to support
 
 - Angular
@@ -58,5 +72,9 @@ In the future we will look to support
 Please ask any questions on this project, you can do so by
 [creating a new issue](https://github.com/primo-design-system/primo/issues/new/choose). Or contributing to any [active issues](https://github.com/primo-design-system/primo/issues).
 
-If you wish to get in contact, please don't hesitate via teams or email
-[richard.mccartney@me.com](mailto:richard.mccartney@me.com).
+If you wish to get in contact, please don't hesitate via twitter [@Rich_McCartney](https://twitter.com/rich_mccartney).
+
+## Licence
+
+Licensed under standard
+[MIT license](https://github.com/primo-design-system/primo/blob/main/LICENSE).
