@@ -9,7 +9,9 @@ async function release() {
   try {
     const paths = [
       `${__dirname}/browserlist-config/package.json`,
+      `${__dirname}/commitlint-config/package.json`,
       `${__dirname}/eslint-config/package.json`,
+      `${__dirname}/postcss-config/package.json`,
       `${__dirname}/prettier-config/package.json`,
       `${__dirname}/stylelint-config/package.json`,
       `${__dirname}/components/package.json`,
