@@ -40,10 +40,10 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@postcss-plugins/text-transform": "^0.1.2",
-    "@primo/stylelint-config": "0.0.0",
+    "@primo/stylelint-config": "^1.0.0",
     "@primo/styles": "0.0.0",
     "@primo/tokens": "0.0.0",
-    "@primo/postcss-config": "0.0.0",
+    "@primo/postcss-config": "^1.0.0",
     "@storybook/addon-a11y": "^6.3.9",
     "@storybook/addons": "^6.5.12",
     "@storybook/addon-actions": "^6.3.9",
