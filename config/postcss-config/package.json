@@ -1,6 +1,6 @@
 {
   "name": "@primo/postcss-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Richard McCartney <richard@mccartney.io>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
@@ -21,7 +21,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@primo/tokens": "0.0.0",
+    "@primo/tokens": "1.0.0",
     "autoprefixer": "^9.0.0",
     "postcss-combine-media-query": "1.0.1",
     "postcss-import": "^14.1.0",
