@@ -21,21 +21,23 @@ jobs:
         run: yarn build
         
         # 👇 Adds Chromatic as a step in the workflow
-      - name: 🧭 Publish @primo/components to Chromatic
+      - name: 🚀 Publish [ @primo/components ] to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_COMPONENTS }}
           workingDir: packages/components
-      - name: ⚛️ Publish @primo/react to Chromatic
+
+      - name: 🚀 Publish [ @primo/react ] to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_REACT }}
           workingDir: packages/react
-      - name: 🎨 Publish @primo/styles to Chromatic
+
+      - name: 🚀 Publish [ @primo/styles ] to Chromatic
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
