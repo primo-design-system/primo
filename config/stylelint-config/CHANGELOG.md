@@ -1,3 +1,10 @@
+# @primo/stylelint-config [1.1.0](https://github.com/primo-design-system/primo/compare/@primo/stylelint-config@1.0.0...@primo/stylelint-config@1.1.0) (2022-11-19)
+
+
+### Features
+
+* adding new stylelint rules ([234f3d6](https://github.com/primo-design-system/primo/commit/234f3d602ac1b0cc84befed975c7c32d33442bcf))
+
 # @primo/stylelint-config 1.0.0 (2022-11-18)
 
 
