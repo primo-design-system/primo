@@ -1,6 +1,5 @@
 import StyleDictionary from 'style-dictionary';
-const { createPropertyFormatter, fileHeader } =
-  StyleDictionary.formatHelpers;
+const { createPropertyFormatter, fileHeader } = StyleDictionary.formatHelpers;
 
 StyleDictionary.registerFormat({
   name: 'custom/format/custom-media',

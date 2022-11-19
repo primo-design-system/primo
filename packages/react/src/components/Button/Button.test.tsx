@@ -85,7 +85,9 @@ describe('<Button />', () => {
     // Change props
     rerender(<Button {...props} />);
 
-    expect(screen.getByTestId('test-button')).toHaveClass('primo-Button--small');
+    expect(screen.getByTestId('test-button')).toHaveClass(
+      'primo-Button--small'
+    );
   });
 
   // test(': renders with `startIcon`', () => {
