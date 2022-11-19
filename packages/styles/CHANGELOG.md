@@ -1,3 +1,13 @@
+## @primo/styles [1.0.1](https://github.com/primo-design-system/primo/compare/@primo/styles@1.0.0...@primo/styles@1.0.1) (2022-11-19)
+
+
+
+
+
+### Dependencies
+
+* **@primo/stylelint-config:** upgraded to 1.1.0
+
 # @primo/styles 1.0.0 (2022-11-18)
 
 
