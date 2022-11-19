@@ -4,7 +4,7 @@ exports[`<Button /> : matches snapshot 1`] = `
 <body>
   <div>
     <button
-      class="pds-Button"
+      class="primo-Button"
       type="button"
     >
       Click me!

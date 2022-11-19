@@ -21,6 +21,6 @@ addParameters({
 
 document.body.onload = function () {
   document.body.classList.add(
-    'primo pds-ThemeProvider pds-ThemeProvider--primo'
+    'primo primo-ThemeProvider primo-ThemeProvider--primo'
   );
 };

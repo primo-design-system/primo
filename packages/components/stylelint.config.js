@@ -1,4 +1,4 @@
-'use strict';
+
 
 const stylelintConfig = require('@primo/stylelint-config');
 

@@ -19,5 +19,5 @@ addParameters({
 });
 
 document.body.onload = function () {
-  document.body.classList.add('pds-ThemeProvider--primo');
+  document.body.classList.add('primo-ThemeProvider--primo');
 };

@@ -1,5 +1,5 @@
 import StyleDictionary from 'style-dictionary';
-const { createPropertyFormatter, fileHeader, formattedVariables } =
+const { createPropertyFormatter, fileHeader } =
   StyleDictionary.formatHelpers;
 
 StyleDictionary.registerFormat({

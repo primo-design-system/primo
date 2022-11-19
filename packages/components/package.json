@@ -24,12 +24,13 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "build:storybook": "build-storybook -c .storybook -o build",
+    "build:storybook:quiet": "yarn storybook --quiet",
     "build:watch": "rollup -c -w",
+    "lint": "yarn lint:html && yarn lint:styles",
     "lint:html": "htmlhint \"src/**/*.html\"",
     "lint:styles": "stylelint '**/*.{css,scss}'",
     "lint:styles:fix": "stylelint '**/*.{css,scss}' --fix",
-    "build:storybook": "build-storybook -c .storybook -o build",
-    "build:storybook:quiet": "yarn storybook --quiet",
     "start:storybook": "start-storybook --ci -p 6002"
   },
   "sass": {

@@ -16,10 +16,16 @@
     "build:playroom": "playroom build",
     "build:storybook": "build-storybook --docs --quiet",
     "build:storybook:quiet": "yarn storybook --quiet",
+    "build:watch": "rollup -c -w",
+    "lint": "yarn lint:es && yarn lint:ts",
+    "lint:es": "eslint src/**/*.ts[x]",
+    "lint:es:fix": "yarn lint:es --fix",
+    "lint:ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "lint:ts:fix": "yarn lint:ts --fix",
     "start:playroom": "playroom start",
     "start:storybook": "start-storybook -p 6006 -s public",
-    "lint:es": "eslint ./{src,.storybook}",
-    "test": "jest"
+    "test": "jest",
+    "test:update-snapshots": "yarn test -u"
   },
   "publishConfig": {
     "access": "public"
@@ -82,6 +88,7 @@
     "style-loader": "^3.3.1",
     "ts-jest": "^26.4.0",
     "tslib": "^2.0.1",
+    "tslint": "^6.1.3",
     "typescript": "^4.0.2",
     "url-loader": "^4.1.1",
     "webpack": "^5.2.0"

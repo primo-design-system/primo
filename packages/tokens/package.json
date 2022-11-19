@@ -31,7 +31,8 @@
   "scripts": {
     "build": "node scripts",
     "clean": "rm -rf build",
-    "test": "jest"
+    "test": "jest",
+    "test:update-snapshots": "yarn test -u"
   },
   "bugs": {
     "url": "https://github.com/primodesignsystem/primo/issues"

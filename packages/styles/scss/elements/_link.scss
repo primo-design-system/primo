@@ -1,7 +1,6 @@
 a {
-  cursor: pointer;
-  text-decoration: underline;
   color: inherit;
+  cursor: pointer;
   font-weight: inherit;
   text-decoration: underline;
   text-decoration-thickness: max(1px, 0.0625rem);
@@ -13,8 +12,8 @@ a {
   }
 
   &:active {
+    background-color: var(--color-yellow-20);
     color: inherit;
     text-decoration-thickness: 3px;
-    background-color: var(--color-yellow-20);
   }
 }

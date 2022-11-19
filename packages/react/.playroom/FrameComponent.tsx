@@ -12,7 +12,7 @@ const FrameComponent: FunctionComponent = ({ children }) => {
 
   return (
     <>
-      <div className="pds-ThemeProvider pds-ThemeProvider--primo">
+      <div className="primo-ThemeProvider primo-ThemeProvider--primo">
         {children}
       </div>
     </>

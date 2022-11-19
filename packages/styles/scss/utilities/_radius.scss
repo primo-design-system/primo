@@ -27,12 +27,13 @@ $radius: (
 ///
 
 @each $key, $value in $radius {
-  /* stylelint-disable-next-line */
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-borderRadius#{$key} {
     border-radius: var(--border-radius-#{$value});
 
     @each $breakpoint in variables.$breakpoints {
       @include mixins.media-min-width($breakpoint) {
+        // stylelint-disable-next-line plugin/selector-bem-pattern
         &:#{$breakpoint} {
           border-radius: var(--border-radius-#{$value});
         }

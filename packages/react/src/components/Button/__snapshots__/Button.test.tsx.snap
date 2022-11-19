@@ -2,7 +2,7 @@
 
 exports[`<Button /> : matches snapshot 1`] = `
 <button
-  class="pds-Button"
+  class="primo-Button"
   data-testid="test-button"
   type="button"
 >
@@ -13,7 +13,7 @@ exports[`<Button /> : matches snapshot 1`] = `
 exports[`<Button /> : matches snapshot as an anchor 1`] = `
 <a
   aria-disabled="false"
-  class="pds-Button"
+  class="primo-Button"
   data-testid="test-button"
   href="https://lloyds.com"
 >

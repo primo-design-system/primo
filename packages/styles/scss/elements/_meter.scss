@@ -1,13 +1,13 @@
 meter {
+  background: var(--color-grey-10);
   border-radius: var(--size-8);
   height: var(--size-16);
-  background: var(--color-grey-10);
 
   &::-webkit-meter-bar {
+    background: var(--color-grey-10);
+    border: none;
     border-radius: var(--size-8);
     height: var(--size-16);
-    border: none;
-    background: var(--color-grey-10);
   }
 
   &::-webkit-meter-optimum-value {
@@ -23,10 +23,10 @@ meter {
   }
 
   &::-moz-meter-bar {
+    background: var(--color-grey-10);
+    border: none;
     border-radius: var(--size-8);
     height: var(--size-16);
-    border: none;
-    background: var(--color-grey-10);
   }
 
   &:-moz-meter-optimum::-moz-meter-bar {

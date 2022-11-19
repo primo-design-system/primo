@@ -30,12 +30,13 @@ $opacities: (
 ///
 
 @each $key, $value in $opacities {
-  /* stylelint-disable-next-line */
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-opacity#{$key} {
     opacity: var(--opacity-#{$value});
 
     @each $breakpoint in variables.$breakpoints {
       @include mixins.media-min-width($breakpoint) {
+        // stylelint-disable-next-line plugin/selector-bem-pattern
         &:#{$breakpoint} {
           opacity: var(--opacity-#{$value});
         }

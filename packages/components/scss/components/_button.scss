@@ -1,23 +1,25 @@
 /** @define Button */
 
-.pds-Button {
+:root {
   --Button-background-color: var(--color-grey-20);
   --Button-background-color--hover: var(--color-grey-30);
   --Button-background-color--active: var(--color-grey-40);
   --Button-color: var(--color-black);
   --Button-font: inherit;
+}
 
+.primo-Button {
   appearance: none;
+  background-color: var(--Button-background-color);
   border: 0;
   border-radius: var(--size-4);
+  color: var(--Button-color);
+  display: inline-flex;
   font-family: var(--Button-font);
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-medium);
   line-height: var(--size-24);
   padding: calc(var(--size-4) * 3) var(--spacing-24);
-  background-color: var(--Button-background-color);
-  color: var(--Button-color);
-  display: inline-flex;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -32,9 +34,7 @@
     --Button-background-color: var(--Button-background-color--active);
   }
 
-  //
   // Modifier: Button variants
-  //
 
   &--primary {
     --Button-background-color: var(--color-black);
@@ -73,6 +73,7 @@
     --Button-color: var(--color-white);
   }
 
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   &:disabled,
   &[disabled],
   &[aria-disabled='true'],
@@ -80,24 +81,22 @@
     --Button-background-color: var(--color-grey-10);
     --Button-color: var(--color-grey-60);
 
-    cursor: not-allowed;
     box-shadow: none;
+    cursor: not-allowed;
   }
 
-  //
   // Modifier: Size
-  //
 
   &--sizeMini {
     font-size: var(--font-size-12);
-    padding: var(--size-2) var(--spacing-8);
     min-height: var(--size-24);
+    padding: var(--size-2) var(--spacing-8);
   }
 
   &--sizeCompact {
     font-size: var(--font-size-14);
-    padding: var(--spacing-8) 12px;
     min-height: 36px;
+    padding: var(--spacing-8) 12px;
   }
 
   &--sizeLarge {
@@ -109,24 +108,20 @@
     border-radius: 50%;
   }
 
-  //
   // Modifier: Full Width
-  //
 
   &--fullWidth {
     display: block;
     width: 100%;
   }
 
-  //
   // Modifier: icon position
-  //
 
-  &--endIcon > .pds-Icon {
+  &--endIcon > .primo-Icon {
     margin-left: var(--spacing-8);
   }
 
-  &--startIcon > .pds-Icon {
+  &--startIcon > .primo-Icon {
     margin-right: var(--spacing-8);
   }
 }

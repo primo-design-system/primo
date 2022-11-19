@@ -1,16 +1,15 @@
 select {
   appearance: none;
-
-  border-radius: var(--size-4);
   border: 1px solid var(--color-grey-60);
+  border-radius: var(--size-4);
+  padding: var(--size-8) var(--size-48) var(--size-8) var(--size-16);
   background: {
     color: var(--color-white);
     image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23CBCBCB" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
+    position: right var(--size-16) center;
     repeat: no-repeat;
     size: var(--size-12) 3px;
-    position: right var(--size-16) center;
   }
-  padding: var(--size-8) var(--size-48) var(--size-8) var(--size-16);
 
   // Removes firefox select styles & arrow
 
@@ -31,14 +30,14 @@ select {
   }
 
   &:hover {
-    border-color: var(--color-grey-80);
     background-image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23A6A6A6" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
+    border-color: var(--color-grey-80);
   }
 
   &:active,
   &:focus {
-    border-color: var(--color-black);
     background-image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23000000" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
+    border-color: var(--color-black);
   }
 
   &[multiple],
@@ -53,8 +52,8 @@ select {
 
   &[multiple] {
     optgroup {
-      padding: 0;
       font-weight: normal;
+      padding: 0;
     }
 
     option {

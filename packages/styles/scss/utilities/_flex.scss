@@ -11,6 +11,7 @@
 /// @prop {Map} $key - Flex variables
 ///
 @each $key, $value in ('flex': 'flex', 'flex-inline': 'inline-flex') {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-#{functions.camelize($key)} {
     display: #{$value} !important;
   }
@@ -25,6 +26,7 @@
 /// @prop {Map} $value - Direction variables
 ///
 @each $value in 'row', 'row-reverse', 'column', 'column-reverse' {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flex#{functions.pascalize($value)} {
     flex-direction: #{$value} !important;
   }
@@ -39,6 +41,7 @@
 /// @prop {Map} $value - Wrap variables
 ///
 @each $value in 'wrap', 'nowrap', 'wrap-reverse' {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flex#{functions.pascalize($value)} {
     flex-wrap: #{$value} !important;
   }
@@ -66,6 +69,7 @@
       'stretch': 'stretch'
     )
 {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexJustify#{functions.pascalize($key)} {
     justify-content: #{$value} !important;
   }
@@ -92,6 +96,7 @@
       'stretch': 'stretch'
     )
 {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexAlignItems#{functions.pascalize($key)} {
     align-items: #{$value} !important;
   }
@@ -115,6 +120,7 @@
       'stretch': 'stretch'
     )
 {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexAlignContent#{functions.pascalize($key)} {
     align-content: #{$value} !important;
   }
@@ -135,6 +141,7 @@
       'auto': 'auto'
     )
 {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexAlignSelf#{functions.pascalize($key)} {
     align-self: #{$value} !important;
   }
@@ -145,6 +152,7 @@
  */
 
 @each $key, $value in ('first': '-1', 'last': '1', 'none': '0') {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexOrder#{functions.pascalize($key)} {
     order: #{$value} !important;
   }
@@ -165,6 +173,7 @@
  */
 
 @each $value in 1, 2, 3, 4, 5 {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexGrow#{$value} {
     flex: #{$value} 1 0% !important; /* 1 */
   }
@@ -176,6 +185,7 @@
  */
 
 @each $value in 1, 2, 3, 4, 5 {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexShrink#{$value} {
     flex-shrink: #{$value} !important; /* 2 */
   }
@@ -191,6 +201,7 @@
 }
 
 @each $value in 'left', 'right', 'top', 'bottom' {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexExpand#{functions.pascalize($value)} {
     margin-#{$value}: auto !important;
   }

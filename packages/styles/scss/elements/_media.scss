@@ -31,6 +31,7 @@ audio {
 // Corrects overflow displayed oddly in IE9
 
 svg {
+  // stylelint-disable-next-line suitcss/selector-root-no-composition
   &:not(:root) {
     overflow: hidden;
   }

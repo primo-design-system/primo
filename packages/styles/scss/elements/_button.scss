@@ -4,15 +4,15 @@ input[type='submit'],
 input[type='reset'],
 input[type='file']::file-selector-button {
   appearance: none;
+  background-color: var(--color-grey-20);
   border: 0;
   border-radius: var(--size-4);
+  color: var(--color-black);
+  display: inline-block;
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-medium);
   line-height: var(--size-24);
   padding: calc(var(--size-4) * 3) var(--spacing-24);
-  background-color: var(--color-grey-20);
-  color: var(--color-black);
-  display: inline-block;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;

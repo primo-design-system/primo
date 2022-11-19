@@ -11,11 +11,13 @@
 /// @group utilities
 ///
 @each $value in (0, 100, 200, 300, 400, 500, 600, 700, 800, 900) {
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-zIndex#{$value} {
     z-index: var(--z-index-#{$value});
 
     @each $breakpoint in variables.$breakpoints {
       @include mixins.media-min-width($breakpoint) {
+        // stylelint-disable-next-line plugin/selector-bem-pattern
         &:#{$breakpoint} {
           z-index: var(--z-index-#{$value});
         }
