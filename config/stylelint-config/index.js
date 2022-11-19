@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   extends: [
     require.resolve('stylelint-config-standard'),
@@ -14,11 +12,14 @@ module.exports = {
   ],
   rules: {
     'selector-class-pattern': null,
+    'custom-property-pattern': null,
     'function-whitespace-after': null,
     'no-eol-whitespace': null,
     'string-quotes': 'single',
+    'no-descending-specificity': null,
     'prettier/prettier': true,
     'order/properties-order': null,
+    'suitcss/custom-property-no-outside-root': null,
     'scss/no-global-function-names': null,
     'comment-empty-line-before': [
       'always',

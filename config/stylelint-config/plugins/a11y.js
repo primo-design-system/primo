@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   plugins: [require.resolve('stylelint-a11y')],
   rules: {
