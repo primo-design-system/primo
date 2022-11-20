@@ -38,6 +38,9 @@
   "bugs": {
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
+  "peerDependencies": {
+    "@primo/browserlist-config": "^1.0.0"
+  },
   "devDependencies": {
     "jest": "^26.6.0",
     "style-dictionary": "^3.0.1",
