@@ -1,6 +1,6 @@
 # @primo/stylelint-config
 
-[![NPM version](https://badgen.net/npm/v/@primo/browserslist-config)](https://www.npmjs.org/package/@primo/browserslist-config)
+[![NPM version](https://badgen.net/npm/v/@primo/stylelint-config)](https://www.npmjs.org/package/@primo/stylelint-config)
 
 > Stylelint configuration for Primo
 
