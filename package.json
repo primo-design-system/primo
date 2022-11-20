@@ -38,6 +38,7 @@
     "@babel/core": "^7.10.5",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
+    "@primo/browserlist-config": "^1.0.0",
     "@primo/eslint-config": "1.0.0",
     "@primo/prettier-config": "0.0.0",
     "@semantic-release/changelog": "^5.0.1",
