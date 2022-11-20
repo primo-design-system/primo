@@ -1,5 +1,7 @@
 # @primo/browserlist-config
 
+[![NPM version](https://badgen.net/npm/v/@primo/browserlist-config)](https://www.npmjs.org/package/@primo/browserlist-config)
+
 > Browserlist configuration for Primo
 
 ## Getting started
