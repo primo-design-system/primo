@@ -1,7 +1,7 @@
 {
   "name": "@primo/postcss-config",
   "version": "1.0.1",
-  "description": "> TODO: description",
+  "description": "PostCSS config for Primo Design System",
   "author": "Richard McCartney <richard@mccartney.io>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
   "license": "MIT",

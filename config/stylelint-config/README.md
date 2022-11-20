@@ -1,11 +1,37 @@
-# `stylelint-config`
+# @primo/stylelint-config
 
-> TODO: description
+[![NPM version](https://badgen.net/npm/v/@primo/browserslist-config)](https://www.npmjs.org/package/@primo/browserslist-config)
+
+> Stylelint configuration for Primo
+
+## Getting started
+
+To install `@primo/stylelint-config` in your project, you will need to run the
+following command using [npm](https://www.npmjs.com/):
+
+```bash
+npm install -S @primo/stylelint-config
+```
+
+If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
+instead:
+
+```bash
+yarn add @primo/stylelint-config
+```
 
 ## Usage
 
-```
-const stylelintConfig = require('stylelint-config');
+You can use `@primo/stylelint-config` in your project by extending it in your
+`stylelint` configuration. For example, if we had an `.stylelintrc` file:
 
-// TODO: DEMONSTRATE API
+```json
+{
+  "extends": ["@primo/stylelint-config"]
+}
 ```
+
+## Licence
+
+Licensed under standard
+[MIT license](https://github.com/primo-design-system/primo/blob/main/LICENSE).

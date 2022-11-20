@@ -1,5 +1,7 @@
 # @primo/eslint-config
 
+[![NPM version](https://badgen.net/npm/v/@primo/eslint-config)](https://www.npmjs.org/package/@primo/eslint-config)
+
 > ESLint configuration for Primo
 
 ## Getting started
