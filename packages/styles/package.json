@@ -13,6 +13,7 @@
   ],
   "style": "dist/style.min.css",
   "publishConfig": {
+    "registry": "https://registry.npmjs.org",
     "access": "public"
   },
   "repository": {

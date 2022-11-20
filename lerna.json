@@ -5,6 +5,7 @@
   "useWorkspaces": true,
   "version": "independent",
   "publishConfig": {
+    "registry": "https://registry.npmjs.org",
     "access": "public",
     "directory": "dist"
   },
