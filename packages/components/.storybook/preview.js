@@ -1,4 +1,4 @@
-import { addParameters } from '@storybook/html';
+import { addParameters, configure } from '@storybook/html';
 import '@storybook/addon-console';
 import '@primo/tokens/dist/css/tokens.css';
 import '@primo/styles/dist/style.min.css';
@@ -19,8 +19,7 @@ addParameters({
   },
 });
 
-document.body.onload = function () {
-  document.body.classList.add(
-    'primo primo-ThemeProvider primo-ThemeProvider--primo'
-  );
+// Adds Primo classes to the root iframe to enable theming and styles
+document.body.onload = function() {
+  document.body.classList.add('primo');
 };

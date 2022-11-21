@@ -19,6 +19,7 @@
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-medium);
   line-height: var(--size-24);
+  margin: 0;
   padding: calc(var(--size-4) * 3) var(--spacing-24);
   text-align: center;
   text-decoration: none;
@@ -106,6 +107,7 @@
 
   &--shapeRound {
     border-radius: 50%;
+    padding: calc(var(--size-4) * 3);
   }
 
   // Modifier: Full Width
@@ -116,6 +118,10 @@
   }
 
   // Modifier: icon position
+
+  &--onlyIcon {
+    padding: calc(var(--size-4) * 3);
+  }
 
   &--endIcon > .primo-Icon {
     margin-left: var(--spacing-8);
