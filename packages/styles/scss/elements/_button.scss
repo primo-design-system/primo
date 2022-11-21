@@ -12,6 +12,7 @@ input[type='file']::file-selector-button {
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-medium);
   line-height: var(--size-24);
+  margin: 0;
   padding: calc(var(--size-4) * 3) var(--spacing-24);
   text-align: center;
   text-decoration: none;
