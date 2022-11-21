@@ -1,0 +1,5 @@
+---
+to: packages/react/src/components/index.ts
+---
+
+<%- fileList %>
