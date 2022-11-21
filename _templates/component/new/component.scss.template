@@ -1,0 +1,12 @@
+---
+to: packages/components/scss/components/_<%= name %>.scss
+---
+/** @define <%= name %> */
+
+:root {
+  /* Custom properties go here */
+}
+
+.primo-<%= name %> {
+  /* Styles go here */
+}

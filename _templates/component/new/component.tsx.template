@@ -1,0 +1,39 @@
+---
+to: packages/react/src/components/<%= name %>/<%= name %>.tsx
+---
+
+import classNames from 'classnames';
+import React, { FunctionComponent } from 'react';
+import type { <%= name %>Props } from '.';
+
+/**
+ * <%= name %> component.
+ *
+ * @component
+ * @example
+ * return (
+ *   <<%= name %> />
+ * )
+ */
+
+const <%= name %>: FunctionComponent<<%= name %>Props> = ({
+  testId,
+  className,
+  ...props
+}) => {
+  const <%= name.toLowerCase() %>Classes = classNames({
+    'primo-<%= name %>': true,
+    [`${className}`]: className,
+  });
+  const commonProps = {
+    className: <%= name.toLowerCase() %>Classes,
+    'data-testid': testId,
+  };
+  return (
+    <p {...commonProps} {...props}>
+      AnExample
+    </p>
+  );
+};
+
+export default <%= name %>;

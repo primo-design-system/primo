@@ -19,6 +19,7 @@
     "build:styles": "lerna run --scope \"styles*\" build",
     "build:tokens": "lerna run --scope \"tokens*\" build",
     "clean": "lerna clean",
+    "create:component": "hygen component new",
     "format": "lerna run format && yarn format:prettier",
     "format:fix": "lerna run format:fix && yarn format:prettier:fix",
     "format:prettier": "yarn prettier --check './**/*.{css,html,js,json,ts,tsx,scss}'",
