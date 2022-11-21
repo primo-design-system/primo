@@ -12,9 +12,7 @@ const FrameComponent: FunctionComponent = ({ children }) => {
 
   return (
     <>
-      <div className="primo">
-        {children}
-      </div>
+      <div className="primo">{children}</div>
     </>
   );
 };

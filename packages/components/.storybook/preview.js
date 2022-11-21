@@ -20,6 +20,6 @@ addParameters({
 });
 
 // Adds Primo classes to the root iframe to enable theming and styles
-document.body.onload = function() {
+document.body.onload = function () {
   document.body.classList.add('primo');
 };
