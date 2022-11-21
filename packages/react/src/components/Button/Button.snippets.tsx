@@ -10,15 +10,6 @@ export const ButtonSnippets = [
   },
   {
     group: 'Button',
-    name: 'Default Ghost',
-    code: `
-      <Button fill="ghost">
-        Button
-      </Button>
-    `,
-  },
-  {
-    group: 'Button',
     name: 'Default Full Width',
     code: `
       <Button isFullWidth>
@@ -46,24 +37,6 @@ export const ButtonSnippets = [
   },
   {
     group: 'Button',
-    name: 'Start Icon',
-    code: `
-      <Button startIcon='copy'>
-        Button Icon
-      </Button>
-    `,
-  },
-  {
-    group: 'Button',
-    name: 'End Icon',
-    code: `
-      <Button endIcon='copy'>
-        Button Icon
-      </Button>
-    `,
-  },
-  {
-    group: 'Button',
     name: 'Primary',
     code: `
       <Button variant="primary">
@@ -71,24 +44,7 @@ export const ButtonSnippets = [
       </Button>
     `,
   },
-  {
-    group: 'Button',
-    name: 'Primary Outline',
-    code: `
-      <Button variant="primary" fill="outline">
-        Primary Button
-      </Button>
-    `,
-  },
-  {
-    group: 'Button',
-    name: 'Primary Ghost',
-    code: `
-      <Button variant="primary" fill="ghost">
-        Primary Button
-      </Button>
-    `,
-  },
+
   {
     group: 'Button',
     name: 'Negative',
@@ -103,15 +59,6 @@ export const ButtonSnippets = [
     name: 'Negative Outline',
     code: `
       <Button variant="negative" fill="outline">
-        Negative Button
-      </Button>
-    `,
-  },
-  {
-    group: 'Button',
-    name: 'Negative Ghost',
-    code: `
-      <Button variant="negative" fill="ghost">
         Negative Button
       </Button>
     `,

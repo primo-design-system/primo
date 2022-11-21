@@ -4,7 +4,7 @@ import '@primo/styles/dist/style.min.css';
 import '@primo/components/dist/style.min.css';
 
 export const StoryWrapper = (Story) => (
-  <div className="primo-ThemeProvider--primo">
+  <div className="primo">
     <Story />
   </div>
 );
