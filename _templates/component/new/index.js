@@ -1,6 +1,9 @@
 const fs = require('fs').promises;
 const path = require('path');
-const postsDirectory = path.join(process.cwd(), 'packages/react/src/components');
+const postsDirectory = path.join(
+  process.cwd(),
+  'packages/react/src/components'
+);
 
 const uppercaseFirstLetter = (word) =>
   word.replace(/\w/, (firstLetter) => firstLetter.toUpperCase());
