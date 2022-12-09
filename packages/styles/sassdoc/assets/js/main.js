@@ -1,7 +1,7 @@
 /* global document */
 
 (function ($, global) {
-  'use strict';
+  
 
   // Constructor
   var App = function (conf) {

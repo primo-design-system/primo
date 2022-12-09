@@ -1,5 +1,5 @@
-@use "sass:map";
-@use "variables";
+@use 'sass:map';
+@use 'variables';
 
 /// Min breakpoint mixin, can be used to set media individually. Use breakpoint names; xs, sm, md,
 /// lg and xl to set the breakpoint value e.g @include media-min-width(sm).

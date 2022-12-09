@@ -1,15 +1,15 @@
-@use "../abstracts/functions";
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
+@use '../abstracts/functions';
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 /** @define utilities */
 
 /// Sets text alignment
-/// 
+///
 /// @group Utilities
 /// @author Richard McCartney
 @each $align in center, left, justify, right {
-  /* stylelint-disable-next-line */
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-text#{functions.capitalize($align)} {
     text-align: $align;
   }
@@ -20,7 +20,7 @@
 /// @group Utilities
 /// @author Richard McCartney
 @each $transform in capitalize, lowercase, uppercase {
-  /* stylelint-disable-next-line */
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-text#{functions.capitalize($transform)} {
     text-transform: $transform;
   }
@@ -31,7 +31,7 @@
 /// @group Utilities
 /// @author Richard McCartney
 @each $weight in regular, medium, bold {
-  /* stylelint-disable-next-line */
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-text#{functions.capitalize($weight)} {
     font-weight: var(--font-weight-#{$weight});
   }
@@ -126,12 +126,13 @@
 @each $value in 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 70, 84, 96,
   112
 {
-  /* stylelint-disable-next-line */
+  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-textSize#{$value} {
     font-size: var(--font-size-#{$value}) !important;
 
     @each $breakpoint in variables.$breakpoints {
       @include mixins.media-min-width($breakpoint) {
+        // stylelint-disable-next-line plugin/selector-bem-pattern
         &:#{$breakpoint} {
           font-size: var(--font-size-#{$value}) !important;
         }

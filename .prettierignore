@@ -9,5 +9,6 @@ umd
 
 node_modules
 packages/*/examples/*
+packages/*/sassdoc/*
 
 example

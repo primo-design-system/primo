@@ -1,7 +1,7 @@
 /** @define utilities */
 
 /// Position absolute
-/// 
+///
 /// @group Utilities
 /// @author Richard McCartney
 .u-positionFit,
@@ -23,7 +23,7 @@
 }
 
 /// Element is positioned to fit or full screen
-/// 
+///
 /// @group Utilities
 /// @author Richard McCartney
 .u-positionFit,
@@ -36,7 +36,7 @@
 }
 
 /// Element is positioned to fixed
-/// 
+///
 /// 1. Make sure fixed elements are promoted into a new layer, for performance
 ///    reasons.
 ///
@@ -50,7 +50,7 @@
 }
 
 /// Element is positioned relative
-/// 
+///
 /// @group Utilities
 /// @author Richard McCartney
 .u-positionRelative {
@@ -58,7 +58,7 @@
 }
 
 /// Element is positioned static
-/// 
+///
 /// @group Utilities
 /// @author Richard McCartney
 .u-positionStatic {
