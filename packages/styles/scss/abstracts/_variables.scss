@@ -1,12 +1,26 @@
-@use '~@primo/tokens/dist/scss/tokens';
+@use "~@primo/tokens/dist/scss/tokens";
 
+/// Breakpoint sizes
+///
+/// @group Variables
+/// @author Richard McCartney
 $breakpoints: xs, sm, md, lg !default;
+
+/// Max width screen sizes
+///
+/// @group Variables
+/// @author Richard McCartney
 $media-max-widths: (
   xs: tokens.$media-max-width-xs,
   sm: tokens.$media-max-width-sm,
   md: tokens.$media-max-width-md,
   lg: tokens.$media-max-width-lg,
 ) !default;
+
+/// Min width screen sizes
+///
+/// @group Variables
+/// @author Richard McCartney
 $media-min-widths: (
   xs: tokens.$media-min-width-xs,
   sm: tokens.$media-min-width-sm,

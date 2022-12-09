@@ -9,7 +9,9 @@
     "src": "src"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "scss",
+    "index.scss"
   ],
   "style": "dist/style.min.css",
   "publishConfig": {
@@ -23,22 +25,35 @@
   "bugs": {
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
+  "keywords": [
+    "primo",
+    "design-system",
+    "primo-design-system",
+    "components",
+    "react",
+    "scss",
+    "css"
+  ],
   "scripts": {
     "build": "rollup -c",
+    "build:sassdocs": "yarn sassdoc scss/ -v",
+    "build:storybook": "build-storybook -c .storybook -o build",
+    "build:storybook:quiet": "yarn storybook --quiet",
     "build:watch": "rollup -c -w",
     "lint": "yarn lint:html && yarn lint:styles",
     "lint:fix": "yarn lint:styles:fix",
     "lint:html": "htmlhint \"src/**/*.html\"",
     "lint:styles": "stylelint '**/*.{css,scss}'",
     "lint:styles:fix": "stylelint '**/*.{css,scss}' --fix",
-    "build:storybook": "build-storybook -c .storybook -o build",
-    "build:storybook:quiet": "yarn storybook --quiet",
     "start:storybook": "start-storybook --ci -p 6001"
   },
   "sass": {
     "includePaths": [
       "./node_modules"
     ]
+  },
+  "peerDependencies": {
+    "sass": "^1.50.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
@@ -75,6 +90,7 @@
     "rollup-plugin-sass": "^1.2.12",
     "rollup-watch": "^4.3.1",
     "sass": "^1.50.1",
+    "sassdoc": "^2.7.4",
     "sass-loader": "10.1.1",
     "style-loader": "2.0.0",
     "stylelint": "^14.6.1"

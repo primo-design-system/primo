@@ -1,62 +1,41 @@
-@use '../abstracts/functions';
+@use "../abstracts/functions";
 
 /** @define utilities */
 
-///
 /// Flex classes
 ///
+/// @group Utilities
 /// @author Richard McCartney
-///
-/// @group utilities
-/// @prop {Map} $key - Flex variables
-///
 @each $key, $value in ('flex': 'flex', 'flex-inline': 'inline-flex') {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-#{functions.camelize($key)} {
     display: #{$value} !important;
   }
 }
 
-///
 /// Direction classes
 ///
+/// @group Utilities
 /// @author Richard McCartney
-///
-/// @group utilities
-/// @prop {Map} $value - Direction variables
-///
 @each $value in 'row', 'row-reverse', 'column', 'column-reverse' {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flex#{functions.pascalize($value)} {
     flex-direction: #{$value} !important;
   }
 }
 
-///
 /// Wrap classes
 ///
+/// @group Utilities
 /// @author Richard McCartney
-///
-/// @group utilities
-/// @prop {Map} $value - Wrap variables
-///
 @each $value in 'wrap', 'nowrap', 'wrap-reverse' {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flex#{functions.pascalize($value)} {
     flex-wrap: #{$value} !important;
   }
 }
 
-///
 /// Justify classes
 ///
-/// Align items along the main axis of the current line of the flex container
-///
+/// @group Utilities
 /// @author Richard McCartney
-///
-/// @group utilities
-/// @prop {Map} $key - Justify variables
-///
 @each $key,
   $value
     in (
@@ -69,23 +48,15 @@
       'stretch': 'stretch'
     )
 {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexJustify#{functions.pascalize($key)} {
     justify-content: #{$value} !important;
   }
 }
 
-///
 /// Align items classes
 ///
-/// Align items in the cross axis of the current line of the flex container
-/// Similar to `justify-content` but in the perpendicular direction
-///
+/// @group Utilities
 /// @author Richard McCartney
-///
-/// @group utilities
-/// @prop {Map} $key - Align variables
-///
 @each $key,
   $value
     in (
@@ -96,19 +67,18 @@
       'stretch': 'stretch'
     )
 {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexAlignItems#{functions.pascalize($key)} {
     align-items: #{$value} !important;
   }
 }
 
-/**
- * Aligns items within the flex container when there is extra
- * space in the cross-axis
- *
- * Has no effect when there is only one line of flex items.
- */
-
+///
+/// Aligns items within the flex container when there is extra
+/// space in the cross-axis
+///
+/// Has no effect when there is only one line of flex items.
+/// @group Utilities
+/// @author Richard McCartney
 @each $key,
   $value
     in (
@@ -120,16 +90,15 @@
       'stretch': 'stretch'
     )
 {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexAlignContent#{functions.pascalize($key)} {
     align-content: #{$value} !important;
   }
 }
 
-/**
- * Override default alignment of single item when specified by `align-items`
- */
-
+/// Override default alignment of single item when specified by `align-items`
+/// 
+/// @group Utilities
+/// @author Richard McCartney
 @each $key,
   $value
     in (
@@ -141,76 +110,71 @@
       'auto': 'auto'
     )
 {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexAlignSelf#{functions.pascalize($key)} {
     align-self: #{$value} !important;
   }
 }
 
-/**
- * Change order without editing underlying HTML
- */
-
+/// Change order without editing underlying HTML
+/// 
+/// @group Utilities
+/// @author Richard McCartney
 @each $key, $value in ('first': '-1', 'last': '1', 'none': '0') {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexOrder#{functions.pascalize($key)} {
     order: #{$value} !important;
   }
 }
 
-/**
- * Specify the flex grow factor, which determines how much the flex item will
- * grow relative to the rest of the flex items in the flex container.
- *
- * Supports 1-5 proportions
- *
- * 1. Provide all values to avoid IE10 bug with shorthand flex
- *    - http://git.io/vllC7
- *
- *    Use `0%` to avoid bug in IE10/11 with unitless flex basis. Using this
- *    instead of `auto` as this matches what the default would be with `flex`
- *    shorthand - http://git.io/vllWx
- */
-
+/// Specify the flex grow factor, which determines how much the flex item will
+/// grow relative to the rest of the flex items in the flex container.
+///
+/// Supports 1-5 proportions
+///
+/// 1. Provide all values to avoid IE10 bug with shorthand flex
+///    - http://git.io/vllC7
+///
+///    Use `0%` to avoid bug in IE10/11 with unitless flex basis. Using this
+///    instead of `auto` as this matches what the default would be with `flex`
+///    shorthand - http://git.io/vllWx
+///
+/// @group Utilities
+/// @author Richard McCartney
 @each $value in 1, 2, 3, 4, 5 {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexGrow#{$value} {
     flex: #{$value} 1 0% !important; /* 1 */
   }
 }
 
-/**
- * Specify the flex shrink factor, which determines how much the flex item will
- * shrink relative to the rest of the flex items in the flex container.
- */
-
+/// Specify the flex shrink factor, which determines how much the flex item will
+/// shrink relative to the rest of the flex items in the flex container.
+///
+/// @group Utilities
+/// @author Richard McCartney
 @each $value in 1, 2, 3, 4, 5 {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexShrink#{$value} {
     flex-shrink: #{$value} !important; /* 2 */
   }
 }
 
-/**
- * Aligning with `auto` margins
- * http://www.w3.org/TR/css-flexbox-1/#auto-margins
- */
-
+/// Aligning with `auto` margins
+/// http://www.w3.org/TR/css-flexbox-1/#auto-margins
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-flexExpand {
   margin: auto !important;
 }
 
 @each $value in 'left', 'right', 'top', 'bottom' {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexExpand#{functions.pascalize($value)} {
     margin-#{$value}: auto !important;
   }
 }
 
-/**
- * Basis
- */
-
+/// Flex basis
+/// 
+/// @group Utilities
+/// @author Richard McCartney
 .u-flexBasisAuto {
   flex-basis: auto !important;
 }
@@ -219,41 +183,39 @@
   flex-basis: 0 !important;
 }
 
-/**
- * Shorthand
- *
- * Declares all values instead of keywords like 'initial' to work around IE10
- * https://www.w3.org/TR/css-flexbox-1/#flex-common
- *
- * 1. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
- *    This ensures it overrides flex-basis set in other utilities.
- */
-
-/*
- * Sizes the item based on the width/height properties
- */
-
+/// Shorthand
+///
+/// Declares all values instead of keywords like 'initial' to work around IE10
+/// https://www.w3.org/TR/css-flexbox-1/#flex-common
+///
+/// 1. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
+///    This ensures it overrides flex-basis set in other utilities.
+///
+/// Sizes the item based on the width/height properties
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-flexInitial {
   flex: 0 1 auto !important;
   flex-basis: auto !important; /* 1 */
 }
 
-/**
- * Sizes the item based on the width/height properties, but makes them fully
- * flexible, so that they absorb any free space along the main axis.
- */
-
+/// Sizes the item based on the width/height properties, but makes them fully
+/// flexible, so that they absorb any free space along the main axis.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-flexAuto {
   flex: 1 1 auto !important;
   flex-basis: auto !important; /* 1 */
 }
 
-/**
- * Sizes the item according to the width/height properties, but makes the flex
- * item fully inflexible. Similar to initial, except that flex items are
- * not allowed to shrink, even in overflow situations.
- */
-
+/// Sizes the item according to the width/height properties, but makes the flex
+/// item fully inflexible. Similar to initial, except that flex items are
+/// not allowed to shrink, even in overflow situations.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-flexNone {
   flex: 0 0 auto !important;
   flex-basis: auto !important; /* 1 */

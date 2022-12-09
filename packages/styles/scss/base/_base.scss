@@ -1,28 +1,33 @@
-// Import Inter Font files from Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-// Set up a decent box model on the root element
-
+///
+/// Set up a decent box model on the root element
+///
+/// @group Elements
+/// @author Richard McCartney
 html {
   box-sizing: border-box;
   font-family: var(--font-family-base);
   font-size: var(--font-size-16);
 }
 
-// Make all elements from the DOM inherit from the parent box-sizing
-// Since `*` has a specificity of 0, it does not override the `html` value
-// making all elements inheriting from the root box-sizing value
-// See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
-
+///
+/// Make all elements from the DOM inherit from the parent box-sizing
+/// Since `*` has a specificity of 0, it does not override the `html` value
+/// making all elements inheriting from the root box-sizing value
+/// See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+///
+/// @group Elements
+/// @author Richard McCartney
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-// Lobotomized Owl Selector
-// See: http://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
-
+/// Lobotomized Owl Selector 
+/// See: http://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
+///
+/// @group Classes
+/// @author Richard McCartney
 .primo {
   * + * {
     margin-top: var(--size-16);

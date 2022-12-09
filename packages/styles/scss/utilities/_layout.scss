@@ -1,36 +1,45 @@
-/**
- * @define utilities
- * Contain floats
- *
- * Make an element expand to contain floated children.
- * Uses pseudo-elements (micro clearfix).
- *
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of the
- *    element.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+/* @define utilities */
 
+/// Contain floats
+///
+/// Make an element expand to contain floated children.
+/// Uses pseudo-elements (micro clearfix).
+///
+/// 1. The space content is one way to avoid an Opera bug when the
+///    `contenteditable` attribute is included anywhere else in the document.
+///    Otherwise it causes space to appear at the top and bottom of the
+///    element.
+/// 2. The use of `table` rather than `block` is only necessary if using
+///    `:before` to contain the top-margins of child elements.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-containFloats::before,
 .u-containFloats::after {
   content: ' '; /* 1 */
   display: table; /* 2 */
 }
 
+/// Contain floats
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-containFloats::after {
   clear: both;
 }
 
-/**
-  * Floats
-  */
-
+/// Float left
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-floatLeft {
-  float: left !important;
+  float: left;
 }
 
+/// Float right
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-floatRight {
-  float: right !important;
+  float: right;
 }

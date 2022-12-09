@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+
+@use '~@primo/tokens/dist/css/tokens';
+@use '~@primo/tokens/dist/scss/tokens' as tokens2;
+
+// Config and helpers
+@use './scss/abstracts/variables';
+@use './scss/abstracts/functions';
+@use './scss/abstracts/mixins';
+
+// Vendors
+@use './scss/vendors/normalize';
+
+// Base styles
+@use './scss/base/reset';
+@use './scss/base/base';
+@use './scss/base/focus';
+@use './scss/base/selection';
+
+// Elements
+@use './scss/elements/button';
+@use './scss/elements/input';
+@use './scss/elements/textarea';
+@use './scss/elements/select';
+@use './scss/elements/label';
+@use './scss/elements/tables';
+@use './scss/elements/hr';
+@use './scss/elements/headers';
+@use './scss/elements/lists';
+@use './scss/elements/link';
+@use './scss/elements/address';
+@use './scss/elements/blockquote';
+@use './scss/elements/code';
+@use './scss/elements/details';
+@use './scss/elements/dialog';
+@use './scss/elements/meter';
+@use './scss/elements/paragraphs';
+@use './scss/elements/progress';
+@use './scss/elements/media';
+@use './scss/elements/fieldset';
+@use './scss/elements/text';
+
+// Utilities
+@use './scss/utilities/align';
+@use './scss/utilities/display';
+@use './scss/utilities/flex';
+@use './scss/utilities/layout';
+@use './scss/utilities/link' as link2;
+@use './scss/utilities/opacity';
+@use './scss/utilities/radius';
+@use './scss/utilities/spacing';
+@use './scss/utilities/text' as text2;
+@use './scss/utilities/word-break';
+@use './scss/utilities/z-index';

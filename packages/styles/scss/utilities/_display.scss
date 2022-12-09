@@ -1,28 +1,20 @@
-@use '../abstracts/functions';
-@use '../abstracts/mixins';
-@use '../abstracts/variables';
-
 /** @define utilities */
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
 
-///
 /// Display classes
 ///
+/// @group Utilities
 /// @author Richard McCartney
-///
-/// @group utilities
-/// @prop {Map} $value - Display variables
-/// @prop {Map} $breakpoints - Global breakpoint variables and names
-///
 @each $value in 'block', 'none', 'inline', 'inline-block', 'table', 'table-cell',
   'table-row'
 {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-display#{functions.pascalize($value)} {
     display: $value !important;
 
     @each $breakpoint in variables.$breakpoints {
       @include mixins.media-min-width($breakpoint) {
-        // stylelint-disable-next-line plugin/selector-bem-pattern
         &:#{$breakpoint} {
           display: $value !important;
         }
@@ -31,11 +23,10 @@
   }
 }
 
-///
 /// Visibility utility classes
 ///
-/// Completely remove from the flow but leave available to screen readers.
-///
+/// @group Utilities
+/// @author Richard McCartney
 .u-hiddenVisually {
   border: 0 !important;
   clip: rect(

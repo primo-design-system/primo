@@ -1,7 +1,6 @@
-@use 'sass:list';
-@use 'sass:map';
-@use 'sass:string';
-
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
 ///
 /// Map deep get
 ///
@@ -25,9 +24,7 @@
 /// @return {String}
 ///
 @function capitalize($string) {
-  /* stylelint-disable-next-line scss/operator-no-newline-after */
-  @return string.to-upper-case(string.slice($string, 1, 1)) +
-    string.slice($string, 2);
+  @return string.to-upper-case(string.slice($string, 1, 1)) + string.slice($string, 2);
 }
 
 // Alias
@@ -41,9 +38,7 @@
 /// @return {String}
 ///
 @function uncapitalize($string) {
-  /* stylelint-disable-next-line scss/operator-no-newline-after */
-  @return string.to-lower-case(string.slice($string, 1, 1)) +
-    string.slice($string, 2);
+  @return string.to-lower-case(string.slice($string, 1, 1)) + string.slice($string, 2);
 }
 
 // Alias
@@ -98,7 +93,6 @@
     $char: string.slice($progress, 1, 1);
 
     @if contain($exclude, $char) {
-      /* stylelint-disable-next-line scss/operator-no-newline-after */
       $progress: capitalize(string.slice($progress, 2, 2)) +
         string.slice($progress, 3);
     } @else {

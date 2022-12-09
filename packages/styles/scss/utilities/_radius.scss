@@ -1,7 +1,7 @@
-@use 'sass:map';
-@use '../abstracts/functions';
-@use '../abstracts/mixins';
-@use '../abstracts/variables';
+@use "sass:map";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
 
 /** @define utilities */
 
@@ -13,27 +13,22 @@ $radius: (
   '8': 16,
   '24': 24,
   '64': 64,
-  '128': 128,
+  '128': 128
 );
 
-///
 /// Border radius classes
 ///
 /// @author Richard McCartney
 ///
-/// @group utilities
-/// @prop {Map} $radius - Radius variables
-/// @prop {Map} $breakpoints - Global breakpoint variables and names
-///
-
+/// @access public
+/// @group Utilities
 @each $key, $value in $radius {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
+  /* stylelint-disable-next-line */
   .u-borderRadius#{$key} {
     border-radius: var(--border-radius-#{$value});
 
     @each $breakpoint in variables.$breakpoints {
       @include mixins.media-min-width($breakpoint) {
-        // stylelint-disable-next-line plugin/selector-bem-pattern
         &:#{$breakpoint} {
           border-radius: var(--border-radius-#{$value});
         }

@@ -1,13 +1,13 @@
-@use '../abstracts/functions';
-@use '../abstracts/mixins';
-@use '../abstracts/variables';
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
 
 /** @define utilities */
 
-/**
- * Sets text alignment
- */
-
+/// Sets text alignment
+/// 
+/// @group Utilities
+/// @author Richard McCartney
 @each $align in center, left, justify, right {
   /* stylelint-disable-next-line */
   .u-text#{functions.capitalize($align)} {
@@ -15,10 +15,10 @@
   }
 }
 
-/**
- * Sets text transformation.
- */
-
+/// Sets text transformation.
+///
+/// @group Utilities
+/// @author Richard McCartney
 @each $transform in capitalize, lowercase, uppercase {
   /* stylelint-disable-next-line */
   .u-text#{functions.capitalize($transform)} {
@@ -26,10 +26,10 @@
   }
 }
 
-/**
- * Sets the text weight.
- */
-
+/// Sets the text weight.
+///
+/// @group Utilities
+/// @author Richard McCartney
 @each $weight in regular, medium, bold {
   /* stylelint-disable-next-line */
   .u-text#{functions.capitalize($weight)} {
@@ -37,34 +37,34 @@
   }
 }
 
-/**
- * Sets text style to italic.
- */
-
+/// Sets text style to italic.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-textItalic {
   font-style: italic;
 }
 
-/**
- * Inherit the ancestor's text color.
- */
-
+/// Inherit the ancestor's text color.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-textInheritColor {
   color: inherit;
 }
 
-/**
- * Text truncation
- *
- * Prevent text from wrapping onto multiple lines, and truncate with an
- * ellipsis.
- *
- * 1. Ensure that the node has a maximum width after which truncation can
- *    occur.
- * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
- *    nodes.
- */
-
+/// Text truncation
+///
+/// Prevent text from wrapping onto multiple lines, and truncate with an
+/// ellipsis.
+///
+/// 1. Ensure that the node has a maximum width after which truncation can
+///    occur.
+/// 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+///    nodes.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-textTruncate {
   max-width: 100%; /* 1 */
   overflow: hidden !important;
@@ -73,44 +73,45 @@
   word-wrap: normal !important; /* 2 */
 }
 
-/**
- * Enables font kerning in all browsers.
- * http://blog.typekit.com/2014/02/05/kerning-on-the-web/
- *
- * 1. Chrome (not Windows), Firefox, IE 10+
- * 2. Safari 7 and future browsers
- * 3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
- */
-
+///
+/// Enables font kerning in all browsers.
+/// http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+///
+/// 1. Chrome (not Windows), Firefox, IE 10+
+/// 2. Safari 7 and future browsers
+/// 3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-textKern {
   font-feature-settings: 'kern' 1; /* 1 */
   font-kerning: normal; /* 2 */
   text-rendering: optimizelegibility; /* 3 */
 }
 
-/**
- * Word breaking
- *
- * Break strings when their length exceeds the width of their container.
- */
-
+/// Word breaking
+///
+/// Break strings when their length exceeds the width of their container.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-textBreak {
   overflow-wrap: break-word !important;
   word-break: break-word !important;
 }
 
-/**
- * Prevent whitespace wrapping
- */
-
+/// Prevent whitespace wrapping
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-textNoWrap {
   white-space: nowrap !important;
 }
 
-/* 
- * Prevent text decoration
- */
-
+/// Prevent text decoration
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-textNoDecoration {
   &,
   &:hover {
@@ -118,20 +119,19 @@
   }
 }
 
-/**
- * Sets text size
- */
-
+/// Sets text size
+///
+/// @group Utilities
+/// @author Richard McCartney
 @each $value in 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 70, 84, 96,
   112
 {
-  // stylelint-disable-next-line plugin/selector-bem-pattern
+  /* stylelint-disable-next-line */
   .u-textSize#{$value} {
     font-size: var(--font-size-#{$value}) !important;
 
     @each $breakpoint in variables.$breakpoints {
       @include mixins.media-min-width($breakpoint) {
-        // stylelint-disable-next-line plugin/selector-bem-pattern
         &:#{$breakpoint} {
           font-size: var(--font-size-#{$value}) !important;
         }

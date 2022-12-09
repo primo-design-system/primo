@@ -1,16 +1,20 @@
 /** @define utilities */
 
+/// Position absolute
+/// 
+/// @group Utilities
+/// @author Richard McCartney
 .u-positionFit,
 .u-positionAbsoluteCenter,
 .u-positionAbsolute {
   position: absolute !important;
 }
 
-/**
- * Element will be centered to its nearest relatively-positioned
- * ancestor.
- */
-
+/// Element will be centered to its nearest relatively-positioned
+/// ancestor.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-positionFixedCenter,
 .u-positionAbsoluteCenter {
   left: 50% !important;
@@ -18,6 +22,10 @@
   transform: translate(-50%, -50%) !important;
 }
 
+/// Element is positioned to fit or full screen
+/// 
+/// @group Utilities
+/// @author Richard McCartney
 .u-positionFit,
 .u-positionFullScreen {
   bottom: 0 !important;
@@ -27,11 +35,13 @@
   top: 0 !important;
 }
 
-/**
- * 1. Make sure fixed elements are promoted into a new layer, for performance
- *    reasons.
- */
-
+/// Element is positioned to fixed
+/// 
+/// 1. Make sure fixed elements are promoted into a new layer, for performance
+///    reasons.
+///
+/// @group Utilities
+/// @author Richard McCartney
 .u-positionFullScreen,
 .u-positionFixedCenter,
 .u-positionFixed {
@@ -39,10 +49,18 @@
   position: fixed !important;
 }
 
+/// Element is positioned relative
+/// 
+/// @group Utilities
+/// @author Richard McCartney
 .u-positionRelative {
   position: relative !important;
 }
 
+/// Element is positioned static
+/// 
+/// @group Utilities
+/// @author Richard McCartney
 .u-positionStatic {
   position: static !important;
 }
