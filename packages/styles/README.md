@@ -44,12 +44,14 @@ You can bring in all the styles for the Primo Design System by including
 @use '@primo/styles';
 ```
 
-## 🙌 Contributing
+## ✍️ Feedback
 
-We're always looking for contributors to help us fix bugs, build new features,
-or help us improve the project documentation. If you're interested, definitely
-check out our [Contributing Guide](/.github/CONTRIBUTING.md)! 👀
+Please ask any questions on this project, you can do so by
+[creating a new issue](https://github.com/primo-design-system/primo/issues/new/choose). Or contributing to any [active issues](https://github.com/primo-design-system/primo/issues).
 
-## 📝 License
+If you wish to get in contact, please don't hesitate via twitter [@Rich_McCartney](https://twitter.com/rich_mccartney).
 
-Licensed under the [Apache 2.0 License](/LICENSE).
+## Licence
+
+Licensed under standard
+[MIT license](https://github.com/primo-design-system/primo/blob/main/LICENSE).
