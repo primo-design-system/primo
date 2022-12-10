@@ -3507,6 +3507,11 @@
     camelcase "6.2.0"
     postcss-simple-vars "6.0.3"
 
+"@primo/postcss-config@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@primo/postcss-config/-/postcss-config-1.0.1.tgz#31970edab09ad4b5cd4adc41c586e9a697010625"
+  integrity sha512-RiZl0Iygts9R8PijJXnZbPjX0HDwJRyEgbxU+gxEqPcfrIJEBR08zj9hoTKoooAbP5vRFcGQPTOMuI9eOHXvsQ==
+
 "@reach/router@^1.2.1", "@reach/router@^1.3.4":
   version "1.3.4"
   resolved "https://registry.npmjs.org/@reach/router/-/router-1.3.4.tgz"

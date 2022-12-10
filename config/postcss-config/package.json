@@ -22,7 +22,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@primo/tokens": "1.0.1",
+    "@primo/tokens": "1.0.0",
     "autoprefixer": "^9.0.0",
     "postcss-combine-media-query": "1.0.1",
     "postcss-import": "^14.1.0",
