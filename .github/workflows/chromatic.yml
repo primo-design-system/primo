@@ -59,7 +59,7 @@ jobs:
       - name: 💡 Build
         run: yarn build
   
-  Chromatic-Deployment-@primo/components:
+  Chromatic-Deployment-Components:
     name: 🚀 Deploy [ @primo/components ] to Chromatic
     runs-on: ubuntu-latest
     needs: Setup
@@ -95,7 +95,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_COMPONENTS }}
           workingDir: packages/components
 
-  Chromatic-Deployment-@primo/react:
+  Chromatic-Deployment-React:
     name: 🚀 Deploy [ @primo/react ] to Chromatic
     runs-on: ubuntu-latest
     needs: Setup
@@ -131,7 +131,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_COMPONENTS }}
           workingDir: packages/react
 
-  Chromatic-Deployment-@primo/styles:
+  Chromatic-Deployment-Styles:
     name: 🚀 Deploy [ @primo/styles ] to Chromatic
     runs-on: ubuntu-latest
     needs: Setup
