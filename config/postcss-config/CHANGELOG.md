@@ -1,3 +1,13 @@
+## @primo/postcss-config [1.0.3](https://github.com/primo-design-system/primo/compare/@primo/postcss-config@1.0.2...@primo/postcss-config@1.0.3) (2022-12-10)
+
+
+
+
+
+### Dependencies
+
+* **@primo/tokens:** upgraded to 1.0.1
+
 ## @primo/postcss-config [1.0.2](https://github.com/primo-design-system/primo/compare/@primo/postcss-config@1.0.1...@primo/postcss-config@1.0.2) (2022-12-10)
 
 
