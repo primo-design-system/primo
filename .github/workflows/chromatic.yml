@@ -55,9 +55,6 @@ jobs:
         env:
           BRANCH_NAME: ${{ steps.extract-branch-name.outputs.branch }}
         run: yarn
-      
-      - name: 💡 Build
-        run: yarn build
   
   Chromatic-Deployment-Components:
     name: 🚀 Deploy [ @primo/components ] to Chromatic
@@ -87,6 +84,10 @@ jobs:
           key: packages-cache-${{ github.sha }}
         
         # 👇 Adds Chromatic as a step in the workflow
+      
+      - name: 💡 Build
+        run: yarn build
+
       - name: 🚀 Publish
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
@@ -121,6 +122,9 @@ jobs:
         with:
           path: packages
           key: packages-cache-${{ github.sha }}
+
+      - name: 💡 Build
+        run: yarn build
         
         # 👇 Adds Chromatic as a step in the workflow
       - name: 🚀 Publish
@@ -157,6 +161,9 @@ jobs:
         with:
           path: packages
           key: packages-cache-${{ github.sha }}
+
+      - name: 💡 Build
+        run: yarn build
         
         # 👇 Adds Chromatic as a step in the workflow
       - name: 🚀 Publish
