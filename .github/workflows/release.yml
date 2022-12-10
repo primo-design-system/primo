@@ -6,43 +6,168 @@ on:
     branches: [ main, next ]
 
 jobs:
-  Test:
+  Setup:
+    name: 🏗 Setup packages
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🛒 Checkout
-        uses: actions/checkout@v3
+      - name: 🛒 Check out repository
+        uses: actions/checkout@v2
 
-      - name: 🏗 Setup Node.js
-        uses: actions/setup-node@v3
+      - name: 📁 Get Yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: 📇 Extract branch name
+        id: extract-branch-name
+        run: echo "::set-output name=branch::$([[ -z "${GITHUB_HEAD_REF}" ]] && echo ${GITHUB_REF#refs/heads/} || echo ${GITHUB_HEAD_REF})"
+
+      - name: 📁 Use cache for yarn
+        id: yarn-cache
+        uses: actions/cache@v2
         with:
-          node-version: 16.13.2
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: 📁 Use cache for modules
+        id: modules-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: modules-cache-${{ github.sha }}
+
+      - name: 📁 Use cache for packages
+        id: packages-cache
+        uses: actions/cache@v2
+        with:
+          path: packages
+          key: packages-cache-${{ github.sha }}
 
       - name: 🚧 Install
+        env:
+          BRANCH_NAME: ${{ steps.extract-branch-name.outputs.branch }}
         run: yarn
+
+  Lint:
+    name: 📝 Lint
+    runs-on: ubuntu-latest
+    needs: Setup
+
+    steps:
+      - name: 🛒 Check out repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 📁 Use cache for modules
+        id: modules-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: modules-cache-${{ github.sha }}
+
+      - name: 📁 Use cache for packages
+        id: packages-cache
+        uses: actions/cache@v2
+        with:
+          path: packages
+          key: packages-cache-${{ github.sha }}
+
+      - name: 📝 Lint packages
+        run: yarn lint
+
+  Format:
+    name: 🔀 Format
+    runs-on: ubuntu-latest
+    needs: Setup
+
+    steps:
+      - name: 🛒 Check out repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 📁 Use cache for modules
+        id: modules-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: modules-cache-${{ github.sha }}
+
+      - name: 📁 Use cache for packages
+        id: packages-cache
+        uses: actions/cache@v2
+        with:
+          path: packages
+          key: packages-cache-${{ github.sha }}
 
       - name: 🔀 Format
         run: yarn format
+
+  Test:
+    name: 🧪 Test
+    runs-on: ubuntu-latest
+    needs: Setup
+
+    steps:
+      - name: 🛒 Check out repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 📁 Use cache for modules
+        id: modules-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: modules-cache-${{ github.sha }}
+
+      - name: 📁 Use cache for packages
+        id: packages-cache
+        uses: actions/cache@v2
+        with:
+          path: packages
+          key: packages-cache-${{ github.sha }}
 
       - name: 🧪 Test
         run: yarn test
 
   Release:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./
 
     needs: [Test]
 
     steps:
-      - name: 🛒 Checkout
-        uses: actions/checkout@v3
-
-      - name: 🏗 Setup Node.js
-        uses: actions/setup-node@v3
+      - name: 🛒 Check out repository
+        uses: actions/checkout@v2
         with:
-          node-version: 16.13.2
+          fetch-depth: 0
 
-      - name: 🚧 Install
-        run: yarn
+      - name: 📁 Use cache for modules
+        id: modules-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: modules-cache-${{ github.sha }}
+
+      - name: 📁 Use cache for packages
+        id: packages-cache
+        uses: actions/cache@v2
+        with:
+          path: packages
+          key: packages-cache-${{ github.sha }}
 
       - name: 💡 Build
         run: yarn build
