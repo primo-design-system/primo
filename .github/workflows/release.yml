@@ -141,6 +141,7 @@ jobs:
         run: yarn test
 
   Release:
+    name: 🚀 Release
     runs-on: ubuntu-latest
     env:
       working-directory: ./

@@ -143,6 +143,7 @@ jobs:
         run: yarn test
 
   Dry-Run:
+    name: 👷‍♂️ Dry Run
     runs-on: ubuntu-latest
     env:
       working-directory: ./
