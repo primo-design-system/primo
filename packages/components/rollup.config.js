@@ -5,7 +5,7 @@ import * as postcssConfig from '@primo/postcss-config';
 export default [
   // CSS Output
   {
-    input: 'scss/styles.scss',
+    input: 'index.scss',
     output: {
       file: 'dist/style.css',
       format: 'es',
@@ -24,7 +24,7 @@ export default [
 
   // Minified CSS Output
   {
-    input: 'scss/styles.scss',
+    input: 'index.scss',
     output: {
       file: 'dist/style.min.css',
       format: 'es',

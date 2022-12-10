@@ -9,7 +9,9 @@
     "src": "src"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "scss",
+    "index.scss"
   ],
   "style": "dist/style.min.css",
   "publishConfig": {
@@ -23,6 +25,15 @@
   "bugs": {
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
+  "keywords": [
+    "primo",
+    "design-system",
+    "primo-design-system",
+    "components",
+    "react",
+    "scss",
+    "css"
+  ],
   "scripts": {
     "build": "rollup -c",
     "build:storybook": "build-storybook -c .storybook -o build",

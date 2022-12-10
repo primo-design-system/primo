@@ -3,5 +3,5 @@
 
 .primo {
   // Component styles
-  @include meta.load-css('components/Button');
+  @include meta.load-css('scss/components/Button');
 }
