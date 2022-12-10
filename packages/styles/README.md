@@ -1,18 +1,19 @@
 # @primo/styles
 
+[![NPM version](https://badgen.net/npm/v/@primo/styles)](https://www.npmjs.org/package/@primo/styles)
+
 > Styles for the Primo Design System
 
 ## Getting started
 
-To install `@primo/styles` in your project, you will need to run the following
-command using [npm](https://www.npmjs.com/):
+To install `@primo/styles` to your new or exsisting project, you will
+need to run the following command using [npm](https://www.npmjs.com/):
 
 ```bash
 npm install -S @primo/styles
 ```
 
-If you prefer [Yarn](https://yarnpkg.com/en/), use the following command
-instead:
+If you use [Yarn](https://yarnpkg.com/en/), use the following command instead:
 
 ```bash
 yarn add @primo/styles
@@ -51,7 +52,7 @@ Please ask any questions on this project, you can do so by
 
 If you wish to get in contact, please don't hesitate via twitter [@Rich_McCartney](https://twitter.com/rich_mccartney).
 
-## Licence
+## 📝 Licence
 
 Licensed under standard
 [MIT license](https://github.com/primo-design-system/primo/blob/main/LICENSE).
