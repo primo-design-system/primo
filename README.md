@@ -8,6 +8,12 @@
   <a href="https://lerna.js.org/">
     <img src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg" alt="Maintained with Lerna" />
   </a>
+  <a href="https://github.com/primo-design-system/primo/actions">
+    <img src="https://github.com/primo-design-system/primo/actions/workflows/commit.yml/badge.svg" alt="Actions" style="max-width: 100%">
+  </a>
+  <a href="https://github.com/primo-design-system/primo/actions">
+    <img src="https://github.com/primo-design-system/primo/actions/workflows/pre-release.yml/badge.svg" alt="Actions" style="max-width: 100%">
+  </a>
   <a href="https://github.com/primo-design-system/primo/blob/main/.github/CONTRIBUTING.md">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome" />
   </a>
