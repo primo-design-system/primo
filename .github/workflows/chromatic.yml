@@ -13,7 +13,7 @@ on:
 # List of jobs
 jobs:
   Setup:
-    name: 🏗 Setup packages
+    name: 🏗 Setup packages - [Chromatic]
     runs-on: ubuntu-latest
 
     steps:

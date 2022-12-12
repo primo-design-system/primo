@@ -7,7 +7,7 @@ on:
 
 jobs:
   Setup:
-    name: 🏗 Setup packages
+    name: 🏗 Setup packages - [Dry Run]
     runs-on: ubuntu-latest
 
     steps:
@@ -51,7 +51,7 @@ jobs:
         run: yarn
 
   Dry-Run:
-    name: 👷‍♂️ Dry Run
+    name: 👷‍♂️ Dry Run Release - [Dry Run]
     runs-on: ubuntu-latest
     env:
       working-directory: ./

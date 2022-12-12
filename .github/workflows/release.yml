@@ -7,7 +7,7 @@ on:
 
 jobs:
   Setup:
-    name: 🏗 Setup packages
+    name: 🏗 Setup packages - [Release]
     runs-on: ubuntu-latest
 
     steps:
@@ -51,7 +51,7 @@ jobs:
         run: yarn
 
   Lint:
-    name: 📝 Lint
+    name: 📝 Lint - [Release]
     runs-on: ubuntu-latest
     needs: Setup
 
@@ -81,7 +81,7 @@ jobs:
         run: yarn lint
 
   Format:
-    name: 🔀 Format
+    name: 🔀 Format - [Release]
     runs-on: ubuntu-latest
     needs: Setup
 
@@ -111,7 +111,7 @@ jobs:
         run: yarn format
 
   Test:
-    name: 🧪 Test
+    name: 🧪 Test - [Release]
     runs-on: ubuntu-latest
     needs: [Lint, Format]
 
@@ -141,7 +141,7 @@ jobs:
         run: yarn test
 
   Release:
-    name: 🚀 Release
+    name: 🚀 Release packages - [Release]
     runs-on: ubuntu-latest
     env:
       working-directory: ./
