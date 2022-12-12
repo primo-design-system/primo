@@ -73,6 +73,17 @@ In the future we will look to support
 | [`@primo/styles`](./packages/styles)          | Base styles and CSS reset for the Design System                                        |
 | [`@primo/tokens`](./packages/tokens)          | Tokens for color, type, spacing, grids that are available in the Cardano design system |
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## ✍️ Feedback
 
 Please ask any questions on this project, you can do so by
