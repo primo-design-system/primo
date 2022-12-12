@@ -1,3 +1,15 @@
+## @primo/react [1.0.2](https://github.com/primo-design-system/primo/compare/@primo/react@1.0.1...@primo/react@1.0.2) (2022-12-12)
+
+
+
+
+
+### Dependencies
+
+* **@primo/tokens:** upgraded to 1.0.1
+* **@primo/styles:** upgraded to 1.1.0
+* **@primo/components:** upgraded to 2.0.0
+
 ## @primo/react [1.0.1](https://github.com/primo-design-system/primo/compare/@primo/react@1.0.0...@primo/react@1.0.1) (2022-11-19)
 
 
