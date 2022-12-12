@@ -17,6 +17,9 @@
   <a href="https://github.com/primo-design-system/primo/blob/main/.github/CONTRIBUTING.md">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome" />
   </a>
+  <a href="#contributors">
+    <img src="https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square" alt="" />
+  </a>
 </p>
 
 > Primo is an open-source design system that makes it easy to build high quality 
