@@ -1,9 +1,11 @@
 {
-  "projectName": "Primo",
+  "projectName": "primo",
   "projectOwner": "primo-design-system",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "files": ["README.md"],
+  "files": [
+    "README.md"
+  ],
   "imageSize": 100,
   "commit": false,
   "contributorsPerLine": 7,
@@ -19,5 +21,22 @@
   },
   "linkToUsage": true,
   "skipCi": true,
-  "contributors": []
+  "contributors": [
+    {
+      "login": "richmccartney",
+      "name": "Richard McCartney",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1201618?v=4",
+      "profile": "http://richmccartney.uk",
+      "contributions": [
+        "code",
+        "maintenance",
+        "design",
+        "a11y",
+        "test",
+        "infra",
+        "doc"
+      ]
+    }
+  ],
+  "commitConvention": "angular"
 }
