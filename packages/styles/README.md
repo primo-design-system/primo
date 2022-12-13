@@ -45,6 +45,10 @@ You can bring in all the styles for the Primo Design System by including
 @use '@primo/styles';
 ```
 
+## Public Storybook
+
+If you wish to see our styles components live, and the most recent version and changes please visit here: [@primo/styles - Storybook](https://main--6377de0c8a29e4b5116a392b.chromatic.com)
+
 ## ✍️ Feedback
 
 Please ask any questions on this project, you can do so by

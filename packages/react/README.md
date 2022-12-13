@@ -33,6 +33,10 @@ function HelloWorld() {
 }
 ```
 
+## Public Storybook
+
+If you wish to see our react components live, and the most recent version and changes please visit here: [@primo/react - Storybook](https://main--6377ddcc97779b50d34d4241.chromatic.com)
+
 ## ✍️ Feedback
 
 Please ask any questions on this project, you can do so by

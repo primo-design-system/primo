@@ -43,6 +43,11 @@ You can bring in all the components for the Primo Design System by including
 @use '@primo/components';
 ```
 
+## Public Storybook
+
+If you wish to see our components live, and the most recent version and changes please visit here: [@primo/components - Storybook](https://main--6377d93d014d80f32c7cdf2a.chromatic.com)
+
+
 ## ✍️ Feedback
 
 Please ask any questions on this project, you can do so by
