@@ -1,0 +1,8 @@
+---
+to: packages/components/scss/components/<%= name %>/_<%= name %>.vars.scss
+---
+/** @define <%= name %> */
+
+:root {
+  /* Custom properties go here */
+}
