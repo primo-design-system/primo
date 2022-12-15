@@ -145,7 +145,7 @@ Object {
       },
       "100": Object {
         "value": Object {
-          "hex": "#787878",
+          "hex": "#161616",
         },
       },
       "15": Object {
@@ -155,42 +155,42 @@ Object {
       },
       "20": Object {
         "value": Object {
-          "hex": "#efefef",
+          "hex": "#e0e0e0",
         },
       },
       "30": Object {
         "value": Object {
-          "hex": "#eaeaea",
+          "hex": "#c6c6c6",
         },
       },
       "40": Object {
         "value": Object {
-          "hex": "#e2e2e2",
+          "hex": "#a8a8a8",
         },
       },
       "50": Object {
         "value": Object {
-          "hex": "#d8d8d8",
+          "hex": "#8d8d8d",
         },
       },
       "60": Object {
         "value": Object {
-          "hex": "#cbcbcb",
+          "hex": "#6f6f6f",
         },
       },
       "70": Object {
         "value": Object {
-          "hex": "#bababa",
+          "hex": "#525252",
         },
       },
       "80": Object {
         "value": Object {
-          "hex": "#a6a6a6",
+          "hex": "#393939",
         },
       },
       "90": Object {
         "value": Object {
-          "hex": "#8f8f8f",
+          "hex": "#262626",
         },
       },
     },
