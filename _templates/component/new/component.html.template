@@ -1,0 +1,4 @@
+---
+to: packages/components/src/components/<%= name %>/<%= name %>.html
+---
+<div class="primo-<%= name %>">Hello World!</div>

@@ -1,0 +1,11 @@
+---
+to: packages/components/src/components/<%= name %>/<%= name %>.stories.js
+---
+import <%= name.toLowerCase() %>Default from './<%= name %>.html';
+
+export default {
+  title: 'Components/<%= name %>',
+  parameters: { layout: 'centered' },
+};
+
+export const <%= name.toLowerCase() %> = () => <%= name.toLowerCase() %>Default;
