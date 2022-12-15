@@ -4,10 +4,10 @@ input[type='submit'],
 input[type='reset'],
 input[type='file']::file-selector-button {
   appearance: none;
-  background-color: var(--color-grey-20);
+  background-color: var(--color-black);
   border: 0;
   border-radius: var(--size-4);
-  color: var(--color-black);
+  color: var(--color-white);
   display: inline-block;
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-medium);
@@ -21,11 +21,11 @@ input[type='file']::file-selector-button {
   word-wrap: break-word;
 
   &:hover {
-    background-color: var(--color-grey-30);
+    background-color: var(--color-grey-90);
   }
 
   &:active {
-    background-color: var(--color-grey-40);
+    background-color: var(--color-grey-70);
   }
 
   &:disabled,
@@ -38,7 +38,8 @@ input[type='file']::file-selector-button {
   &[aria-disabled='true']:focus-visible,
   &[aria-disabled='true']:focus:not(:focus-visible),
   &[aria-disabled='true']:focus-within:not(:focus-visible),
-  &[aria-disabled='true']:focus-visible:not(:focus) {
+  &[aria-disabled='true']:focus-visible:not(:focus),
+  &.is-disabled {
     background-color: var(--color-grey-10);
     color: var(--color-grey-60);
     cursor: not-allowed;
