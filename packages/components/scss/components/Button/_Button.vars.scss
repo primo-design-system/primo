@@ -1,9 +1,57 @@
 /** @define Button */
 
+/// Root variables for the Button Component, these will be amended
+/// by each modifying class within the Component CSS
 :root {
   --Button-background-color: var(--color-grey-20);
   --Button-background-color--hover: var(--color-grey-30);
   --Button-background-color--active: var(--color-grey-40);
+  --Button-border-color: var(--color-grey-20);
+  --Button-border-color--hover: var(--color-grey-30);
+  --Button-border-color--active: var(--color-grey-40);
   --Button-color: var(--color-black);
   --Button-font: inherit;
+}
+
+/// Primary Button Variables
+:root {
+  --Button-primary-background-color: var(--color-black);
+  --Button-primary-background-color--hover: var(--color-grey-90);
+  --Button-primary-background-color--active: var(--color-grey-70);
+  --Button-primary-color: var(--color-white);
+}
+
+/// Secondary Button Variables
+:root {
+  --Button-secondary-background-color: var(--color-white);
+  --Button-secondary-background-color--hover: var(--color-grey-10);
+  --Button-secondary-background-color--active: var(--color-grey-30);
+  --Button-secondary-border-color: var(--color-grey-40);
+  --Button-secondary-border-color--hover: var(--color-grey-50);
+  --Button-secondary-border-color--active: var(--color-grey-50);
+  --Button-secondary-color: var(--color-black);
+}
+
+/// Tertiary Button Variables
+:root {
+  --Button-tertiary-background-color: transparent;
+  --Button-tertiary-background-color--hover: var(--color-grey-10);
+  --Button-tertiary-background-color--active: var(--color-grey-30);
+  --Button-tertiary-color: var(--color-black);
+}
+
+/// Negative Button Variables
+:root {
+  --Button-negative-background-color: var(--color-red-60);
+  --Button-negative-background-color--hover: var(--color-red-70);
+  --Button-negative-background-color--active: var(--color-red-80);
+  --Button-negative-color: var(--color-white);
+}
+
+/// Positive Button Variables
+:root {
+  --Button-positive-background-color: var(--color-green-60);
+  --Button-positive-background-color--hover: var(--color-green-70);
+  --Button-positive-background-color--active: var(--color-green-80);
+  --Button-positive-color: var(--color-white);
 }
