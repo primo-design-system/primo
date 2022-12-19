@@ -36,6 +36,13 @@
     --Button-background-color--hover: var(--Button-primary-background-color--hover);
     --Button-background-color--active: var(--Button-primary-background-color--active);
     --Button-color: var(--Button-primary-color);
+
+    &.primo-Button--outline {
+        --Button-color: var(--Button-background-color);
+        
+        background-color: transparent;
+        box-shadow: inset 0 0 0 1px var(--Button-background-color);
+    }
   }
 
   &--secondary {
@@ -62,6 +69,13 @@
     --Button-background-color--hover: var(--Button-negative-background-color--hover);
     --Button-background-color--active: var(--Button-negative-background-color--active);
     --Button-color: var(--Button-negative-color);
+
+    &.primo-Button--outline {
+      --Button-color: var(--Button-background-color);
+      
+      background-color: transparent;
+      box-shadow: inset 0 0 0 1px var(--Button-background-color);
+    }
   }
 
   &--positive {
@@ -69,6 +83,13 @@
     --Button-background-color--hover: var(--Button-positive-background-color--hover);
     --Button-background-color--active: var(--Button-positive-background-color--active);
     --Button-color: var(--Button-positive-color);
+
+    &.primo-Button--outline {
+      --Button-color: var(--Button-background-color);
+      
+      background-color: transparent;
+      box-shadow: inset 0 0 0 1px var(--Button-background-color);
+    }
   }
 
   // stylelint-disable-next-line plugin/selector-bem-pattern
