@@ -123,9 +123,7 @@
 ///
 /// @group Utilities
 /// @author Richard McCartney
-@each $value in 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 70, 84, 96,
-  112
-{
+@each $value in 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 56, 64, 70, 84, 96, 112 {
   // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-textSize#{$value} {
     font-size: var(--font-size-#{$value}) !important;

@@ -25,8 +25,7 @@
 ///
 @function capitalize($string) {
   /* stylelint-disable-next-line scss/operator-no-newline-after */
-  @return string.to-upper-case(string.slice($string, 1, 1)) +
-    string.slice($string, 2);
+  @return string.to-upper-case(string.slice($string, 1, 1)) + string.slice($string, 2);
 }
 
 // Alias
@@ -41,8 +40,7 @@
 ///
 @function uncapitalize($string) {
   /* stylelint-disable-next-line scss/operator-no-newline-after */
-  @return string.to-lower-case(string.slice($string, 1, 1)) +
-    string.slice($string, 2);
+  @return string.to-lower-case(string.slice($string, 1, 1)) + string.slice($string, 2);
 }
 
 // Alias
@@ -98,8 +96,7 @@
 
     @if contain($exclude, $char) {
       /* stylelint-disable-next-line scss/operator-no-newline-after */
-      $progress: capitalize(string.slice($progress, 2, 2)) +
-        string.slice($progress, 3);
+      $progress: capitalize(string.slice($progress, 2, 2)) + string.slice($progress, 3);
     } @else {
       $result: $result + $char;
       $progress: string.slice($progress, 2);

@@ -37,11 +37,12 @@
     --Button-background-color--active: var(--Button-primary-background-color--active);
     --Button-color: var(--Button-primary-color);
 
+    // stylelint-disable-next-line plugin/selector-bem-pattern
     &.primo-Button--outline {
-        --Button-color: var(--Button-background-color);
-        
-        background-color: transparent;
-        box-shadow: inset 0 0 0 1px var(--Button-background-color);
+      --Button-color: var(--Button-background-color);
+      // stylelint-disable-next-line declaration-empty-line-before
+      background-color: transparent;
+      box-shadow: inset 0 0 0 1px var(--Button-background-color);
     }
   }
 
@@ -53,7 +54,7 @@
     --Button-border-color--hover: var(--Button-secondary-border-color--hover);
     --Button-border-color--active: var(--Button-secondary-border-color--active);
     --Button-color: var(--Button-secondary-color);
-
+    // stylelint-disable-next-line declaration-empty-line-before
     box-shadow: inset 0 0 0 1px var(--Button-border-color);
   }
 
@@ -70,9 +71,10 @@
     --Button-background-color--active: var(--Button-negative-background-color--active);
     --Button-color: var(--Button-negative-color);
 
+    // stylelint-disable-next-line plugin/selector-bem-pattern
     &.primo-Button--outline {
       --Button-color: var(--Button-background-color);
-      
+      // stylelint-disable-next-line declaration-empty-line-before
       background-color: transparent;
       box-shadow: inset 0 0 0 1px var(--Button-background-color);
     }
@@ -84,9 +86,10 @@
     --Button-background-color--active: var(--Button-positive-background-color--active);
     --Button-color: var(--Button-positive-color);
 
+    // stylelint-disable-next-line plugin/selector-bem-pattern
     &.primo-Button--outline {
       --Button-color: var(--Button-background-color);
-      
+      // stylelint-disable-next-line declaration-empty-line-before
       background-color: transparent;
       box-shadow: inset 0 0 0 1px var(--Button-background-color);
     }
@@ -97,9 +100,10 @@
   &[disabled],
   &[aria-disabled='true'],
   &.is-disabled {
+    // stylelint-disable-next-line declaration-empty-line-before
     --Button-background-color: var(--color-grey-10);
     --Button-color: var(--color-grey-60);
-
+    // stylelint-disable-next-line declaration-empty-line-before
     box-shadow: none;
     cursor: not-allowed;
   }

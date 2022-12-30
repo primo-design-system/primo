@@ -63,13 +63,7 @@
 /// @author Richard McCartney
 @each $key,
   $value
-    in (
-      'start': 'flex-start',
-      'end': 'flex-end',
-      'center': 'center',
-      'base line': 'baseline',
-      'stretch': 'stretch'
-    )
+    in ('start': 'flex-start', 'end': 'flex-end', 'center': 'center', 'base line': 'baseline', 'stretch': 'stretch')
 {
   // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-flexAlignItems#{functions.pascalize($key)} {

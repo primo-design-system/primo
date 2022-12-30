@@ -10,15 +10,7 @@
 /// @group Utilities
 /// @author Richard McCartney
 /// @require $value
-@each $key,
-  $value
-    in (
-      'base line': 'baseline',
-      'top': 'top',
-      'middle': 'middle',
-      'bottom': 'bottom'
-    )
-{
+@each $key, $value in ('base line': 'baseline', 'top': 'top', 'middle': 'middle', 'bottom': 'bottom') {
   // stylelint-disable-next-line plugin/selector-bem-pattern
   .u-align#{functions.pascalize($key)} {
     vertical-align: $value !important;
