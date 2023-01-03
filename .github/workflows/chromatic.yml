@@ -10,7 +10,7 @@ on:
     paths: ['packages/**']
   pull_request:
     branches: [ main, next ]
-      paths: ['packages/**']
+    paths: ['packages/**']
 
 # List of jobs
 jobs:
