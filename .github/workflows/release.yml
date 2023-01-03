@@ -22,7 +22,7 @@ jobs:
 
       - name: 📇 Extract branch name
         id: extract-branch-name
-        run: echo "::set-output name=branch::$([[ -z "${GH_HEAD_REF}" ]] && echo ${GH_REF#refs/heads/} || echo ${GH_HEAD_REF})"
+        run: echo "::set-output name=branch::$([[ -z "${GITHUB_HEAD_REF}" ]] && echo ${GITHUB_REF#refs/heads/} || echo ${GITHUB_HEAD_REF})"
 
       - name: 📁 Use cache for yarn
         id: yarn-cache
