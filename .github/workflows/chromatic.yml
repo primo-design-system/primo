@@ -7,8 +7,10 @@ name: '💈 Chromatic'
 on:
   push:
     branches: [main]
+    paths: ['packages/**']
   pull_request:
     branches: [ main, next ]
+      paths: ['packages/**']
 
 # List of jobs
 jobs:
