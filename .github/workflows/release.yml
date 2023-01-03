@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: 🛒 Check out repository
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: 📁 Get Yarn cache directory path
         id: yarn-cache-dir-path
@@ -20,7 +22,7 @@ jobs:
 
       - name: 📇 Extract branch name
         id: extract-branch-name
-        run: echo "::set-output name=branch::$([[ -z "${GITHUB_HEAD_REF}" ]] && echo ${GITHUB_REF#refs/heads/} || echo ${GITHUB_HEAD_REF})"
+        run: echo "::set-output name=branch::$([[ -z "${GH_HEAD_REF}" ]] && echo ${GH_REF#refs/heads/} || echo ${GH_HEAD_REF})"
 
       - name: 📁 Use cache for yarn
         id: yarn-cache
@@ -176,9 +178,9 @@ jobs:
       - name: 👷‍♂️ Release dry run
         run: yarn release:dryrun
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          SEMANTIC_RELEASE_PACKAGE: ${{ secrets.GITHUB_TOKEN }}
+          SEMANTIC_RELEASE_PACKAGE: ${{ secrets.GH_TOKEN }}
 
   Release:
     name: 🚀 Release packages - [Release]
@@ -193,6 +195,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: 📁 Use cache for modules
         id: modules-cache
@@ -216,6 +219,6 @@ jobs:
       - name: 🚀 Release
         run: yarn release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          SEMANTIC_RELEASE_PACKAGE: ${{ secrets.GITHUB_TOKEN }}
+          SEMANTIC_RELEASE_PACKAGE: ${{ secrets.GH_TOKEN }}
