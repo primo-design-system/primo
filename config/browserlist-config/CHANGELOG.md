@@ -1,3 +1,10 @@
+## @primo/browserlist-config [1.0.1](https://github.com/primo-design-system/primo/compare/@primo/browserlist-config@1.0.0...@primo/browserlist-config@1.0.1) (2023-01-03)
+
+
+### Bug Fixes
+
+* updating README(s) on all packages ([d917ecc](https://github.com/primo-design-system/primo/commit/d917ecc70242577a1f3bf1335ba9ee4b63a579c2))
+
 # @primo/browserlist-config 1.0.0 (2022-11-18)
 
 
