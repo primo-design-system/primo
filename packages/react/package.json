@@ -1,7 +1,7 @@
 {
   "name": "@primo/react",
   "version": "1.0.2",
-  "description": "> TODO: description",
+  "description": "Primo React Components",
   "author": "Richard McCartney <richard@mccartney.io>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
   "license": "MIT",

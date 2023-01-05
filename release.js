@@ -15,16 +15,9 @@ async function release() {
       `${__dirname}/prettier-config/package.json`,
       `${__dirname}/stylelint-config/package.json`,
       `${__dirname}/components/package.json`,
-      `${__dirname}/grid/package.json`,
-      `${__dirname}/icons/package.json`,
-      `${__dirname}/icons-react/package.json`,
-      `${__dirname}/icons-web-components/package.json`,
-      `${__dirname}/layout/package.json`,
       `${__dirname}/react/package.json`,
       `${__dirname}/styles/package.json`,
       `${__dirname}/tokens/package.json`,
-      `${__dirname}/typography/package.json`,
-      `${__dirname}/web-components/package.json`,
     ];
 
     await multirelease(paths, { dryRun });

@@ -1,5 +1,7 @@
 # @primo/components
 
+[![NPM version](https://badgen.net/npm/v/@primo/components)](https://www.npmjs.org/package/@primo/components)
+
 > Component styles for the Primo Design System
 
 ## Getting started
