@@ -54,7 +54,7 @@
     "@babel/core": "^7.15.5",
     "@postcss-plugins/text-transform": "^0.1.2",
     "@primo/postcss-config": "1.0.1",
-    "@primo/stylelint-config": "1.1.0",
+    "@primo/stylelint-config": "1.1.1",
     "@primo/styles": "1.0.1",
     "@primo/tokens": "1.0.0",
     "@storybook/addon-a11y": "^6.3.9",
