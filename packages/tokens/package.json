@@ -1,6 +1,6 @@
 {
   "name": "@primo/tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Design tokens for web and platform products using Primo",
   "keywords": [
     "tokens",

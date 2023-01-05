@@ -1,6 +1,6 @@
 {
   "name": "@primo/react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Primo React Components",
   "author": "Richard McCartney <richard@mccartney.io>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
@@ -40,9 +40,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.5",
-    "@primo/tokens": "1.0.0",
-    "@primo/styles": "1.0.1",
-    "@primo/components": "1.0.1",
+    "@primo/tokens": "^1.0.0",
+    "@primo/styles": "^1.0.1",
+    "@primo/components": "^1.0.1",
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^10.0.1",
