@@ -1,6 +1,6 @@
 {
   "name": "@primo/postcss-config",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "PostCSS config for Primo Design System",
   "author": "Richard McCartney <richard@mccartney.io>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
@@ -25,11 +25,11 @@
     "autoprefixer": "^9.0.0",
     "postcss-combine-media-query": "1.0.1",
     "postcss-import": "^14.1.0",
+    "postcss-map-get": "^0.3.0",
+    "postcss-nested": "^5.0.0",
     "postcss-preset-env": "^7.4.3",
     "postcss-reporter": "^7.0.5",
     "postcss-scss": "^4.0.3",
-    "postcss-map-get": "^0.3.0",
-    "postcss-nested": "^5.0.0",
     "postcss-sort-media-queries": "^4.2.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@primo/tokens",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Design tokens for web and platform products using Primo",
   "keywords": [
     "tokens",
@@ -42,8 +42,8 @@
     "@primo/browserlist-config": "^1.0.0"
   },
   "devDependencies": {
+    "chroma-js": "^2.1.2",
     "jest": "^26.6.0",
-    "style-dictionary": "^3.0.1",
-    "chroma-js": "^2.1.2"
+    "style-dictionary": "^3.0.1"
   }
 }
