@@ -188,7 +188,7 @@ jobs:
     env:
       working-directory: ./
 
-    needs: [Dry-Run, Test]
+    needs: [Test]
 
     steps:
       - name: 🛒 Check out repository
@@ -216,9 +216,17 @@ jobs:
       - name: 💡 Build
         run: yarn build
 
-      - name: 🚀 Release
-        run: yarn release
+      - name: 🧑‍💻 Set GitHub credentials
+        run: |
+          git config --global user.name "$GITHUB_ACTOR"
+          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: 🔒 Set npm token
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          SEMANTIC_RELEASE_PACKAGE: ${{ secrets.GH_TOKEN }}
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+
+      - name: 🚀 Publish packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+        run: npx lerna publish -m "[skip ci] Release" --yes
