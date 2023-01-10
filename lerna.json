@@ -1,5 +1,5 @@
 {
-  "lerna": "3.20.2",
+  "lerna": "6.0.3",
   "packages": ["packages/*", "config/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
@@ -13,7 +13,8 @@
     "publish": {
       "allowBranch": "main",
       "conventionalCommits": true,
-      "message": "chore(release): updated release notes and package versions"
+      "message": "chore(release): updated release notes and package versions",
+      "createRelease": "github"
     }
   }
 }

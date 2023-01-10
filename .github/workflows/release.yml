@@ -142,46 +142,6 @@ jobs:
       - name: 🧪 Test
         run: yarn test
 
-  Dry-Run:
-    name: 👷‍♂️ Dry Run Release - [Dry Run]
-    runs-on: ubuntu-latest
-    env:
-      working-directory: ./
-
-    needs: [Setup]
-
-    steps:
-      - name: 🛒 Check out repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: 📁 Use cache for modules
-        id: modules-cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: modules-cache-${{ github.sha }}
-
-      - name: 📁 Use cache for packages
-        id: packages-cache
-        uses: actions/cache@v2
-        with:
-          path: packages
-          key: packages-cache-${{ github.sha }}
-
-      - name: 💡 Build
-        run: yarn build
-
-      - name: 👷‍♂️ Release dry run
-        run: yarn release:dryrun
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          SEMANTIC_RELEASE_PACKAGE: ${{ secrets.GH_TOKEN }}
-
   Release:
     name: 🚀 Release packages - [Release]
     runs-on: ubuntu-latest
@@ -229,4 +189,4 @@ jobs:
       - name: 🚀 Publish packages
         env:
           GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
-        run: npx lerna publish -m "[skip ci] Release" --yes
+        run: npx lerna publish

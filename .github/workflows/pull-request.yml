@@ -139,3 +139,57 @@ jobs:
 
       - name: 🧪 Test
         run: yarn test
+
+  Release-Beta:
+    name: 🚀 Beta Release packages - [PR]
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./
+    environment: beta
+
+    needs: [Test]
+
+    steps:
+      - name: 🛒 Check out repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_TOKEN }}
+    
+      - name: Extract branch information
+        id: extract-branch-information
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
+      - name: 📁 Use cache for modules
+        id: modules-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: modules-cache-${{ github.sha }}
+
+      - name: 📁 Use cache for packages
+        id: packages-cache
+        uses: actions/cache@v2
+        with:
+          path: packages
+          key: packages-cache-${{ github.sha }}
+
+      - name: 💡 Build
+        run: yarn build
+
+      - name: 🧑‍💻 Set GitHub credentials
+        run: |
+          git config --global user.name "$GITHUB_ACTOR"
+          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: 🔒 Set npm token
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+
+      - name: 🚀 Publish Beta packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+        run: npx lerna publish --canary --preid beta-${{ steps.extract-branch-information.outputs.sha_short }} --dist-tag beta --yes
