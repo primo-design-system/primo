@@ -14,6 +14,10 @@
       "allowBranch": "main",
       "conventionalCommits": true,
       "message": "chore(release): updated release notes and package versions"
+    },
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true
     }
   }
 }
