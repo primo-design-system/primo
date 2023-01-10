@@ -191,5 +191,5 @@ jobs:
 
       - name: 🚀 Publish Beta packages
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx lerna publish --canary --preid beta-${{ steps.extract-branch-information.outputs.sha_short }} --dist-tag beta --yes
