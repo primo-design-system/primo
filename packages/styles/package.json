@@ -53,6 +53,7 @@
     ]
   },
   "peerDependencies": {
+    "@primo/tokens": "^1.1.0",
     "sass": "^1.50.1"
   },
   "devDependencies": {
@@ -60,7 +61,6 @@
     "@postcss-plugins/text-transform": "^0.1.2",
     "@primo/postcss-config": "^1.0.7",
     "@primo/stylelint-config": "^1.1.4",
-    "@primo/tokens": "^1.1.0",
     "@storybook/addon-a11y": "^6.3.9",
     "@storybook/addon-actions": "^6.3.9",
     "@storybook/addon-console": "^1.2.3",
