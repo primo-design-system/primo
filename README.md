@@ -1,6 +1,6 @@
 # Primo Design System
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![🔎 Review](https://github.com/primo-design-system/primo/actions/workflows/pull-request.yml/badge.svg)](https://github.com/primo-design-system/primo/actions/workflows/pull-request.yml) [![🚀 Release](https://github.com/primo-design-system/primo/actions/workflows/release.yml/badge.svg)](https://github.com/primo-design-system/primo/actions/workflows/release.yml) [![Maintained With Lerna](https://img.shields.io/badge/maintained%20with-lerna-brightgreen.svg)](https://lerna.js.org/) [![All Contributors](https://img.shields.io/github/all-contributors/projectOwner/projectName?color=ee8449&style=flat-square)](#contributors)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![🔎 Review](https://github.com/primo-design-system/primo/actions/workflows/pull-request.yml/badge.svg)](https://github.com/primo-design-system/primo/actions/workflows/pull-request.yml) [![🚀 Release](https://github.com/primo-design-system/primo/actions/workflows/release.yml/badge.svg)](https://github.com/primo-design-system/primo/actions/workflows/release.yml) [![Maintained With Lerna](https://img.shields.io/badge/maintained%20with-lerna-brightgreen.svg)](https://lerna.js.org/) 
 
 > Primo is an open-source design system that makes it easy to build high quality 
 > and accessible web applications. The system includes designs, token, styles 
