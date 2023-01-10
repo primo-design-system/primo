@@ -79,9 +79,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "stylelint": "^13.6.1",
-    "typescript": "^3.9.7",
-    "multi-semantic-release": "^2.4.7",
-    "semantic-release": "^17.2.2"
+    "typescript": "^3.9.7"
   },
   "husky": {
     "hooks": {
