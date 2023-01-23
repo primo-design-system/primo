@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/primodesignsystem/primo/compare/@primo/styles@1.2.0...@primo/styles@1.2.1) (2023-01-23)
+
+### Bug Fixes
+
+- changing button sizes to be more inline with design
+  ([5731dd4](https://github.com/primodesignsystem/primo/commit/5731dd47322459bd6d564a1442e94dc48c205772))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 # [1.2.0](https://github.com/primodesignsystem/primo/compare/@primo/styles@1.1.1...@primo/styles@1.2.0) (2023-01-23)
 
 ### Bug Fixes
