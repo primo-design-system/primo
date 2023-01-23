@@ -12,6 +12,75 @@ Object {
       },
     },
     "line-height": Object {
+      "100": Object {
+        "value": "6.25",
+      },
+      "108": Object {
+        "value": "6.75",
+      },
+      "12": Object {
+        "value": "0.75",
+      },
+      "14": Object {
+        "value": "0.875",
+      },
+      "16": Object {
+        "value": "1",
+      },
+      "18": Object {
+        "value": "1.125",
+      },
+      "20": Object {
+        "value": "1.25",
+      },
+      "24": Object {
+        "value": "1.5",
+      },
+      "28": Object {
+        "value": "1.75",
+      },
+      "32": Object {
+        "value": "2",
+      },
+      "36": Object {
+        "value": "2.25",
+      },
+      "40": Object {
+        "value": "2.5",
+      },
+      "44": Object {
+        "value": "2.75",
+      },
+      "48": Object {
+        "value": "3",
+      },
+      "52": Object {
+        "value": "3.25",
+      },
+      "56": Object {
+        "value": "3.5",
+      },
+      "60": Object {
+        "value": "3.75",
+      },
+      "64": Object {
+        "value": "4",
+      },
+      "72": Object {
+        "value": "4.5",
+      },
+      "76": Object {
+        "value": "4.75",
+      },
+      "80": Object {
+        "value": "5",
+      },
+      "84": Object {
+        "value": "5.25",
+      },
+      "88": Object {
+        "value": "5.5",
+      },
       "default": Object {
         "value": "1.5",
       },
