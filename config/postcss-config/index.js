@@ -9,6 +9,7 @@ module.exports = {
       features: {
         'color-mod-function': { unresolved: 'ignore' },
         'custom-properties': false,
+        'focus-visible-pseudo-class': false,
       },
     }),
     require('postcss-sort-media-queries')({
