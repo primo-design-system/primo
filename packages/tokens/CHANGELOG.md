@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/primodesignsystem/primo/compare/@primo/tokens@1.1.1...@primo/tokens@1.2.0) (2023-01-23)
+
+### Features
+
+- new line height tokens
+  ([a7f2792](https://github.com/primodesignsystem/primo/commit/a7f2792a0566210672ab715f90e71a89f089177f))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## [1.1.1](https://github.com/primodesignsystem/primo/compare/@primo/tokens@1.1.0...@primo/tokens@1.1.1) (2023-01-10)
 
 **Note:** Version bump only for package @primo/tokens

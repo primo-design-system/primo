@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/primodesignsystem/primo/compare/@primo/styles@1.1.1...@primo/styles@1.2.0) (2023-01-23)
+
+### Bug Fixes
+
+- fixing linting errors
+  ([233d26d](https://github.com/primodesignsystem/primo/commit/233d26d10a01099897d2790d4f48c119b3196c33))
+
+### Features
+
+- updating focus styles and input styles
+  ([23e380f](https://github.com/primodesignsystem/primo/commit/23e380f90f5df46e70830b647c0d7c2770c5407f))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## [1.1.1](https://github.com/primodesignsystem/primo/compare/@primo/styles@1.1.0...@primo/styles@1.1.1) (2023-01-10)
 
 **Note:** Version bump only for package @primo/styles

@@ -1,6 +1,6 @@
 {
   "name": "@primo/components",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Primo component CSS styles",
   "author": "Richard McCartney <richard@mccartney.io>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
@@ -59,7 +59,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@postcss-plugins/text-transform": "^0.1.2",
-    "@primo/postcss-config": "^1.0.7",
+    "@primo/postcss-config": "^1.0.8",
     "@primo/stylelint-config": "^1.1.4",
     "@storybook/addon-a11y": "^6.3.9",
     "@storybook/addon-actions": "^6.3.9",
