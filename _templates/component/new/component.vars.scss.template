@@ -3,6 +3,8 @@ to: packages/components/scss/components/<%= name %>/_<%= name %>.vars.scss
 ---
 /** @define <%= name %> */
 
+/// Root variables for the <%= name %> Component, these will be amended
+/// by each modifying class within the Component CSS
 :root {
   /* Custom properties go here */
 }
