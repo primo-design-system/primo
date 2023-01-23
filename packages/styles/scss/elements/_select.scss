@@ -19,6 +19,10 @@ select {
     overflow: '';
   }
 
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
   // Removes firefox dotted outline focusing
 
   &:-moz-focusring {

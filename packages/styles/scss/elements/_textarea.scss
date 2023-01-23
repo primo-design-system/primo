@@ -26,4 +26,8 @@ textarea {
       color: transparent;
     }
   }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
