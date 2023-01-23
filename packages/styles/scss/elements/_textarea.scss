@@ -6,17 +6,24 @@ textarea {
   min-height: 175px;
   padding: var(--size-8) var(--size-16);
   resize: both;
+  transition: box-shadow 0.3s, outline-offset 0.25s ease;
 
   + p {
     margin-top: var(--size-8);
   }
 
   &:hover {
-    border-color: var(--color-grey-80);
+    border-color: var(--color-grey-60);
+    box-shadow: 0 0 0 1px var(--color-grey-60);
   }
 
   &:active,
   &:focus {
     border-color: var(--color-black);
+    box-shadow: 0 0 0 2px var(--color-black);
+
+    &::placeholder {
+      color: transparent;
+    }
   }
 }

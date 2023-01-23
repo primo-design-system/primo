@@ -3,6 +3,7 @@ select {
   border: 1px solid var(--color-grey-60);
   border-radius: var(--size-4);
   padding: var(--size-8) var(--size-48) var(--size-8) var(--size-16);
+  transition: box-shadow 0.3s, outline-offset 0.25s ease;
   background: {
     color: var(--color-white);
     image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23CBCBCB" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
@@ -31,13 +32,15 @@ select {
 
   &:hover {
     background-image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23A6A6A6" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
-    border-color: var(--color-grey-80);
+    border-color: var(--color-grey-60);
+    box-shadow: 0 0 0 1px var(--color-grey-60);
   }
 
   &:active,
   &:focus {
     background-image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23000000" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
     border-color: var(--color-black);
+    box-shadow: 0 0 0 2px var(--color-black);
   }
 
   &[multiple],
