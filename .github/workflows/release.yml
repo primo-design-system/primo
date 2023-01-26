@@ -189,4 +189,4 @@ jobs:
       - name: 🚀 Publish packages
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx lerna publish -m "[skip ci] Release" --yes
+        run: npx lerna version -m "[skip ci] Release" --conventional-commits --create-release github
