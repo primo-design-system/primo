@@ -45,7 +45,19 @@ export const FullWidth: Story<ButtonProps> = (
 
 export const Small: Story<ButtonProps> = (
   args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
-) => <Button {...args} isSmall />;
+) => <Button {...args} size="small" />;
+
+export const Large: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} size="large" />;
+
+export const Pill: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} shape="pill" />;
+
+export const Round: Story<ButtonProps> = (
+  args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>
+) => <Button {...args} shape="round" />;
 
 // export const WithIcon: Story<ButtonElementProps> = (args: JSX.IntrinsicAttributes & React.PropsWithChildren<ButtonProps>) => (
 //   <Button {...args} startIcon="copy" />

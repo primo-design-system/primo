@@ -3,6 +3,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import { Button } from '..';
 import { ButtonProps } from '.';
+import { ButtonShape, ButtonSize } from './Button.types';
 // import { IconTypes } from '../Icon/Icon.types';
 
 describe('<Button />', () => {
@@ -20,7 +21,7 @@ describe('<Button />', () => {
   test(': matches snapshot as an anchor', () => {
     const props = {
       ...defaultProps,
-      href: 'https://lloyds.com',
+      href: 'https://google.com',
     };
     const { container } = render(<Button {...props} />);
 
@@ -74,19 +75,57 @@ describe('<Button />', () => {
   test(': renders as small by the isSmall prop', () => {
     const props = {
       ...defaultProps,
-      isSmall: true,
+      size: 'small' as ButtonSize
     };
     const { rerender } = render(<Button {...defaultProps} />);
 
     expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'primo-Button--small'
+      'primo-Button--sizeSmall'
     );
 
     // Change props
     rerender(<Button {...props} />);
 
     expect(screen.getByTestId('test-button')).toHaveClass(
-      'primo-Button--small'
+      'primo-Button--sizeSmall'
+    );
+  });
+
+  test(': renders as large by the isLarge prop', () => {
+    const props = {
+      ...defaultProps,
+      size: 'large' as ButtonSize
+    };
+    const { rerender } = render(<Button {...defaultProps} />);
+
+    expect(screen.getByTestId('test-button')).not.toHaveClass(
+      'primo-Button--sizeLarge'
+    );
+
+    // Change props
+    rerender(<Button {...props} />);
+
+    expect(screen.getByTestId('test-button')).toHaveClass(
+      'primo-Button--sizeLarge'
+    );
+  });
+
+  test(': renders as shape round by the isShapeRound prop', () => {
+    const props = {
+      ...defaultProps,
+      shape: 'round' as ButtonShape
+    };
+    const { rerender } = render(<Button {...defaultProps} />);
+
+    expect(screen.getByTestId('test-button')).not.toHaveClass(
+      'primo-Button--shapeRound'
+    );
+
+    // Change props
+    rerender(<Button {...props} />);
+
+    expect(screen.getByTestId('test-button')).toHaveClass(
+      'primo-Button--shapeRound'
     );
   });
 

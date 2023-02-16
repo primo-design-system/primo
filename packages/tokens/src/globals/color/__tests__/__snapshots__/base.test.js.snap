@@ -73,62 +73,62 @@ Object {
     "green": Object {
       "0": Object {
         "value": Object {
-          "hex": "#f4fff7",
+          "hex": "#DFE2CC",
         },
       },
       "10": Object {
         "value": Object {
-          "hex": "#c5fdd3",
+          "hex": "#C2CEAB",
         },
       },
       "100": Object {
         "value": Object {
-          "hex": "#008738",
+          "hex": "#023036",
         },
       },
       "15": Object {
         "value": Object {
-          "hex": "#adfbc1",
+          "hex": "#A1BA8A",
         },
       },
       "20": Object {
         "value": Object {
-          "hex": "#97fab0",
+          "hex": "#7BA56A",
         },
       },
       "30": Object {
         "value": Object {
-          "hex": "#6ef592",
+          "hex": "#51904A",
         },
       },
       "40": Object {
         "value": Object {
-          "hex": "#4ced79",
+          "hex": "#2A7B31",
         },
       },
       "50": Object {
         "value": Object {
-          "hex": "#32e466",
+          "hex": "#26782F",
         },
       },
       "60": Object {
         "value": Object {
-          "hex": "#1ed758",
+          "hex": "#0B6523",
         },
       },
       "70": Object {
         "value": Object {
-          "hex": "#11c74e",
+          "hex": "#085A2F",
         },
       },
       "80": Object {
         "value": Object {
-          "hex": "#08b346",
+          "hex": "#064E38",
         },
       },
       "90": Object {
         "value": Object {
-          "hex": "#039e3f",
+          "hex": "#04423C",
         },
       },
     },

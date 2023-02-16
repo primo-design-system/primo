@@ -12,13 +12,13 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build": "lerna run build --parallel",
-    "build:ci": "lerna run build.ci --parallel",
+    "build": "lerna run build --stream",
+    "build:ci": "lerna run build.ci --stream",
     "build:components": "lerna run --scope \"@primo/components\" build",
     "build:react": "lerna run --scope \"@primo/react*\" build",
     "build:styles": "lerna run --scope \"@primo/styles*\" build",
     "build:tokens": "lerna run --scope \"@primo/tokens*\" build",
-    "build:watch": "lerna run build:watch --parallel",
+    "build:watch": "lerna run build:watch --stream",
     "clean": "lerna clean",
     "create:component": "hygen component new",
     "format": "lerna run format && lerna run format:prettier",
@@ -31,13 +31,14 @@
     "lint:es:ci": "eslint . --max-warnings 0",
     "release": "multi-semantic-release",
     "release:dryrun": "yarn release --dry-run",
+    "start:playroom": "lerna run --scope \"@primo/react*\" start:playroom",
     "start:storybook": "lerna run start:storybook --parallel",
     "start:storybook:components": "lerna run --scope \"@primo/components*\" start:storybook",
     "start:storybook:react": "lerna run --scope \"@primo/react*\" start:storybook",
     "start:storybook:styles": "lerna run --scope \"@primo/styles*\" start:storybook",
     "setup": "lerna exec yarn install",
-    "test": "lerna run test --parallel", 
-    "test:update-snapshots": "lerna run test:update-snapshots --parallel"
+    "test": "lerna run test --stream", 
+    "test:update-snapshots": "lerna run test:update-snapshots --stream"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

@@ -63,18 +63,18 @@
       "100": { "value": { "hex": "#876800" } }
     },
     "green": {
-      "0": { "value": { "hex": "#f4fff7" } },
-      "10": { "value": { "hex": "#c5fdd3" } },
-      "15": { "value": { "hex": "#adfbc1" } },
-      "20": { "value": { "hex": "#97fab0" } },
-      "30": { "value": { "hex": "#6ef592" } },
-      "40": { "value": { "hex": "#4ced79" } },
-      "50": { "value": { "hex": "#32e466" } },
-      "60": { "value": { "hex": "#1ed758" } },
-      "70": { "value": { "hex": "#11c74e" } },
-      "80": { "value": { "hex": "#08b346" } },
-      "90": { "value": { "hex": "#039e3f" } },
-      "100": { "value": { "hex": "#008738" } }
+      "0": { "value": { "hex": "#DFE2CC" } },
+      "10": { "value": { "hex": "#C2CEAB" } },
+      "15": { "value": { "hex": "#A1BA8A" } },
+      "20": { "value": { "hex": "#7BA56A" } },
+      "30": { "value": { "hex": "#51904A" } },
+      "40": { "value": { "hex": "#2A7B31" } },
+      "50": { "value": { "hex": "#26782F" } },
+      "60": { "value": { "hex": "#0B6523" } },
+      "70": { "value": { "hex": "#085A2F" } },
+      "80": { "value": { "hex": "#064E38" } },
+      "90": { "value": { "hex": "#04423C" } },
+      "100": { "value": { "hex": "#023036" } }
     },
     "orange": {
       "0": { "value": { "hex": "#fff7f4" } },

@@ -3,14 +3,17 @@
 /// Root variables for the Button Component, these will be amended
 /// by each modifying class within the Component CSS
 :root {
-  --Button-background-color: var(--color-grey-20);
-  --Button-background-color--hover: var(--color-grey-30);
-  --Button-background-color--active: var(--color-grey-40);
+  --Button-background-color: var(--color-black);
+  --Button-background-color--hover: var(--color-grey-90);
+  --Button-background-color--active: var(--color-grey-70);
   --Button-border-color: var(--color-grey-20);
   --Button-border-color--hover: var(--color-grey-30);
   --Button-border-color--active: var(--color-grey-40);
-  --Button-color: var(--color-black);
+  --Button-border-radius: var(--size-4);
+  --Button-color: var(--color-white);
   --Button-font: inherit;
+  --Button-font-size: var(--font-size-14);
+  --Button-line-height: 20px;
   --Button-primary-background-color: var(--color-black);
   --Button-primary-background-color--hover: var(--color-grey-90);
   --Button-primary-background-color--active: var(--color-grey-70);
@@ -30,8 +33,8 @@
   --Button-negative-background-color--hover: var(--color-red-70);
   --Button-negative-background-color--active: var(--color-red-80);
   --Button-negative-color: var(--color-white);
-  --Button-positive-background-color: var(--color-green-60);
-  --Button-positive-background-color--hover: var(--color-green-70);
-  --Button-positive-background-color--active: var(--color-green-80);
+  --Button-positive-background-color: var(--color-green-70);
+  --Button-positive-background-color--hover: var(--color-green-80);
+  --Button-positive-background-color--active: var(--color-green-90);
   --Button-positive-color: var(--color-white);
 }

@@ -4,15 +4,15 @@
   appearance: none;
   background-color: var(--Button-background-color);
   border: 0;
-  border-radius: var(--size-4);
+  border-radius: var(--Button-border-radius);
   color: var(--Button-color);
   display: inline-flex;
   font-family: var(--Button-font);
-  font-size: var(--font-size-16);
+  font-size: var(--Button-font-size);
   font-weight: var(--font-weight-medium);
-  line-height: var(--size-24);
+  line-height: var(--Button-line-height);
   margin: 0;
-  padding: calc(var(--size-4) * 3) var(--spacing-24);
+  padding: calc(var(--size-4) * 2.5) var(--spacing-16);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -27,6 +27,11 @@
   &:active {
     --Button-background-color: var(--Button-background-color--active);
     --Button-border-color: var(var(--Button-border-color--active));
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline-offset: 2px;
   }
 
   // Modifier: Button variants
@@ -110,15 +115,8 @@
 
   // Modifier: Size
 
-  &--sizeMini {
+  &--sizeSmall {
     font-size: var(--font-size-12);
-    min-height: var(--size-24);
-    padding: var(--size-2) var(--spacing-8);
-  }
-
-  &--sizeCompact {
-    font-size: var(--font-size-14);
-    min-height: 36px;
     padding: var(--spacing-8) 12px;
   }
 
@@ -130,6 +128,10 @@
   &--shapeRound {
     border-radius: 50%;
     padding: calc(var(--size-4) * 3);
+  }
+
+  &--shapePill {
+    border-radius: 26px;
   }
 
   // Modifier: Full Width
