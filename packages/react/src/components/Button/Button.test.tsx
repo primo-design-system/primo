@@ -20,7 +20,7 @@ describe('<Button />', () => {
   test(': matches snapshot as an anchor', () => {
     const props = {
       ...defaultProps,
-      href: 'https://lloyds.com',
+      href: 'https://google.com',
     };
     const { container } = render(<Button {...props} />);
 
@@ -71,114 +71,24 @@ describe('<Button />', () => {
     );
   });
 
-  test(': renders as small by the isSmall prop', () => {
+  test.each([
+    ['size', 'small'],
+    ['size', 'large']
+  ])(': renders as %s by the %s value', (propName, propValue) => {
     const props = {
       ...defaultProps,
-      isSmall: true,
+      [propName]: propValue,
     };
     const { rerender } = render(<Button {...defaultProps} />);
-
+    const modifierClass = `${propName}${propValue.charAt(0).toUpperCase() + propValue.slice(1)}`
     expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'primo-Button--small'
+      `primo-Button--${modifierClass}`
     );
-
-    // Change props
     rerender(<Button {...props} />);
-
     expect(screen.getByTestId('test-button')).toHaveClass(
-      'primo-Button--small'
+      `primo-Button--${modifierClass}`
     );
   });
-
-  // test(': renders with `startIcon`', () => {
-  //   const props = {
-  //     ...defaultProps,
-  //     startIcon: 'copy' as IconTypes,
-  //   };
-  //   const { rerender } = render(<Button {...defaultProps} />);
-
-  //   expect(screen.getByTestId('test-button')).toBeInTheDocument();
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-
-  //   // Change props
-  //   rerender(<Button {...props} />);
-
-  //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'primo-Button--startIcon'
-  //   );
-  //   expect(screen.getByTestId('test-button-svg')).toBeInTheDocument();
-  //   expect(screen.getByTestId('test-button-svg')).toHaveClass('primo-Icon');
-  // });
-
-  // test(': renders with small `startIcon` when set to `isSmall`', () => {
-  //   const props = {
-  //     ...defaultProps,
-  //     startIcon: 'copy' as IconTypes,
-  //     isSmall: true,
-  //   };
-  //   const { rerender } = render(<Button {...defaultProps} />);
-
-  //   expect(screen.getByTestId('test-button')).toBeInTheDocument();
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-
-  //   // Change props
-  //   rerender(<Button {...props} />);
-
-  //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'primo-Button--startIcon',
-  //     'primo-Button--small'
-  //   );
-  //   expect(screen.getByTestId('test-button-svg')).toBeInTheDocument();
-  //   expect(screen.getByTestId('test-button-svg')).toHaveClass(
-  //     'primo-Icon',
-  //     'primo-Icon--small'
-  //   );
-  // });
-
-  // test(': renders without an icon when both `startIcon` and `endIcon` is set', () => {
-  //   const props = {
-  //     ...defaultProps,
-  //     endIcon: 'copy' as IconTypes,
-  //     startIcon: 'copy' as IconTypes,
-  //   };
-  //   const { rerender } = render(<Button {...defaultProps} />);
-
-  //   expect(screen.getByTestId('test-button')).toBeInTheDocument();
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-
-  //   // Change props
-  //   rerender(<Button {...props} />);
-
-  //   expect(screen.getByTestId('test-button')).not.toHaveClass(
-  //     'primo-Button--endIcon'
-  //   );
-  //   expect(screen.getByTestId('test-button')).not.toHaveClass(
-  //     'primo-Button--startIcon'
-  //   );
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-  // });
-
-  // test(': renders with only Icon', () => {
-  //   const props = {
-  //     testId: 'test-button',
-  //     endIcon: 'copy' as IconTypes,
-  //   };
-  //   const { rerender } = render(<Button {...defaultProps} />);
-
-  //   expect(screen.getByTestId('test-button')).toBeInTheDocument();
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-
-  //   // Change props
-  //   rerender(<Button {...props} />);
-
-  //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'primo-Button--endIcon'
-  //   );
-  //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'primo-Button--onlyIcon'
-  //   );
-  //   expect(screen.queryByTestId('test-button-svg')).toBeInTheDocument();
-  // });
 
   test(': is set to `disabled` by the isDisabled prop', () => {
     const props = {

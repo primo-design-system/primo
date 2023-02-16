@@ -15,7 +15,7 @@ exports[`<Button /> : matches snapshot as an anchor 1`] = `
   aria-disabled="false"
   class="primo-Button"
   data-testid="test-button"
-  href="https://lloyds.com"
+  href="https://google.com"
 >
   Button text
 </a>

@@ -16,6 +16,8 @@ export type ButtonVariant =
   | 'tertiary'
   | 'positive'
   | 'negative';
+export type ButtonSize = 'small' | 'large';
+export type ButtonShape = 'round' | 'pill';
 
 interface SharedButtonProps {
   /** Specify the content of your Button */
@@ -36,8 +38,11 @@ interface SharedButtonProps {
   /** Specify whether the Button is full width or not */
   isFullWidth?: boolean;
 
-  /** Specify whether the Button is sized small or not */
-  isSmall?: boolean;
+  /** Specify whether the Button is sized large or small */
+  size?: ButtonSize;
+
+  /** Specify whether the Button shape is round or pill */
+  shape?: ButtonShape;
 
   /** Optional prop to specify the icon label of the Button */
   // iconLabel?: string;
