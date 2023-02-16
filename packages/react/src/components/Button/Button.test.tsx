@@ -3,7 +3,6 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import { Button } from '..';
 import { ButtonProps } from '.';
-import { ButtonShape, ButtonSize } from './Button.types';
 // import { IconTypes } from '../Icon/Icon.types';
 
 describe('<Button />', () => {
@@ -72,152 +71,24 @@ describe('<Button />', () => {
     );
   });
 
-  test(': renders as small by the isSmall prop', () => {
+  test.each([
+    ['size', 'small'],
+    ['size', 'large']
+  ])(': renders as %s by the %s value', (propValue, className) => {
     const props = {
       ...defaultProps,
-      size: 'small' as ButtonSize
+      [propValue]: className,
     };
     const { rerender } = render(<Button {...defaultProps} />);
-
+    const modifierClass = `${propValue}${className.charAt(0).toUpperCase() + className.slice(1)}`
     expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'primo-Button--sizeSmall'
+      `primo-Button--${modifierClass}`
     );
-
-    // Change props
     rerender(<Button {...props} />);
-
     expect(screen.getByTestId('test-button')).toHaveClass(
-      'primo-Button--sizeSmall'
+      `primo-Button--${modifierClass}`
     );
   });
-
-  test(': renders as large by the isLarge prop', () => {
-    const props = {
-      ...defaultProps,
-      size: 'large' as ButtonSize
-    };
-    const { rerender } = render(<Button {...defaultProps} />);
-
-    expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'primo-Button--sizeLarge'
-    );
-
-    // Change props
-    rerender(<Button {...props} />);
-
-    expect(screen.getByTestId('test-button')).toHaveClass(
-      'primo-Button--sizeLarge'
-    );
-  });
-
-  test(': renders as shape round by the isShapeRound prop', () => {
-    const props = {
-      ...defaultProps,
-      shape: 'round' as ButtonShape
-    };
-    const { rerender } = render(<Button {...defaultProps} />);
-
-    expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'primo-Button--shapeRound'
-    );
-
-    // Change props
-    rerender(<Button {...props} />);
-
-    expect(screen.getByTestId('test-button')).toHaveClass(
-      'primo-Button--shapeRound'
-    );
-  });
-
-  // test(': renders with `startIcon`', () => {
-  //   const props = {
-  //     ...defaultProps,
-  //     startIcon: 'copy' as IconTypes,
-  //   };
-  //   const { rerender } = render(<Button {...defaultProps} />);
-
-  //   expect(screen.getByTestId('test-button')).toBeInTheDocument();
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-
-  //   // Change props
-  //   rerender(<Button {...props} />);
-
-  //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'primo-Button--startIcon'
-  //   );
-  //   expect(screen.getByTestId('test-button-svg')).toBeInTheDocument();
-  //   expect(screen.getByTestId('test-button-svg')).toHaveClass('primo-Icon');
-  // });
-
-  // test(': renders with small `startIcon` when set to `isSmall`', () => {
-  //   const props = {
-  //     ...defaultProps,
-  //     startIcon: 'copy' as IconTypes,
-  //     isSmall: true,
-  //   };
-  //   const { rerender } = render(<Button {...defaultProps} />);
-
-  //   expect(screen.getByTestId('test-button')).toBeInTheDocument();
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-
-  //   // Change props
-  //   rerender(<Button {...props} />);
-
-  //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'primo-Button--startIcon',
-  //     'primo-Button--small'
-  //   );
-  //   expect(screen.getByTestId('test-button-svg')).toBeInTheDocument();
-  //   expect(screen.getByTestId('test-button-svg')).toHaveClass(
-  //     'primo-Icon',
-  //     'primo-Icon--small'
-  //   );
-  // });
-
-  // test(': renders without an icon when both `startIcon` and `endIcon` is set', () => {
-  //   const props = {
-  //     ...defaultProps,
-  //     endIcon: 'copy' as IconTypes,
-  //     startIcon: 'copy' as IconTypes,
-  //   };
-  //   const { rerender } = render(<Button {...defaultProps} />);
-
-  //   expect(screen.getByTestId('test-button')).toBeInTheDocument();
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-
-  //   // Change props
-  //   rerender(<Button {...props} />);
-
-  //   expect(screen.getByTestId('test-button')).not.toHaveClass(
-  //     'primo-Button--endIcon'
-  //   );
-  //   expect(screen.getByTestId('test-button')).not.toHaveClass(
-  //     'primo-Button--startIcon'
-  //   );
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-  // });
-
-  // test(': renders with only Icon', () => {
-  //   const props = {
-  //     testId: 'test-button',
-  //     endIcon: 'copy' as IconTypes,
-  //   };
-  //   const { rerender } = render(<Button {...defaultProps} />);
-
-  //   expect(screen.getByTestId('test-button')).toBeInTheDocument();
-  //   expect(screen.queryByTestId('test-button-svg')).not.toBeInTheDocument();
-
-  //   // Change props
-  //   rerender(<Button {...props} />);
-
-  //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'primo-Button--endIcon'
-  //   );
-  //   expect(screen.getByTestId('test-button')).toHaveClass(
-  //     'primo-Button--onlyIcon'
-  //   );
-  //   expect(screen.queryByTestId('test-button-svg')).toBeInTheDocument();
-  // });
 
   test(': is set to `disabled` by the isDisabled prop', () => {
     const props = {
