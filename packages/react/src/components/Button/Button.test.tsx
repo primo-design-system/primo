@@ -74,13 +74,13 @@ describe('<Button />', () => {
   test.each([
     ['size', 'small'],
     ['size', 'large']
-  ])(': renders as %s by the %s value', (propValue, className) => {
+  ])(': renders as %s by the %s value', (propName, propValue) => {
     const props = {
       ...defaultProps,
-      [propValue]: className,
+      [propName]: propValue,
     };
     const { rerender } = render(<Button {...defaultProps} />);
-    const modifierClass = `${propValue}${className.charAt(0).toUpperCase() + className.slice(1)}`
+    const modifierClass = `${propName}${propValue.charAt(0).toUpperCase() + propValue.slice(1)}`
     expect(screen.getByTestId('test-button')).not.toHaveClass(
       `primo-Button--${modifierClass}`
     );
