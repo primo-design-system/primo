@@ -89,6 +89,9 @@ jobs:
       
       - name: 💡 Build
         run: yarn build
+      
+      - name: 🧑‍🎨 Build Storybook
+        run: yarn build:storybook
 
       - name: 🚀 Publish
         uses: chromaui/action@v1
@@ -127,6 +130,9 @@ jobs:
 
       - name: 💡 Build
         run: yarn build
+
+      - name: 🧑‍🎨 Build Storybook
+        run: yarn build:storybook
         
         # 👇 Adds Chromatic as a step in the workflow
       - name: 🚀 Publish
@@ -166,6 +172,9 @@ jobs:
 
       - name: 💡 Build
         run: yarn build
+
+      - name: 🧑‍🎨 Build Storybook
+        run: yarn build:storybook
         
         # 👇 Adds Chromatic as a step in the workflow
       - name: 🚀 Publish
