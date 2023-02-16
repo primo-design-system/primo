@@ -1,7 +1,7 @@
 // For browsers that don't support :focus-visible
 :focus {
-  outline-offset: 3px;
   outline: 2px solid var(--color-blue-60);
+  outline-offset: 3px;
 
   // Remove :focus styling for browsers that do support :focus-visible
   &:not(:focus-visible) {
@@ -13,8 +13,8 @@
 
 /* postcss-ignore-line */
 :focus-visible {
-  outline-offset: 3px;
   outline: 2px solid var(--color-blue-60);
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
