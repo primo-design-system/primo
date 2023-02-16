@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/primodesignsystem/primo/compare/@primo/postcss-config@1.0.7...@primo/postcss-config@1.0.8) (2023-01-23)
+
+### Bug Fixes
+
+- disabling focus visible pseudo class
+  ([aa4bc47](https://github.com/primodesignsystem/primo/commit/aa4bc47bd17892389b5dcacfaef233fa8dde12ae))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## [1.0.7](https://github.com/primodesignsystem/primo/compare/@primo/postcss-config@1.0.3...@primo/postcss-config@1.0.7) (2023-01-09)
 
 **Note:** Version bump only for package @primo/postcss-config
