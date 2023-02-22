@@ -187,9 +187,11 @@ jobs:
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
       
       - name: 🧑‍💻 Setup registry credentials
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npm set @primo:registry=https://npm.pkg.github.com
-          npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}"
+          npm set "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN"
 
       # - name:  Publish packages
       #   env:
@@ -198,7 +200,7 @@ jobs:
       
       - name: 🚀 Version and publish
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git stash
           git checkout ${{ github.ref }}
