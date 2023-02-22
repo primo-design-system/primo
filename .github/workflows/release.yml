@@ -209,4 +209,4 @@ jobs:
           else
             npx lerna version --conventional-commits --conventional-graduate --yes
           fi
-          npx lerna publish from-git --yes
+          npx lerna publish from-git -m "[skip ci] Release" --yes
