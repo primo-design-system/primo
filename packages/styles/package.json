@@ -2,7 +2,7 @@
   "name": "@primo/styles",
   "version": "1.3.0",
   "description": "Primo base CSS styles",
-  "author": "Richard McCartney <richard@mccartney.io>",
+  "author": "Richard McCartney <richard.mccartney@me.com>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
   "license": "MIT",
   "directories": {
@@ -15,7 +15,7 @@
   ],
   "style": "dist/style.min.css",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "repository": {

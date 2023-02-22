@@ -2,7 +2,7 @@
   "name": "@primo/eslint-config",
   "version": "1.0.4",
   "description": "ESLint config for Primo Design System",
-  "author": "Richard McCartney <richard@mccartney.io>",
+  "author": "Richard McCartney <richard.mccartney@me.com>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
   "license": "MIT",
   "main": "index.js",

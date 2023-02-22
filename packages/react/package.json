@@ -2,7 +2,7 @@
   "name": "@primo/react",
   "version": "1.1.0",
   "description": "Primo React Components",
-  "author": "Richard McCartney <richard@mccartney.io>",
+  "author": "Richard McCartney <richard.mccartney@me.com>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
   "license": "MIT",
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
     "test:update-snapshots": "yarn test -u"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "repository": {

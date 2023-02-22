@@ -2,7 +2,7 @@
   "name": "@primo/postcss-config",
   "version": "1.0.8",
   "description": "PostCSS config for Primo Design System",
-  "author": "Richard McCartney <richard@mccartney.io>",
+  "author": "Richard McCartney <richard.mccartney@me.com>",
   "homepage": "https://github.com/primodesignsystem/primo#readme",
   "license": "MIT",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "devDependencies": {

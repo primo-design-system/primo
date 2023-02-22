@@ -183,8 +183,8 @@ jobs:
 
       - name: 🔒 Set npm token
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          GH_PUBLISH_TOKEN: ${{ secrets.GH_PUBLISH_TOKEN }}
+        run: echo "//npm.pkg.github.com/:_authToken=$GH_PUBLISH_TOKEN" >> ~/.npmrc
 
       - name: 🚀 Publish packages
         env:
