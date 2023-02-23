@@ -185,18 +185,11 @@ jobs:
         run: |
           git config --global user.name "$GITHUB_ACTOR"
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
-      
-      - name: 🧑‍💻 Setup registry credentials
+
+      - name: 🔒 Set npm token
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          npm set @primo:registry=https://npm.pkg.github.com
-          npm set "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN"
-
-      # - name:  Publish packages
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      #   run: npx lerna publish -m "[skip ci] Release" --yes
+        run: echo "//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" >> ~/.npmrc
       
       - name: 🚀 Version and publish
         env:
