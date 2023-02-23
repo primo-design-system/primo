@@ -186,7 +186,7 @@ jobs:
           git config --global user.name "$GITHUB_ACTOR"
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: 🔒 Set npm token
+      - name: 🔒 Set GitHub token
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: echo "@primo:registry=https://npm.pkg.github.com/primo \nalways-auth=true \n//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" >> ~/.npmrc
