@@ -28,7 +28,7 @@
     "test:update-snapshots": "yarn test -u"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
+    "@primo:registry": "https://npm.pkg.github.com/primo",
     "access": "public"
   },
   "repository": {

@@ -14,7 +14,7 @@
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
+    "@primo:registry": "https://npm.pkg.github.com/primo",
     "access": "public"
   },
   "peerDependencies": {
