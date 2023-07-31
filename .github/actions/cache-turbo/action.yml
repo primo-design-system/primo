@@ -3,7 +3,7 @@ description: Cache (turbo)
 author: Primo
 
 inputs:
-  GITHUB_TOKEN:
+  TOKEN:
     description: GitHub Token for Turbo
     required: true
 
@@ -18,4 +18,4 @@ runs:
       # pinned the exact version with a commit hash to make sure that our GH token isn't used inappropriately by this third-party GH action
       uses: felixmosh/turborepo-gh-artifacts@90863ce9f52eb50906a199bfc79aa48ba1b4cf1c
       with:
-        repo-token: ${{ inputs.GITHUB_TOKEN }}
+        repo-token: ${{ inputs.TOKEN }}

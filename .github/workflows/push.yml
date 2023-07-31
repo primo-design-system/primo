@@ -18,6 +18,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-1
   cancel-in-progress: true
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+
 jobs:
   Push:
     name: 🔀️ Push
@@ -48,7 +51,7 @@ jobs:
         id: push-cache-turbo
         uses: primo-design-system/primo/.github/actions/cache-turbo@main
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚨️ Lint
         id: push-lint
