@@ -23,6 +23,8 @@ jobs:
     name: 🔀️ Push
     timeout-minutes: 20
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
     strategy:
       fail-fast: false
 

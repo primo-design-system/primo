@@ -9,8 +9,6 @@ inputs:
 
 runs:
   using: composite
-  permissions:
-    actions: read
   steps:
     - name: 🔺️ Cache (turbo)
       id: cache-turbo
