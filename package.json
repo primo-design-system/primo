@@ -56,6 +56,11 @@
     "syncpack": "^10.6.1",
     "turbo": "^1.10.6"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "workspaces": [
     "packages/*",
     "config/*"
