@@ -22,6 +22,7 @@
     "format:fix": "prettier --write './**/*.{css,html,js,json,ts,tsx,scss}' ",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
+    "release": "changeset publish",
     "start:playroom": "turbo run start:playroom",
     "start:storybook": "turbo run start:storybook",
     "start:storybook:components": "turbo run start:storybook --filter=components",

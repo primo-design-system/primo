@@ -93,6 +93,6 @@
     "stylelint": "^14.16.1"
   },
   "dependencies": {
-    "@primo/tokens": "workspace:1.3.0"
+    "@primo/tokens": "workspace:^1.3.0"
   }
 }
