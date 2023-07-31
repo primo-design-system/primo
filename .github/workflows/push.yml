@@ -48,7 +48,7 @@ jobs:
         id: push-cache-turbo
         uses: primo-design-system/primo/.github/actions/cache-turbo@main
         with:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚨️ Lint
         id: push-lint
