@@ -2,11 +2,6 @@ name: 🔺️ Cache (turbo)
 description: Cache (turbo)
 author: Primo
 
-inputs:
-  github-token:
-    required: true
-    description: 'secrets.GITHUB_TOKEN'
-
 runs:
   using: composite
   steps:
