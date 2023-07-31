@@ -21,11 +21,7 @@ export default [
       sourcemap: true,
     },
 
-    plugins: [
-      ...basePlugins,
-      postcss(postcssConfig),
-      typescript({ declaration: true, declarationDir: 'dist/types' }),
-    ],
+    plugins: [...basePlugins, postcss(postcssConfig), typescript({ declaration: true, declarationDir: 'dist/types' })],
   },
   // ES Module
   {

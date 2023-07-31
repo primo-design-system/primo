@@ -22,14 +22,14 @@
     "access": "public"
   },
   "devDependencies": {
-    "autoprefixer": "^9.0.0",
+    "autoprefixer": "^9.8.8",
     "postcss-combine-media-query": "1.0.1",
     "postcss-import": "^14.1.0",
     "postcss-map-get": "^0.3.0",
-    "postcss-nested": "^5.0.0",
-    "postcss-preset-env": "^7.4.3",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.8.3",
     "postcss-reporter": "^7.0.5",
-    "postcss-scss": "^4.0.3",
-    "postcss-sort-media-queries": "^4.2.1"
+    "postcss-scss": "^4.0.6",
+    "postcss-sort-media-queries": "^4.4.1"
   }
 }

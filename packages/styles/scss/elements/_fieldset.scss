@@ -1,23 +1,23 @@
 fieldset {
   border: {
     color: var(--color-grey-20);
-    radius: var(--size-8);
+    radius: var(--spacing-8);
     style: solid;
-    width: var(--size-1);
+    width: var(--spacing-1);
   }
 
-  padding: var(--size-16) var(--size-24) var(--size-24);
+  padding: var(--spacing-16) var(--spacing-24) var(--spacing-24);
 
   legend {
     border: {
       color: var(--color-grey-20);
-      radius: var(--size-8);
+      radius: var(--spacing-8);
       style: solid;
-      width: var(--size-1);
+      width: var(--spacing-1);
     }
 
     font-weight: var(--font-weight-medium);
-    padding: var(--size-16) var(--size-24);
+    padding: var(--spacing-16) var(--spacing-24);
 
     + * {
       margin-top: initial;

@@ -1,13 +1,13 @@
 meter {
   background: var(--color-grey-10);
-  border-radius: var(--size-8);
-  height: var(--size-16);
+  border-radius: var(--spacing-8);
+  height: var(--spacing-16);
 
   &::-webkit-meter-bar {
     background: var(--color-grey-10);
     border: none;
-    border-radius: var(--size-8);
-    height: var(--size-16);
+    border-radius: var(--spacing-8);
+    height: var(--spacing-16);
   }
 
   &::-webkit-meter-optimum-value {
@@ -25,8 +25,8 @@ meter {
   &::-moz-meter-bar {
     background: var(--color-grey-10);
     border: none;
-    border-radius: var(--size-8);
-    height: var(--size-16);
+    border-radius: var(--spacing-8);
+    height: var(--spacing-16);
   }
 
   &:-moz-meter-optimum::-moz-meter-bar {

@@ -2,10 +2,10 @@ p {
   display: block;
 
   + p {
-    margin-top: var(--size-8);
+    margin-top: var(--spacing-8);
   }
 
   + * {
-    margin-top: var(--size-16);
+    margin-top: var(--spacing-16);
   }
 }

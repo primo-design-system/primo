@@ -1,0 +1,29 @@
+name: Lint
+description: Lint all files and packages
+author: Primo
+
+inputs:
+  TURBO_TEAM:
+    description: Team for Turbo
+    required: true
+  TURBO_TOKEN:
+    description: Token for Turbo
+    required: true
+  TURBO_API:
+    description: API for Turbo
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: 🚨️ Lint
+      id: lint
+      shell: bash
+      env:
+        TURBO_TEAM: ${{ inputs.TURBO_TEAM }}
+        TURBO_TOKEN: ${{ inputs.TURBO_TOKEN }}
+        TURBO_API: ${{ inputs.TURBO_TOKEN }}
+      run: |
+        pnpm run lint \
+          --cache-dir=".cache-turbo" \
+          --output-logs="errors-only"

@@ -50,8 +50,7 @@ export const Definition = () =>
 
 export const Emphasis = () => `<p>Get out of bed <em>now</em>!</p>`;
 
-export const Idiomatic = () =>
-  `<p>I looked at it and thought <i>This can't be real!</i></p>`;
+export const Idiomatic = () => `<p>I looked at it and thought <i>This can't be real!</i></p>`;
 
 export const Keyboard = () =>
   `<p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>`;

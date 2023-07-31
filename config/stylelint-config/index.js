@@ -28,15 +28,5 @@ module.exports = {
       },
     ],
   },
-  ignoreFiles: [
-    'build',
-    'build/*',
-    'node_modules',
-    'umd',
-    'dist',
-    'dist/*',
-    'lib',
-    'lib/*',
-    'es',
-  ],
+  ignoreFiles: ['build', 'build/*', 'node_modules', 'umd', 'dist', 'dist/*', 'lib', 'lib/*', 'es'],
 };

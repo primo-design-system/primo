@@ -1,0 +1,20 @@
+name: 🔺️ Cache
+description: Cache (turbo)
+author: Primo
+
+inputs:
+  GITHUB_TOKEN:
+    description: GitHub Token for Turbo
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: 🔺️ Cache (turbo)
+      id: cache-turbo
+      uses: actions/cache@v3
+
+    - name: TurboRepo local server
+      uses: felixmosh/turborepo-gh-artifacts@v2.1.0
+      with:
+        repo-token: ${{ inputs.GITHUB_TOKEN }}

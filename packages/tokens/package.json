@@ -33,15 +33,15 @@
     "build": "node scripts",
     "clean": "rm -rf build",
     "test": "jest",
-    "test:update-snapshots": "yarn test -u"
+    "test:update-snapshots": "test -u"
   },
   "bugs": {
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
   "devDependencies": {
-    "@primo/browserlist-config": "^1.0.0",
-    "chroma-js": "^2.1.2",
-    "jest": "^26.6.0",
-    "style-dictionary": "^3.0.1"
+    "@primo/browserlist-config": "workspace:1.0.5",
+    "chroma-js": "^2.4.2",
+    "jest": "^26.6.3",
+    "style-dictionary": "^3.8.0"
   }
 }

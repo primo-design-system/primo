@@ -136,3 +136,24 @@ hydrate/
 loader/
 www/
 .stencil/
+
+# components
+lib
+build
+stats.html
+build-storybook.log
+storybook-static
+
+# editors
+.idea
+*.iws
+*.iml
+.history
+
+# build info
+*.tsbuildinfo
+
+# turbo
+.turbo
+.turbo-cookie
+*.tsbuildinfo

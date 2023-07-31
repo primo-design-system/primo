@@ -11,9 +11,7 @@ StyleDictionary.registerFormat({
           attributes: { item, type },
           value,
         } = prop;
-        const extensionName = `--custom-media-${type}${
-          item ? `-${item}` : ''
-        }`.trim();
+        const extensionName = `--custom-media-${type}${item ? `-${item}` : ''}`.trim();
 
         return `@custom-media ${extensionName} (${type}: ${value});\n`;
       })
@@ -32,9 +30,7 @@ StyleDictionary.registerFormat({
           attributes: { item, type },
           value,
         } = prop;
-        const extensionName = `--dark-mode-${type}${
-          item ? `-${item}` : ''
-        }`.trim();
+        const extensionName = `--dark-mode-${type}${item ? `-${item}` : ''}`.trim();
 
         return `${extensionName}: ${value};\n`;
       })
@@ -55,11 +51,7 @@ StyleDictionary.registerFormat({
       return (
         fileHeader({ file, commentStyle: format === 'less' && 'short' }) +
         prefix +
-        allTokens
-          .map(
-            createPropertyFormatter({ dictionary, format, outputReferences })
-          )
-          .join('\n') +
+        allTokens.map(createPropertyFormatter({ dictionary, format, outputReferences })).join('\n') +
         suffix
       );
     },

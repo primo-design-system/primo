@@ -12,7 +12,7 @@
   font-weight: var(--font-weight-medium);
   line-height: var(--Button-line-height);
   margin: 0;
-  padding: calc(var(--size-4) * 2.5) var(--spacing-16);
+  padding: calc(var(--spacing-4) * 2.5) var(--spacing-16);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -127,7 +127,7 @@
 
   &--shapeRound {
     border-radius: 50%;
-    padding: calc(var(--size-4) * 3);
+    padding: calc(var(--spacing-4) * 3);
   }
 
   &--shapePill {
@@ -144,14 +144,14 @@
   // Modifier: icon position
 
   &--onlyIcon {
-    padding: calc(var(--size-4) * 3);
+    padding: calc(var(--spacing-4) * 3);
   }
 
-  &--endIcon > .primo-Icon {
+  &--endIcon > .primo-Button-icon {
     margin-left: var(--spacing-8);
   }
 
-  &--startIcon > .primo-Icon {
+  &--startIcon > .primo-Button-icon {
     margin-right: var(--spacing-8);
   }
 }

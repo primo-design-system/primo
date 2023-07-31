@@ -9,13 +9,7 @@ export type RefType = React.Ref<HTMLButtonElement | HTMLAnchorElement>;
 export type ButtonFill = 'default' | 'ghost' | 'outline';
 export type ButtonTarget = '_blank' | '_parent' | '_self' | '_top';
 export type ButtonType = 'button' | 'reset' | 'submit';
-export type ButtonVariant =
-  | 'default'
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'positive'
-  | 'negative';
+export type ButtonVariant = 'default' | 'primary' | 'secondary' | 'tertiary' | 'positive' | 'negative';
 export type ButtonSize = 'small' | 'large';
 export type ButtonShape = 'round' | 'pill';
 
@@ -125,6 +119,4 @@ export interface LinkElementProps extends SharedButtonProps {
 
 export type ButtonProps = ButtonElementProps | LinkElementProps;
 
-export type PolymorphicButton = (
-  props: LinkElementProps | ButtonElementProps
-) => JSX.Element;
+export type PolymorphicButton = (props: LinkElementProps | ButtonElementProps) => JSX.Element;

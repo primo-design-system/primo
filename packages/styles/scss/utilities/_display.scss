@@ -29,10 +29,10 @@
 /// @author Richard McCartney
 .u-hiddenVisually {
   border: 0 !important;
-  clip: rect(var(--size-1), var(--size-1), var(--size-1), var(--size-1)) !important;
-  height: var(--size-1) !important;
+  clip: rect(var(--spacing-1), var(--spacing-1), var(--spacing-1), var(--spacing-1)) !important;
+  height: var(--spacing-1) !important;
   overflow: hidden !important;
   padding: 0 !important;
   position: absolute !important;
-  width: var(--size-1) !important;
+  width: var(--spacing-1) !important;
 }

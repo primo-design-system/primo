@@ -1,0 +1,64 @@
+---
+    name: 🔎 Pull
+    
+    on:
+      pull_request:
+        branches:
+          - main
+          - next
+          - canary
+          - develop
+        types:
+          - opened
+          - synchronize
+          - reopened
+          - ready_for_review
+          - converted_to_draft
+    
+    concurrency:
+      group: push-${{ github.ref }}-1
+      cancel-in-progress: true
+    
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      TURBO_TEAM: primo
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_API: http://127.0.0.1:9080
+    
+    jobs:
+      Pull:
+        name: 🏗 Pull Reqest - [PR]
+        timeout-minutes: 20
+        runs-on: ubuntu-latest
+        strategy:
+          fail-fast: false
+    
+        steps:
+          - name: 🐙️ Checkout
+            id: pull-checkout
+            uses: actions/checkout@v3
+            with:
+              ref: ${{ github.event.pull_request.head.ref }}
+              fetch-depth: 10
+    
+          - name: ⭐ Init
+            id: pull-init
+            uses: primo/.github/actions/init@main
+    
+          - name: 📦 Install
+            id: pull-install
+            uses: primo/.github/actions/install@main
+    
+          - name: 🔺️ Cache (turbo)
+            id: pull-cache-turbo
+            uses: primo/.github/actions/cache-turbo@main
+            with:
+              GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+    
+          - name: 🚨️ Lint
+            id: pull-lint
+            uses: primo/.github/actions/lint@main
+            with:
+              TURBO_TEAM: ${{ env.TURBO_TEAM }}
+              TURBO_TOKEN: ${{ env.TURBO_TOKEN }}

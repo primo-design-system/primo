@@ -9,9 +9,7 @@ import ReactDomServer from 'react-dom/server';
  * https://github.com/storybookjs/storybook/blob/v6.1.0-alpha.3/addons/docs/docs/recipes.md#customizing-source-snippets
  */
 export default (_, storyContext) => {
-  const staticMarkup = ReactDomServer.renderToStaticMarkup(
-    storyContext.storyFn(storyContext.args)
-  );
+  const staticMarkup = ReactDomServer.renderToStaticMarkup(storyContext.storyFn(storyContext.args));
 
   const $ = cheerio.load(staticMarkup);
 

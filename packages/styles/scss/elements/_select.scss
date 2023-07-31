@@ -1,15 +1,15 @@
 select {
   appearance: none;
   border: 1px solid var(--color-grey-60);
-  border-radius: var(--size-4);
-  padding: var(--size-8) var(--size-48) var(--size-8) var(--size-16);
+  border-radius: var(--spacing-4);
+  padding: var(--spacing-8) var(--spacing-48) var(--spacing-8) var(--spacing-16);
   transition: box-shadow 0.3s, outline-offset 0.25s ease;
   background: {
     color: var(--color-white);
     image: url('data:image/svg+xml;utf8,%3Csvg width="10" height="3" viewBox="0 0 10 3" xmlns="http://www.w3.org/2000/svg"%3E%3Ctitle%3E⌄%3C/title%3E%3Cpath fill="%23CBCBCB" d="M9.234 0L4.617 3 0 0h1.788l2.83 1.814L7.445 0" fill-rule="evenodd"/%3E%3C/svg%3E');
-    position: right var(--size-16) center;
+    position: right var(--spacing-16) center;
     repeat: no-repeat;
-    size: var(--size-12) 3px;
+    size: var(--spacing-12) 3px;
   }
 
   // Removes firefox select styles & arrow
@@ -67,11 +67,11 @@ select {
       padding: 0;
 
       &:first-of-type {
-        margin-top: var(--size-4);
+        margin-top: var(--spacing-4);
       }
 
       + option {
-        margin-top: var(--size-4);
+        margin-top: var(--spacing-4);
       }
 
       &:checked {
@@ -81,6 +81,6 @@ select {
   }
 
   + p {
-    margin-top: var(--size-8);
+    margin-top: var(--spacing-8);
   }
 }

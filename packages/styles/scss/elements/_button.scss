@@ -1,19 +1,21 @@
-button,
-input[type='button'],
-input[type='submit'],
-input[type='reset'],
-input[type='file']::file-selector-button {
+:is(
+    button,
+    input[type='button'],
+    input[type='submit'],
+    input[type='reset'],
+    input[type='file']::-webkit-file-upload-button
+  ) {
   appearance: none;
   background-color: var(--color-black);
   border: 0;
-  border-radius: var(--size-4);
+  border-radius: var(--spacing-4);
   color: var(--color-white);
   display: inline-block;
   font-size: var(--font-size-14);
   font-weight: var(--font-weight-medium);
   line-height: 1.25;
   margin: 0;
-  padding: calc(var(--size-4) * 2.5) var(--spacing-16);
+  padding: calc(var(--spacing-4) * 2.5) var(--spacing-16);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -33,10 +35,7 @@ input[type='file']::file-selector-button {
     outline-offset: 2px;
   }
 
-  &:disabled,
-  &[disabled],
-  &[aria-disabled='true'],
-  &.is-disabled {
+  &:is(:disabled, &[disabled], &[aria-disabled='true'], &.is-disabled) {
     background-color: var(--color-grey-10);
     color: var(--color-grey-60);
     cursor: not-allowed;

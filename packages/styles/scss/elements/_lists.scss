@@ -63,9 +63,9 @@ dt {
 
 dd {
   display: block;
-  margin: 0 0 0 var(--size-40);
+  margin: 0 0 0 var(--spacing-40);
 
   + dt {
-    margin-top: var(--size-8);
+    margin-top: var(--spacing-8);
   }
 }

@@ -21,9 +21,7 @@ StyleDictionary.registerTransform({
   type: 'value',
   matcher: ({ attributes }) => {
     return (
-      attributes.category === 'size' ||
-      attributes.category === 'border-radius' ||
-      attributes.category === 'spacing'
+      attributes.category === 'size' || attributes.category === 'border-radius' || attributes.category === 'spacing'
     );
   },
   transformer: ({ value }) => `${value}px`,
@@ -50,8 +48,7 @@ StyleDictionary.registerTransform({
   name: 'color/opacity',
   type: 'value',
   matcher: ({ attributes }) => attributes.category === 'color',
-  transformer: ({ value }) =>
-    chroma(value?.hex).alpha(parseFloat(value?.opacity)).hex(),
+  transformer: ({ value }) => chroma(value?.hex).alpha(parseFloat(value?.opacity)).hex(),
 });
 
 const colorTransform = (token) => {

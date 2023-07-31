@@ -1,7 +1,7 @@
 blockquote {
-  border-left: var(--size-4) solid var(--color-grey-20);
+  border-left: var(--spacing-4) solid var(--color-grey-20);
   margin: 0;
-  padding-left: var(--size-16);
+  padding-left: var(--spacing-16);
 
   p::before {
     content: '\201C';
@@ -16,6 +16,6 @@ blockquote {
   }
 
   + figcaption {
-    margin-top: var(--size-8);
+    margin-top: var(--spacing-8);
   }
 }

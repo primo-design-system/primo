@@ -65,29 +65,22 @@ describe('<Button />', () => {
     // Change props
     rerender(<Button {...props} />);
 
-    expect(screen.getByTestId('test-button')).toHaveAttribute(
-      'href',
-      'https://google.com/'
-    );
+    expect(screen.getByTestId('test-button')).toHaveAttribute('href', 'https://google.com/');
   });
 
   test.each([
     ['size', 'small'],
-    ['size', 'large']
+    ['size', 'large'],
   ])(': renders as %s by the %s value', (propName, propValue) => {
     const props = {
       ...defaultProps,
       [propName]: propValue,
     };
     const { rerender } = render(<Button {...defaultProps} />);
-    const modifierClass = `${propName}${propValue.charAt(0).toUpperCase() + propValue.slice(1)}`
-    expect(screen.getByTestId('test-button')).not.toHaveClass(
-      `primo-Button--${modifierClass}`
-    );
+    const modifierClass = `${propName}${propValue.charAt(0).toUpperCase() + propValue.slice(1)}`;
+    expect(screen.getByTestId('test-button')).not.toHaveClass(`primo-Button--${modifierClass}`);
     rerender(<Button {...props} />);
-    expect(screen.getByTestId('test-button')).toHaveClass(
-      `primo-Button--${modifierClass}`
-    );
+    expect(screen.getByTestId('test-button')).toHaveClass(`primo-Button--${modifierClass}`);
   });
 
   test(': is set to `disabled` by the isDisabled prop', () => {
@@ -103,10 +96,7 @@ describe('<Button />', () => {
     rerender(<Button {...props} />);
 
     expect(screen.getByTestId('test-button')).toHaveAttribute('disabled');
-    expect(screen.getByTestId('test-button')).not.toHaveAttribute(
-      'aria-disabled',
-      'true'
-    );
+    expect(screen.getByTestId('test-button')).not.toHaveAttribute('aria-disabled', 'true');
   });
 
   test(': is set to `width: 100%;` by the isFullWidth prop', () => {
@@ -116,16 +106,12 @@ describe('<Button />', () => {
     };
     const { rerender } = render(<Button {...defaultProps} />);
 
-    expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'primo-Button--fullWidth'
-    );
+    expect(screen.getByTestId('test-button')).not.toHaveClass('primo-Button--fullWidth');
 
     // Change props
     rerender(<Button {...props} />);
 
-    expect(screen.getByTestId('test-button')).toHaveClass(
-      'primo-Button--fullWidth'
-    );
+    expect(screen.getByTestId('test-button')).toHaveClass('primo-Button--fullWidth');
   });
 
   test(': is set with class by the `className` prop', () => {
@@ -135,25 +121,18 @@ describe('<Button />', () => {
     };
     const { rerender } = render(<Button {...defaultProps} />);
 
-    expect(screen.getByTestId('test-button')).not.toHaveClass(
-      'primo-Button--modifier'
-    );
+    expect(screen.getByTestId('test-button')).not.toHaveClass('primo-Button--modifier');
 
     // Change props
     rerender(<Button {...props} />);
 
-    expect(screen.getByTestId('test-button')).toHaveClass(
-      'primo-Button--modifier'
-    );
+    expect(screen.getByTestId('test-button')).toHaveClass('primo-Button--modifier');
   });
 
   test(": is set to `type='submit'` by the type prop", () => {
     const { rerender } = render(<Button {...defaultProps} />);
 
-    expect(screen.getByTestId('test-button')).not.toHaveAttribute(
-      'type',
-      'submit'
-    );
+    expect(screen.getByTestId('test-button')).not.toHaveAttribute('type', 'submit');
 
     // Change props
     rerender(<Button {...defaultProps} type={'submit'} />);
@@ -176,10 +155,7 @@ describe('<Button />', () => {
     rerender(<Button {...props} />);
 
     expect(screen.getByTestId('test-button')).toHaveAttribute('aria-disabled');
-    expect(screen.getByTestId('test-button')).not.toHaveAttribute(
-      'href',
-      'https://google.com/'
-    );
+    expect(screen.getByTestId('test-button')).not.toHaveAttribute('href', 'https://google.com/');
   });
 
   test(': should call `onClick` function when mouseevent `click` is performed', () => {
