@@ -10,3 +10,15 @@ runs:
       shell: bash
       run: |
         pnpm install --frozen-lockfile
+    
+    - uses: actions/cache@v3
+      name: Setup pnpm cache
+      with:
+        path: ${{ steps.pnpm-config.outputs.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
+    
+    - name: 🔺️ Cache (turbo)
+        id: cache-turbo
+        uses: primo-design-system/primo/.github/actions/cache-turbo@main

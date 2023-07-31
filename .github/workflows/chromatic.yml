@@ -32,10 +32,6 @@ jobs:
       - name: 📦 Install
         id: chromatic-install
         uses: primo-design-system/primo/.github/actions/install@main
-
-      - name: 🔺️ Cache (turbo)
-        id: chromatic-cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
   
   Chromatic-Deployment-Components:
     name: 🚀 Deploy [ @primo/components ] to Chromatic
@@ -54,6 +50,7 @@ jobs:
         uses: primo-design-system/primo/.github/actions/build@main
         with:
           BUILD_COMMAND: 'build'
+          path: node_modules/.cache/turbo
 
       - name: 🚀 Publish
         id: chromatic-components-publish
@@ -81,6 +78,7 @@ jobs:
         uses: primo-design-system/primo/.github/actions/build@main
         with:
           BUILD_COMMAND: 'build'
+          path: node_modules/.cache/turbo
 
       - name: 🚀 Publish
         id: chromatic-react-publish
@@ -108,6 +106,7 @@ jobs:
         uses: primo-design-system/primo/.github/actions/build@main
         with:
           BUILD_COMMAND: 'build'
+          path: node_modules/.cache/turbo
 
       - name: 🚀 Publish
         id: chromatic-styles-publish
