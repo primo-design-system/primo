@@ -11,4 +11,3 @@ node_modules
 packages/*/examples/*
 
 example
-sassdoc

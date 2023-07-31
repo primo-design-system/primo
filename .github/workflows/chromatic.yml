@@ -49,7 +49,7 @@ jobs:
         with:
           fetch-depth: 10
 
-      - name: '🏗️  Build'
+      - name: '🏗️ Build'
         id: chromatic-components-build
         uses: primo-design-system/primo/.github/actions/build@main
         with:
@@ -76,7 +76,7 @@ jobs:
         with:
           fetch-depth: 10
 
-      - name: '🏗️  Build'
+      - name: '🏗️ Build'
         id: chromatic-react-build
         uses: primo-design-system/primo/.github/actions/build@main
         with:
@@ -103,7 +103,7 @@ jobs:
         with:
           fetch-depth: 10
 
-      - name: '🏗️  Build'
+      - name: '🏗️ Build'
         id: chromatic-styles-build
         uses: primo-design-system/primo/.github/actions/build@main
         with:

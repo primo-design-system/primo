@@ -14,11 +14,14 @@
     "lint": {
       "dependsOn": ["^build"]
     },
+    "lint:fix": {
+      "dependsOn": []
+    },
     "format": {
       "dependsOn": ["^build"]
     },
-    "clean": {
-      "cache": false
+    "format:fix": {
+      "dependsOn": []
     },
     "start:playroom": {
       "dependsOn": ["^build"]

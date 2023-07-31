@@ -1,0 +1,68 @@
+# .github/workflows/release.yml
+
+---
+name: 🚀 Release
+
+on:
+  workflow_run:
+    workflows: [Push]
+    branches:
+      - main
+      - next
+    types: 
+      - completed
+  pull_request:
+    branches:
+      - main
+      - next
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  PublishBranch:
+    name: 🚀 Publish experimental packages
+    if: ${{ github.event_name == 'pull_request' && !startsWith(github.head_ref, 'changeset-release/') }}
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: 🐙️ Checkout
+        id: pull-checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 10
+
+      - name: ⭐ Init
+        id: pull-init
+        uses: primo-design-system/primo/.github/actions/init@main
+
+      - name: 📦 Install
+        id: pull-install
+        uses: primo-design-system/primo/.github/actions/install@main
+
+      - name: 🔺️ Cache (turbo)
+        id: pull-cache-turbo
+        uses: primo-design-system/primo/.github/actions/cache-turbo@main
+
+      - name: 🏗️ Build
+        id: pull-build
+        uses: primo-design-system/primo/.github/actions/build@main
+        with:
+          BUILD_COMMAND: build
+
+      - name: 🔐 Setup npm token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN_AUTOMATION }}" >> ~/.npmrc
+        shell: bash
+
+      - name: 🚀 Publish snapshot release on npm
+        run: |
+          commit_hash=${{ github.event.pull_request.head.sha }}
+          pnpm exec changeset version --snapshot experimental --snapshot-prerelease-template {tag}-${commit_hash:0:7}
+          pnpm exec changeset publish --tag experimental --no-git-tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+
+
+    

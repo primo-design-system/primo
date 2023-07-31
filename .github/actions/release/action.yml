@@ -1,0 +1,26 @@
+name: Release
+description: Release packages
+author: Primo
+
+inputs:
+  GH_TOKEN:
+    description: Github Token
+    required: true
+  NPM_TOKEN:
+    description: NPM Token
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: 🚀 Release
+      id: changesets
+      uses: changesets/action@v1
+      with:
+        publish: pnpm release
+        commit: 'chore: release'
+        title: 'chore: release new version and update changelog'
+        setupGitUser: false
+      env:
+        GITHUB_TOKEN: ${{ inputs.GH_TOKEN }}
+        NPM_TOKEN: ${{ inputs.NPM_AUTOMATION }}
