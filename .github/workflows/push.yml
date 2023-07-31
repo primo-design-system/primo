@@ -1,5 +1,5 @@
 ---
-    name: '  🔀️  Push'
+    name: 🔀️ Push
     
     on:
       push:
@@ -17,10 +17,6 @@
     concurrency:
       group: push-${{ github.ref }}-1
       cancel-in-progress: true
-    
-    env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     
     jobs:
       Push:
@@ -50,7 +46,7 @@
             id: push-cache-turbo
             uses: primo-design-system/primo/.github/actions/cache-turbo@main
             with:
-              GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+              GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     
           - name: 🚨️ Lint
             id: push-lint
