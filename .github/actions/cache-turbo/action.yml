@@ -4,8 +4,8 @@ author: Primo
 
 inputs:
   github-token:
-    description: GitHub Token for Turbo
     required: true
+    description: 'secrets.GITHUB_TOKEN'
 
 runs:
   using: composite

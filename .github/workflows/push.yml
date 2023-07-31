@@ -26,8 +26,6 @@ jobs:
     name: 🔀️ Push
     timeout-minutes: 20
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
     strategy:
       fail-fast: false
 
@@ -56,8 +54,4 @@ jobs:
       - name: 🚨️ Lint
         id: push-lint
         uses: primo-design-system/primo/.github/actions/lint@main
-        with:
-          TURBO_TEAM: primo
-          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-          TURBO_API: http://127.0.0.1:9080
   

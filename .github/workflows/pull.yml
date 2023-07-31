@@ -8,19 +8,15 @@ on:
       - next
 
 concurrency:
-  group: push-${{ github.ref }}-1
+  group: ${{ github.workflow }}-${{ github.ref }}-1
   cancel-in-progress: true
 
 env:
-  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  TURBO_TEAM: primo
-  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-  TURBO_API: http://127.0.0.1:9080
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 
 jobs:
   Pull:
-    name: 🏗 Pull Reqest - [PR]
+    name: 🔎 Pull
     timeout-minutes: 20
     runs-on: ubuntu-latest
     strategy:
@@ -46,11 +42,9 @@ jobs:
         id: pull-cache-turbo
         uses: primo-design-system/primo/.github/actions/cache-turbo@main
         with:
-          GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚨️ Lint
         id: pull-lint
         uses: primo-design-system/primo/.github/actions/lint@main
-        with:
-          TURBO_TEAM: ${{ env.TURBO_TEAM }}
-          TURBO_TOKEN: ${{ env.TURBO_TOKEN }}
+    
