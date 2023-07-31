@@ -3,7 +3,9 @@ name: 🔎 Pull
 
 on:
   pull_request:
-    branches: [ main, next ]
+    branches:
+      - main
+      - next
 
 concurrency:
   group: push-${{ github.ref }}-1

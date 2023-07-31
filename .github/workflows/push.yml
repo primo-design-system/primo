@@ -1,0 +1,63 @@
+---
+    name: '  🔀️  Push'
+    
+    on:
+      push:
+        branches:
+          - main
+          - canary
+          - develop
+          - ci/**
+          - feat/**
+          - feature/**
+          - fix/**
+          - refactor/**
+          - release/**
+    
+    concurrency:
+      group: push-${{ github.ref }}-1
+      cancel-in-progress: true
+    
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      TURBO_TEAM: primo
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_API: http://127.0.0.1:9080
+    
+    jobs:
+      Push:
+        name: 🏗 Push
+        timeout-minutes: 20
+        runs-on: ubuntu-latest
+        strategy:
+          fail-fast: false
+    
+        steps:
+          - name: 🐙️ Checkout
+            id: push-checkout
+            uses: actions/checkout@v3
+            with:
+              ref: ${{ github.event.push_request.head.ref }}
+              fetch-depth: 10
+    
+          - name: ⭐ Init
+            id: push-init
+            uses: primo/.github/actions/init@main
+    
+          - name: 📦 Install
+            id: push-install
+            uses: primo/.github/actions/install@main
+    
+          - name: 🔺️ Cache (turbo)
+            id: push-cache-turbo
+            uses: primo/.github/actions/cache-turbo@main
+            with:
+              GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
+    
+          - name: 🚨️ Lint
+            id: push-lint
+            uses: primo/.github/actions/lint@main
+            with:
+              TURBO_TEAM: ${{ env.TURBO_TEAM }}
+              TURBO_TOKEN: ${{ env.TURBO_TOKEN }}
