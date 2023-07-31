@@ -18,9 +18,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}-1
   cancel-in-progress: true
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-
 jobs:
   Push:
     name: 🔀️ Push
@@ -34,7 +31,6 @@ jobs:
         id: push-checkout
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.push_request.head.ref }}
           fetch-depth: 10
 
       - name: ⭐ Init
@@ -48,8 +44,6 @@ jobs:
       - name: 🔺️ Cache (turbo)
         id: push-cache-turbo
         uses: primo-design-system/primo/.github/actions/cache-turbo@main
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚨️ Lint
         id: push-lint
