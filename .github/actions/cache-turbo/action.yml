@@ -1,4 +1,4 @@
-name: 🔺️ Cache
+name: 🔺️ Cache (turbo)
 description: Cache (turbo)
 author: Primo
 
@@ -9,6 +9,9 @@ inputs:
 
 runs:
   using: composite
+  permissions:
+    contents: read
+    pull-requests: write
   steps:
     - name: 🔺️ Cache (turbo)
       id: cache-turbo
