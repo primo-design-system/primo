@@ -19,44 +19,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🛒 Check out repository
-        uses: actions/checkout@v2
-
-      - name: 📁 Get Yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: 📇 Extract branch name
-        id: extract-branch-name
-        run: echo "::set-output name=branch::$([[ -z "${GITHUB_HEAD_REF}" ]] && echo ${GITHUB_REF#refs/heads/} || echo ${GITHUB_HEAD_REF})"
-
-      - name: 📁 Use cache for yarn
-        id: yarn-cache
-        uses: actions/cache@v2
+      - name: 🐙️ Checkout
+        id: chromatic-checkout
+        uses: actions/checkout@v3
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          fetch-depth: 10
 
-      - name: 📁 Use cache for modules
-        id: modules-cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: modules-cache-${{ github.sha }}
+      - name: ⭐ Init
+        id: chromatic-init
+        uses: primo-design-system/primo/.github/actions/init@main
 
-      - name: 📁 Use cache for packages
-        id: packages-cache
-        uses: actions/cache@v2
-        with:
-          path: packages
-          key: packages-cache-${{ github.sha }}
+      - name: 📦 Install
+        id: chromatic-install
+        uses: primo-design-system/primo/.github/actions/install@main
 
-      - name: 🚧 Install
-        env:
-          BRANCH_NAME: ${{ steps.extract-branch-name.outputs.branch }}
-        run: yarn
+      - name: 🔺️ Cache (turbo)
+        id: chromatic-cache-turbo
+        uses: primo-design-system/primo/.github/actions/cache-turbo@main
   
   Chromatic-Deployment-Components:
     name: 🚀 Deploy [ @primo/components ] to Chromatic
@@ -64,33 +43,20 @@ jobs:
     needs: Setup
 
     steps:
-      - name: 🛒 Check out repository
-        uses: actions/checkout@v2
+      - name: 🐙️ Checkout
+        id: chromatic-components-checkout
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 10
 
-      - name: 📁 Use cache for modules
-        id: modules-cache
-        uses: actions/cache@v2
+      - name: '🏗️  Build'
+        id: chromatic-components-build
+        uses: primo-design-system/primo/.github/actions/build@main
         with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: modules-cache-${{ github.sha }}
-
-      - name: 📁 Use cache for packages
-        id: packages-cache
-        uses: actions/cache@v2
-        with:
-          path: packages
-          key: packages-cache-${{ github.sha }}
-        
-        # 👇 Adds Chromatic as a step in the workflow
-      
-      - name: 💡 Build
-        run: yarn build
+          BUILD_COMMAND: 'build'
 
       - name: 🚀 Publish
+        id: chromatic-components-publish
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -104,32 +70,20 @@ jobs:
     needs: Setup
 
     steps:
-      - name: 🛒 Check out repository
-        uses: actions/checkout@v2
+      - name: 🐙️ Checkout
+        id: chromatic-react-checkout
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 10
 
-      - name: 📁 Use cache for modules
-        id: modules-cache
-        uses: actions/cache@v2
+      - name: '🏗️  Build'
+        id: chromatic-react-build
+        uses: primo-design-system/primo/.github/actions/build@main
         with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: modules-cache-${{ github.sha }}
+          BUILD_COMMAND: 'build'
 
-      - name: 📁 Use cache for packages
-        id: packages-cache
-        uses: actions/cache@v2
-        with:
-          path: packages
-          key: packages-cache-${{ github.sha }}
-
-      - name: 💡 Build
-        run: yarn build
-        
-        # 👇 Adds Chromatic as a step in the workflow
       - name: 🚀 Publish
+        id: chromatic-react-publish
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
@@ -143,32 +97,20 @@ jobs:
     needs: Setup
 
     steps:
-      - name: 🛒 Check out repository
-        uses: actions/checkout@v2
+      - name: 🐙️ Checkout
+        id: chromatic-styles-checkout
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 10
 
-      - name: 📁 Use cache for modules
-        id: modules-cache
-        uses: actions/cache@v2
+      - name: '🏗️  Build'
+        id: chromatic-styles-build
+        uses: primo-design-system/primo/.github/actions/build@main
         with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: modules-cache-${{ github.sha }}
+          BUILD_COMMAND: 'build'
 
-      - name: 📁 Use cache for packages
-        id: packages-cache
-        uses: actions/cache@v2
-        with:
-          path: packages
-          key: packages-cache-${{ github.sha }}
-
-      - name: 💡 Build
-        run: yarn build
-        
-        # 👇 Adds Chromatic as a step in the workflow
       - name: 🚀 Publish
+        id: chromatic-styles-publish
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:

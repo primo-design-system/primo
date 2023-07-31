@@ -1,14 +1,14 @@
-name: Lint
-description: Lint all files and packages
+name: Test
+description: Test all files and packages
 author: Primo
 
 runs:
   using: composite
   steps:
-    - name: 🚨️ Lint
-      id: lint
+    - name: 🧪 Test
+      id: Test
       shell: bash
       run: |
-        pnpm run lint \
+        pnpm run test \
           --cache-dir=".turbo" \
           --output-logs="errors-only"

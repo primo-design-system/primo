@@ -48,4 +48,14 @@ jobs:
       - name: 🚨️ Lint
         id: push-lint
         uses: primo-design-system/primo/.github/actions/lint@main
+      
+      - name: ✍️ Format
+        id: push-format
+        uses: primo-design-system/primo/.github/actions/format@main
+      
+      # https://docs.github.com/en/actions/learn-github-actions/expressions
+      - name: '📛 Commit Message'
+        id: push-commit-message
+        run: |
+          echo "message=$(git log --no-merges -1 --oneline)" >> $GITHUB_OUTPUT
   

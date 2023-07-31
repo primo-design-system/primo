@@ -1,0 +1,20 @@
+name: Build
+description: Localized Build
+author: Primo
+
+inputs:
+  BUILD_COMMAND:
+    description: 'Dynamic Build String for Run Script'
+    default: 'build'
+    required: true
+    
+runs:
+  using: composite
+  steps:
+    - name: 🏗️ Build
+      id: build
+      shell: bash
+      run: |
+        pnpm run ${{ inputs.BUILD_COMMAND }} \
+          --cache-dir=".turbo" \
+          --output-logs="errors-only"

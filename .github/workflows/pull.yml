@@ -41,4 +41,20 @@ jobs:
       - name: 🚨️ Lint
         id: pull-lint
         uses: primo-design-system/primo/.github/actions/lint@main
+
+      - name: ✍️ Format
+        id: pull-format
+        uses: primo-design-system/primo/.github/actions/format@main
+
+      # https://docs.github.com/en/actions/learn-github-actions/expressions
+      - name: '📛 Commit Message'
+        id: pull-commit-message
+        run: |
+          echo "message=$(git log --no-merges -1 --oneline)" >> $GITHUB_OUTPUT
+
+      - name: '🏗️  Build'
+        id: pull-build
+        uses: primo-design-system/primo/.github/actions/build@main
+        with:
+          BUILD_COMMAND: 'build'
     

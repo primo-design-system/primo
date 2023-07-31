@@ -139,7 +139,6 @@ www/
 
 # components
 lib
-build
 stats.html
 build-storybook.log
 storybook-static
