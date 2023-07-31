@@ -7,7 +7,7 @@ inputs:
     description: 'Dynamic Build String for Run Script'
     default: 'build'
     required: true
-    
+
 runs:
   using: composite
   steps:
@@ -15,6 +15,4 @@ runs:
       id: build
       shell: bash
       run: |
-        pnpm run ${{ inputs.BUILD_COMMAND }} \
-          --cache-dir=".turbo" \
-          --output-logs="errors-only"
+        pnpm run ${{ inputs.BUILD_COMMAND }}

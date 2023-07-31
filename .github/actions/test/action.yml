@@ -9,6 +9,4 @@ runs:
       id: Test
       shell: bash
       run: |
-        pnpm run test \
-          --cache-dir=".turbo" \
-          --output-logs="errors-only"
+        pnpm run test

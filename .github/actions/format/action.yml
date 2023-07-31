@@ -9,6 +9,4 @@ runs:
       id: Format
       shell: bash
       run: |
-        pnpm run format \
-          --cache-dir=".turbo" \
-          --output-logs="errors-only"
+        pnpm run format

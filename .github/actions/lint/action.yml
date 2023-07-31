@@ -9,6 +9,4 @@ runs:
       id: lint
       shell: bash
       run: |
-        pnpm run lint \
-          --cache-dir=".turbo" \
-          --output-logs="errors-only"
+        pnpm run lint
