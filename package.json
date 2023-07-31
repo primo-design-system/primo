@@ -35,7 +35,7 @@
     "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
-    "@primo/browserlist-config": "workspace:1.0.5",
+    "@primo/browserlist-config": "workspace:^1.0.5",
     "@primo/eslint-config": "workspace:^1.0.4",
     "@primo/prettier-config": "workspace:^1.0.4",
     "@typescript-eslint/eslint-plugin": "^5.60.0",

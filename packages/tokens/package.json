@@ -39,7 +39,7 @@
     "url": "https://github.com/primodesignsystem/primo/issues"
   },
   "devDependencies": {
-    "@primo/browserlist-config": "workspace:1.0.5",
+    "@primo/browserlist-config": "workspace:^1.0.5",
     "chroma-js": "^2.4.2",
     "jest": "^26.6.3",
     "style-dictionary": "^3.8.0"
