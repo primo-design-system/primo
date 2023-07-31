@@ -43,21 +43,21 @@
     
           - name: ⭐ Init
             id: push-init
-            uses: primo/.github/actions/init@main
+            uses: primo-design-system/primo/.github/actions/init@main
     
           - name: 📦 Install
             id: push-install
-            uses: primo/.github/actions/install@main
+            uses: primo-design-system/primo/.github/actions/install@main
     
           - name: 🔺️ Cache (turbo)
             id: push-cache-turbo
-            uses: primo/.github/actions/cache-turbo@main
+            uses: primo-design-system/primo/.github/actions/cache-turbo@main
             with:
               GITHUB_TOKEN: ${{ env.GITHUB_TOKEN }}
     
           - name: 🚨️ Lint
             id: push-lint
-            uses: primo/.github/actions/lint@main
+            uses: primo-design-system/primo/.github/actions/lint@main
             with:
               TURBO_TEAM: ${{ env.TURBO_TEAM }}
               TURBO_TOKEN: ${{ env.TURBO_TOKEN }}
