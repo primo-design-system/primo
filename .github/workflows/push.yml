@@ -15,7 +15,7 @@ on:
       - release/**
 
 concurrency:
-  group: push-${{ github.ref }}-1
+  group: ${{ github.workflow }}-${{ github.ref }}-1
   cancel-in-progress: true
 
 jobs:
