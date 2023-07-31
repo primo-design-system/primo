@@ -21,9 +21,6 @@
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      TURBO_TEAM: primo
-      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-      TURBO_API: http://127.0.0.1:9080
     
     jobs:
       Push:
@@ -59,5 +56,7 @@
             id: push-lint
             uses: primo-design-system/primo/.github/actions/lint@main
             with:
-              TURBO_TEAM: ${{ env.TURBO_TEAM }}
-              TURBO_TOKEN: ${{ env.TURBO_TOKEN }}
+              TURBO_TEAM: primo
+              TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+              TURBO_API: http://127.0.0.1:9080
+      
