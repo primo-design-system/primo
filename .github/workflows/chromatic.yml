@@ -17,7 +17,7 @@ env:
 
 # List of jobs
 jobs:
-  Setup:
+  Chromatic:
     name: 🏗 Setup packages - [Chromatic]
     runs-on: ubuntu-latest
 
@@ -35,6 +35,10 @@ jobs:
       - name: 📦 Install
         id: chromatic-install
         uses: primo-design-system/primo/.github/actions/install@main
+      
+      - name: 🔺️ Cache (turbo)
+        id: pull-cache-turbo
+        uses: primo-design-system/primo/.github/actions/cache-turbo@main
 
       - name: '🏗️ Build'
         id: chromatic-components-build
