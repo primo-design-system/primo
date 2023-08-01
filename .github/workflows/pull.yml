@@ -47,6 +47,10 @@ jobs:
       - name: ✍️ Format
         id: pull-format
         uses: primo-design-system/primo/.github/actions/format@main
+      
+      - name: 🧪 Test
+        id: pull-test
+        uses: primo-design-system/primo/.github/actions/test@main
 
       # https://docs.github.com/en/actions/learn-github-actions/expressions
       - name: '📛 Commit Message'
