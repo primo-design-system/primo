@@ -13,6 +13,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "build:storybook": "build-storybook -c .storybook -o build",
+    "build:storybook:quiet": "storybook --quiet",
     "build:watch": "rollup -c -w",
     "lint": "npm-run-all --parallel --print-label --continue-on-error lint:es lint:ts",
     "lint:fix": "npm-run-all --parallel --print-label --continue-on-error lint:es:fix lint:ts:fix",

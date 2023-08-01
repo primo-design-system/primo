@@ -18,7 +18,7 @@ env:
 # List of jobs
 jobs:
   Chromatic:
-    name: 🏗 Setup packages - [Chromatic]
+    name: 💈 Publish Chromatic
     runs-on: ubuntu-latest
 
     steps:
