@@ -55,11 +55,17 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN_AUTOMATION }}" >> ~/.npmrc
         shell: bash
 
-      - name: 🚀 Publish snapshot release on npm
+      - name: Publish snapshot release for branches
+        if: ${{ github.event_name == 'pull_request' && !startsWith(github.head_ref, 'changeset-release/') }}
+        shell: bash
         run: |
-          commit_hash=${{ github.event.pull_request.head.sha }}
-          pnpm exec changeset version --snapshot experimental --snapshot-prerelease-template {tag}-${commit_hash:0:7}
-          pnpm exec changeset publish --tag experimental --no-git-tag
+          yarn changeset version --snapshot experimental --snapshot-prerelease-template {tag}-${GITHUB_SHA:0:7}
+
+          if [[ -n $(git diff --exit-code package.json) ]]; then
+            yarn changeset publish --tag experimental --no-git-tag
+          else
+            echo "No unreleased changesets, not publishing snapshot release"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         

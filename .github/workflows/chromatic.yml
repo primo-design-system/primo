@@ -52,24 +52,12 @@ jobs:
     needs: Setup
 
     steps:
-      - name: 🐙️ Checkout
-        id: chromatic-checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 10
-      
-      - name: 🔺️ Cache (turbo)
-        id: pull-cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
-
       - name: 🚀 Publish [ @primo/components ] to Chromatic
         id: chromatic-components-publish
-        uses: chromaui/action@v1
-        # Chromatic GitHub Action options
+        uses: primo-design-system/primo/.github/actions/chromatic@main
         with:
-          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-          projectToken: ${{ env.CHROMATIC_TOKEN }}
-          workingDir: packages/components
+          CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
+          WORKING_DIR: packages/components
 
   ChromaticReact:
     name: 💈 Publish Chromatic [@primo/react]
@@ -77,47 +65,23 @@ jobs:
     needs: Setup
 
     steps:
-      - name: 🐙️ Checkout
-        id: chromatic-checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 10
-      
-      - name: 🔺️ Cache (turbo)
-        id: pull-cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
-      
       - name: 🚀 Publish [ @primo/react ] to Chromatic
         id: chromatic-react-publish
-        uses: chromaui/action@v1
-        # Chromatic GitHub Action options
+        uses: primo-design-system/primo/.github/actions/chromatic@main
         with:
-          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-          projectToken: ${{ env.CHROMATIC_TOKEN }}
-          workingDir: packages/react
-  
+          CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
+          WORKING_DIR: packages/react
+
   ChromaticStyles:
     name: 💈 Publish Chromatic [@primo/styles]
     runs-on: ubuntu-latest
     needs: Setup
 
     steps:
-      - name: 🐙️ Checkout
-        id: chromatic-checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 10
-      
-      - name: 🔺️ Cache (turbo)
-        id: pull-cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
-        
       - name: 🚀 Publish [ @primo/styles ] to Chromatic
         id: chromatic-styles-publish
-        uses: chromaui/action@v1
-        # Chromatic GitHub Action options
+        uses: primo-design-system/primo/.github/actions/chromatic@main
         with:
-          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-          projectToken: ${{ env.CHROMATIC_TOKEN }}
-          workingDir: packages/styles
+          CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
+          WORKING_DIR: packages/styles
   

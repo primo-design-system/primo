@@ -1,0 +1,41 @@
+name: 💈 Publish Chromatic
+description: Publish Chromatic
+author: Primo
+
+inputs:
+  CHROMATIC_TOKEN:
+    description: Chromatic Token
+    required: true
+  WORKING_DIR:
+    description: Working directory
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: 🐙️ Checkout
+      id: chromatic-checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 10
+
+    - name: ⭐ Init
+      id: chromatic-init
+      uses: primo-design-system/primo/.github/actions/init@main
+    
+    - name: 📁 Cache (modules)
+      id: chromatic-cache-modules
+      uses: primo-design-system/primo/.github/actions/cache-modules@main
+    
+    - name: 🔺️ Cache (turbo)
+      id: chromatic-cache-turbo
+      uses: primo-design-system/primo/.github/actions/cache-turbo@main
+
+    - name: 🚀 Publish to Chromatic
+      id: chromatic-publish
+      uses: chromaui/action@v1
+      # Chromatic GitHub Action options
+      with:
+        # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+        projectToken: ${{ inputs.CHROMATIC_TOKEN }}
+        workingDir: ${{ inputs.WORKING_DIR }}
