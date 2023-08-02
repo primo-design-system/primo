@@ -35,14 +35,6 @@ jobs:
       - name: 📦 Install
         id: chromatic-install
         uses: ./.github/actions/install
-        with:
-          CACHE_PATH: ${{ steps.chromatic-init.outputs.STORE_PATH }}
-          CACHE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          CACHE_RESTORE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
-      
-      - name: 🔺️ Cache (turbo)
-        id: pull-cache-turbo
-        uses: ./.github/actions/cache-turbo
       
       - name: '🏗️ Build'
         id: chromatic-components-build

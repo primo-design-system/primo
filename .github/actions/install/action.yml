@@ -2,35 +2,15 @@ name: 📦️ Install
 description: Install packages
 author: Primo
 
-inputs:
-  CACHE_PATH:
-    description: pnpm outputs store path
-    required: true
-  CACHE_KEY:
-    description: pnpm store cache key
-    required: true
-  CACHE_RESTORE_KEY:
-    description: pnpm store cache restore key
-    required: true
-
 runs:
   using: composite
-  steps:
-    - name: 📁 Setup pnpm cache
-      uses: actions/cache@v3 
-      with:
-        path: ${{ inputs.CACHE_PATH }}
-        key: ${{ inputs.CACHE_KEY}}
-        restore-keys: |
-          ${{ inputs.CACHE_RESTORE_KEY }}
-    
+  steps:    
+    - name: 📁 Cache (modules)
+      uses: ./.github/actions/cache-modules
+
     - name: 🔺️ Cache (turbo)
       id: cache-turbo
       uses: ./.github/actions/cache-turbo
-    
-    - name: 📁 Cache (modules)
-      id: cache-modules
-      uses: ./.github/actions/cache-modules
     
     - name: 📦️ Dependencies
       id: dependencies
