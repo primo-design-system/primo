@@ -24,11 +24,9 @@ runs:
       uses: ./.github/actions/init
     
     - name: 📁 Cache (modules)
-      id: chromatic-cache-modules
       uses: ./.github/actions/cache-modules
     
     - name: 🔺️ Cache (turbo)
-      id: chromatic-cache-turbo
       uses: ./.github/actions/cache-turbo
 
     - name: 🚀 Publish to Chromatic
