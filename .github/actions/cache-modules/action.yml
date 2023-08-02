@@ -11,3 +11,4 @@ runs:
       with:
         node-version-file: .nvmrc
         cache: pnpm
+        key: cache-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
