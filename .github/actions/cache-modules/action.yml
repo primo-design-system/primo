@@ -1,0 +1,15 @@
+name: Cache Modules
+description: Cache modules
+author: Primo
+
+runs:
+  using: composite
+  steps:
+    - name: 📁 Cache modules (pnpm)
+      id: modules-cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          node_modules
+          */*/node_modules
+        key: modules-cache-${{ github.sha }}
