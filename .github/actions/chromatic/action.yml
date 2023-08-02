@@ -21,15 +21,15 @@ runs:
 
     - name: ⭐ Init
       id: chromatic-init
-      uses: primo-design-system/primo/.github/actions/init@main
+      uses: ./.github/actions/init
     
     - name: 📁 Cache (modules)
       id: chromatic-cache-modules
-      uses: primo-design-system/primo/.github/actions/cache-modules@main
+      uses: ./.github/actions/cache-modules
     
     - name: 🔺️ Cache (turbo)
       id: chromatic-cache-turbo
-      uses: primo-design-system/primo/.github/actions/cache-turbo@main
+      uses: ./.github/actions/cache-turbo
 
     - name: 🚀 Publish to Chromatic
       id: chromatic-publish

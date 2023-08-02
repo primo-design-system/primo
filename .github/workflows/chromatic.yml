@@ -30,19 +30,19 @@ jobs:
 
       - name: ⭐ Init
         id: chromatic-init
-        uses: primo-design-system/primo/.github/actions/init@main
+        uses: ./.github/actions/init
 
       - name: 📦 Install
         id: chromatic-install
-        uses: primo-design-system/primo/.github/actions/install@main
+        uses: ./.github/actions/install
       
       - name: 🔺️ Cache (turbo)
         id: pull-cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
+        uses: ./.github/actions/cache-turbo
       
       - name: '🏗️ Build'
         id: chromatic-components-build
-        uses: primo-design-system/primo/.github/actions/build@main
+        uses: ./.github/actions/build
         with:
           BUILD_COMMAND: 'build'
 
@@ -54,7 +54,7 @@ jobs:
     steps:
       - name: 🚀 Publish [ @primo/components ] to Chromatic
         id: chromatic-components-publish
-        uses: primo-design-system/primo/.github/actions/chromatic
+        uses: ./.github/actions/chromatic
         with:
           CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
           WORKING_DIR: packages/components
@@ -67,7 +67,7 @@ jobs:
     steps:
       - name: 🚀 Publish [ @primo/react ] to Chromatic
         id: chromatic-react-publish
-        uses: primo-design-system/primo/.github/actions/chromatic
+        uses: ./.github/actions/chromatic
         with:
           CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
           WORKING_DIR: packages/react
@@ -80,7 +80,7 @@ jobs:
     steps:
       - name: 🚀 Publish [ @primo/styles ] to Chromatic
         id: chromatic-styles-publish
-        uses: primo-design-system/primo/.github/actions/chromatic
+        uses: ./.github/actions/chromatic
         with:
           CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
           WORKING_DIR: packages/styles
