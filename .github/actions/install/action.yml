@@ -2,16 +2,30 @@ name: 📦️ Install
 description: Install packages
 author: Primo
 
+inputs:
+  CACHE_PATH:
+    description: pnpm outputs store path
+    required: true
+  CACHE_KEY:
+    description: pnpm store cache key
+    required: true
+  CACHE_RESTORE_KEY:
+    description: pnpm store cache restore key
+    required: true
+
 runs:
   using: composite
   steps:
     - name: 📁 Setup pnpm cache
       uses: actions/cache@v3 
       with:
-        path: ${{ steps.pnpm-config.outputs.STORE_PATH }}
-        key: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        # ${{ steps.pnpm-config.outputs.STORE_PATH }}
+        path: ${{ inputs.CACHE_PATH }}
+        # ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        key: ${{ inputs.CACHE_KEY}}
+        # ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
         restore-keys: |
-          ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
+          ${{ inputs.CACHE_RESTORE_KEY }}
     
     - name: 🔺️ Cache (turbo)
       id: cache-turbo

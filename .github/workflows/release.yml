@@ -28,26 +28,30 @@ jobs:
   
     steps:
       - name: 🐙️ Checkout
-        id: pull-checkout
+        id: release-checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 10
 
       - name: ⭐ Init
-        id: pull-init
-        uses: primo-design-system/primo/.github/actions/init@main
+        id: release-init
+        uses: ./.github/actions/init
 
       - name: 📦 Install
-        id: pull-install
-        uses: primo-design-system/primo/.github/actions/install@main
+        id: release-install
+        uses: ./.github/actions/install
+        with:
+          CACHE_PATH: ${{ steps.pnpm-config.outputs.STORE_PATH }}
+          CACHE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          CACHE_RESTORE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
 
       - name: 🔺️ Cache (turbo)
-        id: pull-cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
+        id: release-cache-turbo
+        uses: ./.github/actions/cache-turbo
 
       - name: 🏗️ Build
-        id: pull-build
-        uses: primo-design-system/primo/.github/actions/build@main
+        id: release-build
+        uses: ./.github/actions/build
         with:
           BUILD_COMMAND: build
 
