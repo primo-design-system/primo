@@ -50,7 +50,7 @@ jobs:
     steps:
       - name: 🚀 Publish [ @primo/components ] to Chromatic
         id: chromatic-components-publish
-        uses: ./.github/actions/chromatic
+        uses: ./.github/actions/publish-chromatic
         with:
           CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
           WORKING_DIR: packages/components
@@ -63,7 +63,7 @@ jobs:
     steps:
       - name: 🚀 Publish [ @primo/react ] to Chromatic
         id: chromatic-react-publish
-        uses: ./.github/actions/chromatic
+        uses: ./.github/actions/publish-chromatic
         with:
           CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
           WORKING_DIR: packages/react
@@ -76,7 +76,7 @@ jobs:
     steps:
       - name: 🚀 Publish [ @primo/styles ] to Chromatic
         id: chromatic-styles-publish
-        uses: ./.github/actions/chromatic
+        uses: ./.github/actions/publish-chromatic
         with:
           CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
           WORKING_DIR: packages/styles
