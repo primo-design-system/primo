@@ -30,27 +30,31 @@ jobs:
 
       - name: ⭐ Init
         id: pull-init
-        uses: primo-design-system/primo/.github/actions/init@main
+        uses: ./.github/actions/init
 
       - name: 📦 Install
         id: pull-install
-        uses: primo-design-system/primo/.github/actions/install@main
+        uses: ./.github/actions/install
+        with:
+          CACHE_PATH: ${{ steps.pnpm-config.outputs.STORE_PATH }}
+          CACHE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          CACHE_RESTORE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
 
       - name: 🔺️ Cache (turbo)
         id: pull-cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
+        uses: ./.github/actions/cache-turbo
 
       - name: 🚨️ Lint
         id: pull-lint
-        uses: primo-design-system/primo/.github/actions/lint@main
+        uses: ./.github/actions/lint
 
       - name: ✍️ Format
         id: pull-format
-        uses: primo-design-system/primo/.github/actions/format@main
+        uses: ./.github/actions/format
       
       - name: 🧪 Test
         id: pull-test
-        uses: primo-design-system/primo/.github/actions/test@main
+        uses: ./.github/actions/test
 
       # https://docs.github.com/en/actions/learn-github-actions/expressions
       - name: '📛 Commit Message'
@@ -58,9 +62,9 @@ jobs:
         run: |
           echo "message=$(git log --no-merges -1 --oneline)" >> $GITHUB_OUTPUT
 
-      - name: '🏗️  Build'
+      - name: '🏗️ Build'
         id: pull-build
-        uses: primo-design-system/primo/.github/actions/build@main
+        uses: ./.github/actions/build
         with:
           BUILD_COMMAND: 'build'
     

@@ -37,23 +37,27 @@ jobs:
 
       - name: ⭐ Init
         id: push-init
-        uses: primo-design-system/primo/.github/actions/init@main
+        uses: ./.github/actions/init
 
       - name: 📦 Install
         id: push-install
-        uses: primo-design-system/primo/.github/actions/install@main
+        uses: ./.github/actions/install
+        with:
+          CACHE_PATH: ${{ steps.pnpm-config.outputs.STORE_PATH }}
+          CACHE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          CACHE_RESTORE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
 
       - name: 🔺️ Cache (turbo)
         id: push-cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
+        uses: ./.github/actions/cache-turbo
 
       - name: 🚨️ Lint
         id: push-lint
-        uses: primo-design-system/primo/.github/actions/lint@main
+        uses: ./.github/actions/lint
       
       - name: ✍️ Format
         id: push-format
-        uses: primo-design-system/primo/.github/actions/format@main
+        uses: ./.github/actions/format
       
       # https://docs.github.com/en/actions/learn-github-actions/expressions
       - name: '📛 Commit Message'
