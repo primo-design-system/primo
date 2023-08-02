@@ -9,6 +9,6 @@ runs:
       id: modules-cache
       uses: actions/cache@v3
       with:
-        node-version-file: .nvmrc
-        cache: pnpm
         key: cache-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+        path: |
+            ./node_modules
