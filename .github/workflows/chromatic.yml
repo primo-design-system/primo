@@ -42,7 +42,7 @@ jobs:
         with:
           BUILD_COMMAND: 'build'
 
-  ChromaticComponents:
+  Components:
     name: 💈 Publish Chromatic [@primo/components]
     runs-on: ubuntu-latest
     needs: Setup
@@ -55,7 +55,7 @@ jobs:
           CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
           WORKING_DIR: packages/components
 
-  ChromaticReact:
+  React:
     name: 💈 Publish Chromatic [@primo/react]
     runs-on: ubuntu-latest
     needs: Setup
@@ -68,7 +68,7 @@ jobs:
           CHROMATIC_TOKEN: ${{ env.CHROMATIC_TOKEN }}
           WORKING_DIR: packages/react
 
-  ChromaticStyles:
+  Styles:
     name: 💈 Publish Chromatic [@primo/styles]
     runs-on: ubuntu-latest
     needs: Setup
