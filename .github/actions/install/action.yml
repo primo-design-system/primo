@@ -19,11 +19,8 @@ runs:
     - name: 📁 Setup pnpm cache
       uses: actions/cache@v3 
       with:
-        # ${{ steps.pnpm-config.outputs.STORE_PATH }}
         path: ${{ inputs.CACHE_PATH }}
-        # ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
         key: ${{ inputs.CACHE_KEY}}
-        # ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
         restore-keys: |
           ${{ inputs.CACHE_RESTORE_KEY }}
     
