@@ -1,3 +1,4 @@
+# .github/actions/lint/action.yml
 name: Lint
 description: Lint all files and packages
 author: Primo

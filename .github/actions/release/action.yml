@@ -1,3 +1,4 @@
+# .github/actions/release/action.yml
 name: Release
 description: Release packages
 author: Primo
