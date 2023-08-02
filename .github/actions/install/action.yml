@@ -5,14 +5,8 @@ author: Primo
 runs:
   using: composite
   steps:
-    - name: 📦️ Dependencies
-      id: dependencies
-      shell: bash
-      run: |
-        pnpm install --frozen-lockfile
-    
-    - uses: actions/cache@v3
-      name: Setup pnpm cache
+    - name: 📁 Setup pnpm cache
+      uses: actions/cache@v3 
       with:
         path: ${{ steps.pnpm-config.outputs.STORE_PATH }}
         key: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -20,5 +14,15 @@ runs:
           ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
     
     - name: 🔺️ Cache (turbo)
-        id: cache-turbo
-        uses: primo-design-system/primo/.github/actions/cache-turbo@main
+      id: cache-turbo
+      uses: primo-design-system/primo/.github/actions/cache-turbo@main
+    
+    - name: 📁 Cache (modules)
+      id: cache-modules
+      uses: primo-design-system/primo/.github/actions/cache-modules@main
+    
+    - name: 📦️ Dependencies
+      id: dependencies
+      shell: bash
+      run: |
+        pnpm install --frozen-lockfile
