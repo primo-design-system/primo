@@ -36,7 +36,7 @@ jobs:
         id: chromatic-install
         uses: ./.github/actions/install
         with:
-          CACHE_PATH: ${{ steps.pnpm-config.outputs.STORE_PATH }}
+          CACHE_PATH: ${{ steps.chromatic-init.outputs.STORE_PATH }}
           CACHE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           CACHE_RESTORE_KEY: ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
       
