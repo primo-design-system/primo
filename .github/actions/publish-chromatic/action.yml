@@ -1,3 +1,4 @@
+# .github/actions/publish-chromatic/action.yml
 name: 💈 Publish Chromatic
 description: Publish Chromatic
 author: Primo
