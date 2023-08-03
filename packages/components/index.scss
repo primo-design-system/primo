@@ -1,12 +1,4 @@
 @charset 'UTF-8';
 @use 'sass:meta';
 
-@use '~@primo/styles/index';
-
-// Component variables
-@use './scss/components/Button/Button.vars';
-
-.primo {
-  // Component styles
-  @include meta.load-css('scss/components/Button/Button');
-}
+@use './src/Button/index.scss';

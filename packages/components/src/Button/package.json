@@ -1,0 +1,37 @@
+{
+  "name": "@primo/components/button",
+  "version": "0.0.0",
+  "description": "The Primo CSS button component",
+  "author": "Richard McCartney <richard.mccartney@me.com>",
+  "homepage": "https://github.com/primodesignsystem/primo#readme",
+  "license": "MIT",
+  "directories": {
+    "scss": "scss"
+  },
+  "files": [
+    "scss/",
+    "index.scss"
+  ],
+  "style": "index.scss",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/primodesignsystem/primo.git",
+    "directory": "packages/components/src/Button"
+  },
+  "bugs": {
+    "url": "https://github.com/primodesignsystem/primo/issues"
+  },
+  "keywords": [
+    "primo",
+    "design-system",
+    "primo-design-system",
+    "components",
+    "react",
+    "scss",
+    "css"
+  ]
+}
