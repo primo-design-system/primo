@@ -1,11 +1,12 @@
 @charset 'UTF-8';
 @use 'sass:meta';
 
-// Component variables
-@use './scss/Button.vars';
+@layer component {
+    // Component variables
+    @use './scss/Button.vars';
 
-.primo {
-    // Component styles
-    @include meta.load-css('scss/Button');
+    .primo {
+        // Component styles
+        @include meta.load-css('scss/Button');
+    }
 }
-  
