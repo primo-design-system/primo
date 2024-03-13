@@ -1,4 +1,9 @@
 @charset 'UTF-8';
 @use 'sass:meta';
 
-@use './src/Button/index.scss';
+@layer vendors, base, elements, components, utilities;
+
+@layer components {
+    // Component
+    @include meta.load-css('./src/Button');
+}

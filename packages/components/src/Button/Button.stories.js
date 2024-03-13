@@ -1,10 +1,10 @@
-import buttonPrimary from './Button-primary.html';
-import buttonSecondary from './Button-secondary.html';
-import buttonTertiary from './Button-tertiary.html';
-import buttonNegative from './Button-negative.html';
-import buttonDisabled from './Button-disabled.html';
-import buttonSizeSmall from './Button-size.html';
-import buttonShape from './Button-shape.html';
+import buttonPrimary from './html/Button-primary.html';
+import buttonSecondary from './html/Button-secondary.html';
+import buttonTertiary from './html/Button-tertiary.html';
+import buttonNegative from './html/Button-negative.html';
+import buttonDisabled from './html/Button-disabled.html';
+import buttonSizeSmall from './html/Button-size.html';
+import buttonShape from './html/Button-shape.html';
 
 export default {
   title: 'Components/Button',

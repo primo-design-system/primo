@@ -1,54 +1,62 @@
 @charset 'UTF-8';
-
-@use '~@primo/tokens/dist/css/tokens';
-@use '~@primo/tokens/dist/scss/tokens' as tokens2;
+@use 'sass:meta';
 
 // Config and helpers
 @use './scss/abstracts/variables';
 @use './scss/abstracts/functions';
 @use './scss/abstracts/mixins';
 
+@layer vendors, base, elements, components, utilities;
+
 // Vendors
-@use './scss/vendors/normalize';
+@layer vendors {
+    @include meta.load-css('scss/vendors/normalize');
+}
 
 // Base styles
-@use './scss/base/reset';
-@use './scss/base/base';
-@use './scss/base/focus';
-@use './scss/base/selection';
+@layer base {
+    @include meta.load-css('scss/base/reset');
+    @include meta.load-css('scss/base/base');
+    @include meta.load-css('scss/base/focus');
+    @include meta.load-css('scss/base/selection');
+}
 
 // Elements
-@use './scss/elements/button';
-@use './scss/elements/input';
-@use './scss/elements/textarea';
-@use './scss/elements/select';
-@use './scss/elements/label';
-@use './scss/elements/tables';
-@use './scss/elements/hr';
-@use './scss/elements/headers';
-@use './scss/elements/lists';
-@use './scss/elements/link';
-@use './scss/elements/address';
-@use './scss/elements/blockquote';
-@use './scss/elements/code';
-@use './scss/elements/details';
-@use './scss/elements/dialog';
-@use './scss/elements/meter';
-@use './scss/elements/paragraphs';
-@use './scss/elements/progress';
-@use './scss/elements/media';
-@use './scss/elements/fieldset';
-@use './scss/elements/text';
+@layer elements {
+    @include meta.load-css('scss/elements/button');
+    @include meta.load-css('scss/elements/input');
+    @include meta.load-css('scss/elements/textarea');
+    @include meta.load-css('scss/elements/select');
+    @include meta.load-css('scss/elements/label');
+    @include meta.load-css('scss/elements/tables');
+    @include meta.load-css('scss/elements/hr');
+    @include meta.load-css('scss/elements/headers');
+    @include meta.load-css('scss/elements/lists');
+    @include meta.load-css('scss/elements/link');
+    @include meta.load-css('scss/elements/address');
+    @include meta.load-css('scss/elements/blockquote');
+    @include meta.load-css('scss/elements/code');
+    @include meta.load-css('scss/elements/details');
+    @include meta.load-css('scss/elements/dialog');
+    @include meta.load-css('scss/elements/meter');
+    @include meta.load-css('scss/elements/paragraphs');
+    @include meta.load-css('scss/elements/progress');
+    @include meta.load-css('scss/elements/media');
+    @include meta.load-css('scss/elements/fieldset');
+    @include meta.load-css('scss/elements/text');
+}
 
 // Utilities
-@use './scss/utilities/align';
-@use './scss/utilities/display';
-@use './scss/utilities/flex';
-@use './scss/utilities/layout';
-@use './scss/utilities/link' as link2;
-@use './scss/utilities/opacity';
-@use './scss/utilities/radius';
-@use './scss/utilities/spacing';
-@use './scss/utilities/text' as text2;
-@use './scss/utilities/word-break';
-@use './scss/utilities/z-index';
+@layer utilities {
+    @include meta.load-css('scss/utilities/align');
+    @include meta.load-css('scss/utilities/display');
+    @include meta.load-css('scss/utilities/flex');
+    @include meta.load-css('scss/utilities/layout');
+    @include meta.load-css('scss/utilities/link');
+    @include meta.load-css('scss/utilities/opacity');
+    @include meta.load-css('scss/utilities/radius');
+    @include meta.load-css('scss/utilities/spacing');
+    @include meta.load-css('scss/utilities/text');
+    @include meta.load-css('scss/utilities/word-break');
+    @include meta.load-css('scss/utilities/z-index');
+}

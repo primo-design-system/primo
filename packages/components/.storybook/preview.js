@@ -1,7 +1,7 @@
 import { addParameters, configure } from '@storybook/html';
 import '@storybook/addon-console';
 import '@primo/tokens/dist/css/tokens.css';
-import '@primo/styles/dist/style.min.css';
+import '@primo/styles/dist/style.min.css?v2';
 import '../dist/style.css';
 
 addParameters({
