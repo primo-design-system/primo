@@ -1,10 +1,8 @@
-:is(
-    button,
-    input[type='button'],
-    input[type='submit'],
-    input[type='reset'],
-    input[type='file']::-webkit-file-upload-button
-  ) {
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+input[type='file']::-webkit-file-upload-button {
   appearance: none;
   background-color: var(--color-black);
   border: 0;
