@@ -2,7 +2,7 @@
 @use 'sass:meta';
 
 // Component variables
-@use './scss/variables';
+@include meta.load-css('scss/variables');
 
 // Component
-@use './scss/button';
+@include meta.load-css('scss/button');
