@@ -1,8 +1,0 @@
-@charset 'UTF-8';
-@use 'sass:meta';
-
-// Component variables
-@include meta.load-css('scss/variables');
-
-// Component
-@include meta.load-css('scss/button');
