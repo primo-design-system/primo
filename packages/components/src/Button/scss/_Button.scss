@@ -93,8 +93,9 @@
   &:active {
     --Button-background-color: var(--Button-background-color--active);
     --Button-border-color: var(var(--Button-border-color--active));
-    padding-top: 11px;
+    // stylelint-disable-next-line declaration-empty-line-before
     padding-bottom: 9px;
+    padding-top: 11px;
   }
 
   &:focus,
@@ -122,8 +123,8 @@
     padding: var(--spacing-8) 12px;
 
     &:active {
-      padding-top: 9px;
       padding-bottom: 7px;
+      padding-top: 9px;
     }
   }
 
@@ -132,8 +133,8 @@
     padding: var(--spacing-16) var(--spacing-24);
 
     &:active {
-      padding-top: 18px;
       padding-bottom: 14px;
+      padding-top: 18px;
     }
   }
 
